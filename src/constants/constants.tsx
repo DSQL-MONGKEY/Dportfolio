@@ -5,7 +5,7 @@ import { IoSchoolOutline, IoLogoJavascript } from "react-icons/io5"
 import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython } from "react-icons/fa"
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
-import { androidBasic, backendBeginner, bangkit, bnsp, cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, ytclone } from "@assets/index"
+import { androidBasic, backendBeginner, bangkit, bnsp, cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, xclone, ytclone } from "@assets/index"
 
 const navLinks = [
    {
@@ -363,6 +363,58 @@ const experience = [
 
 const projects = [
    {
+      title: 'Twitter Clone',
+      techStack: [
+         {
+            tags: 'Javascript',
+            color: 'text-yellow-800'
+         },
+         {
+            tags: 'React',
+            color: 'text-cyan-600'
+         },
+         {
+            tags: 'Vite',
+            color: 'text-blue-700'
+         },
+         {
+            tags: 'MongoDB',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'TailwindCSS',
+            color: 'text-blue-500'
+         },
+         {
+            tags: 'ExpressJS',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'Tanstack-query',
+            color: 'text-rose-800'
+         },
+         {
+            tags: 'DaisyUI',
+            color: 'text-pink-600'
+         },
+         {
+            tags: 'JWT',
+            color: 'text-red-700'
+         },
+         {
+            tags: 'NodeJS',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'Cloudinary',
+            color: 'text-blue-600'
+         },
+         ],
+      desc: 'Fullstack twitter/X clone with MERN stack that have similar functionality like the real app. In this included auth functionality and as a user we could make an post, follow other user, put some like on other user post, and upload or change the image profile that we want. This project have 95% similar functionality',
+      image: xclone,
+      link: 'https://github.com/DSQL-MONGKEY/twitter-clone'
+   },
+   {
       title: 'Puskesmas Queue',
       techStack: [
          {
@@ -655,6 +707,25 @@ const cards = [
    },
 ]
 
+const articles = [
+   {
+      logo: <TbBrandNotion/>,
+      title: 'Notion',
+      description: '',
+   },
+   {
+      logo: '',
+      title: 'Github Library',
+      tags: [],
+      description: '',
+   },
+   {
+      logo: '',
+      title: 'Medium',
+      description: '',
+   },
+]
+
 const GITHUB_ACCOUNTS = {
    username: "DSQL-MONGKEY"
 }
@@ -670,5 +741,6 @@ export {
    experience,
    GITHUB_ACCOUNTS,
    projects,
-   cards
+   cards,
+   articles,
 }

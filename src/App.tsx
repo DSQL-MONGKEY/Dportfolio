@@ -11,12 +11,14 @@ import Feeds from "@container/Feeds"
 import { cn } from "./lib/utils"
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState(false) // default Light
   const localTheme = window.localStorage.getItem('theme')
+  const savedTheme = localTheme !== 'light' ? true : false;
+  const [darkTheme, setDarkTheme] = useState(savedTheme) 
+
   
 
   return (
-    <section className={cn(darkTheme ? 'dark' : localTheme)}>
+    <section className={cn(darkTheme ? 'dark' : 'light')}>
       <div className="dark:bg-[#252A34] transition-colors duration-300 w-full h-full">
         <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
         <Hero/>

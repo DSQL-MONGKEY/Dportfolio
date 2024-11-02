@@ -31,6 +31,7 @@ import google from './projects/google.webp'
 import porto from './projects/porto.png'
 import cekit from './projects/cekit.png'
 import puskesmas from './projects/puskesmas.png'
+import xclone from './projects/xclone.webp'
 
 export {
    myCv,
@@ -60,4 +61,5 @@ export {
    porto,
    cekit,
    puskesmas,
+   xclone
 };

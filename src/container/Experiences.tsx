@@ -31,9 +31,9 @@ const Experiences = () => {
         </div>
 
       <div className="flex flex-col sm:items-center mt-10">
-        <div className="grid grid-cols-2 p-5 gap-5 w-full">
+        <div className="flex flex-col md:flex-row p-5 gap-5 w-full">
           {experience.map((exp, idx) => (
-            <div key={idx} className="flex flex-col p-2 border-2 dark:border-green-500 rounded dark:bg-zinc-800 shadow-xl dark:shadow-slate-200/10 w-[150px] lg:w-[500px]">
+            <div key={idx} className="flex flex-col p-2 border-2 dark:border-green-500 rounded dark:bg-zinc-800 shadow-xl dark:shadow-slate-200/10 w-full lg:w-[500px]">
               <div className="flex gap-2 items-center mb-2">
                 <Reveal>
                   <>

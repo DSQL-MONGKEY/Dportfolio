@@ -37,13 +37,13 @@ const Projects = () => {
          </div>
 
          <div className="flex items-center justify-center mt-20 w-full">
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
                {projects.map((project) => (
                   <div key={project.title} className="group max-w-[300px] min-h-[360px] flex flex-col p-2 mb-6 border-2 dark:border-green-500 rounded dark:bg-zinc-800 shadow-xl dark:shadow-slate-200/10 gap-2 hover:bg-zinc-100 dark:hover:bg-zinc-900 duration-200 transition ease-linear">
                      <div>
                         {project.image == undefined ?
                            <Skeleton className="w-[280px] h-[180px]"/> :
-                           <img src={project.image} alt={project.title} className="w-[280px] h-[180px] rounded" />
+                           <img src={project.image} alt={project.title} className="w-[280px] h-[188px] rounded" />
                         }
                      </div>
                      <div>
@@ -67,12 +67,12 @@ const Projects = () => {
                               </span>
                            </DialogTitle>
                            <DialogHeader>
-                              <div className="flex gap-2 text-[14px]">
+                              <div className="flex flex-wrap gap-2 text-[14px]">
                               {project.techStack.map((tech) => (
-                                 <p key={tech.tags} 
+                                 <span key={tech.tags} 
                                  className={`${tech.color} font-outfit`}>
                                     {tech.tags}
-                                 </p>
+                                 </span>
                               ))}
                               </div>
                            </DialogHeader>
