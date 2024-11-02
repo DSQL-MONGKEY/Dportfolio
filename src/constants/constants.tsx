@@ -707,6 +707,25 @@ const cards = [
    },
 ]
 
+const articles = [
+   {
+      logo: <TbBrandNotion/>,
+      title: 'Notion',
+      description: '',
+   },
+   {
+      logo: '',
+      title: 'Github Library',
+      tags: [],
+      description: '',
+   },
+   {
+      logo: '',
+      title: 'Medium',
+      description: '',
+   },
+]
+
 const GITHUB_ACCOUNTS = {
    username: "DSQL-MONGKEY"
 }
@@ -722,5 +741,6 @@ export {
    experience,
    GITHUB_ACCOUNTS,
    projects,
-   cards
+   cards,
+   articles,
 }
