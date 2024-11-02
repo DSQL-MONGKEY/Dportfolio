@@ -55,14 +55,14 @@ const Navbar = ({ darkTheme, setDarkTheme }: NavProps) => {
                   <AnimatePresence>
                      {isOpen && (
                      <motion.div
-                        initial={{  opacity: 0 }}
-                        animate={{  opacity: 1,   }}
+                        initial={{  x: -900 }}
+                        animate={{  x: 0 }}
                         transition={{
-                           duration: 0.5,
+                           duration: 1,
                            delay: 0.3,
-                           ease: [0, 0.71, 0.2, 1.01]
+                           ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        exit={{ opacity: 0 }}
+                        exit={{ x: -900 }}
                         className={`flex justify-center absolute top-14 left-0 bg-white dark:bg-[#252A34] h-screen w-full`}>
                         <ul className={`flex flex-col  gap-4 font-poppins text-slate-900 dark:text-[#EAEAEA] font-bold tracking-wider`}>
                            {navLinks.map(nav => (
