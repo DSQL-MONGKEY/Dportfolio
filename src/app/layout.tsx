@@ -28,9 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex flex-row`}
+        className={`flex h-screen flex-col md:flex-row md:overflow-hidden`}
       >
-        <Navbar darkTheme={false}   />
+        <div className="w-full flex-none md:w-64">
+          <Navbar darkTheme={false}   />
+        </div>
+
         <div className="grow">
           {children}
         </div>
