@@ -6,6 +6,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* fonts */
+@font-face {
+  font-family: poppins;
+  src: url(./fonts/Poppins/Poppins-Medium.ttf)
+}
+.font-poppins {
+  font-family: 'poppins', sans-serif;
+}
+
+@font-face {
+  font-family: Paytone;
+  src: url(./fonts/PaytoneOne/PaytoneOne-Regular.ttf)
+}
+.font-paytone {
+  font-family: 'Paytone', sans-serif;
+}
+
+@font-face {
+  font-family: outfit;
+  src: url(./fonts/Outfit/Outfit-Medium.ttf)
+}
+.font-outfit {
+  font-family: 'outfit', sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
