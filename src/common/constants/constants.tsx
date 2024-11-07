@@ -6,40 +6,41 @@ import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPyt
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
 import { androidBasic, backendBeginner, bangkit,  cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, xclone, ytclone } from "@assets/index"
+import { MenuItemProps } from "../types/menu"
 
-const navLinks = [
+const navLinks: MenuItemProps[] = [
    {
-      id: 'home',
+      href: '/',
       title: 'Home',
       icon: <GoHome/>
    },
    {
-      id: 'about',
+      href: 'about',
       title: 'About',
       icon: <GoQuestion/>
    },
    {
-      id: 'skills',
+      href: 'skills',
       title: 'Skills',
       icon: <GoCodeReview/>
    },
    {
-      id: 'educations',
+      href: 'educations',
       title: 'Educations',
       icon: <IoSchoolOutline/>
    },
    {
-      id: 'experiences',
+      href: 'experiences',
       title: 'Experiences',
       icon: <GoProject/>
    },
    {
-      id: 'projects',
+      href: 'projects',
       title: 'Projects',
       icon: <GoWorkflow/>
    },
    {
-      id: 'feeds',
+      href: 'feeds',
       title: 'Feeds',
       icon: <BsChatRightText/>
    },
