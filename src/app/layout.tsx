@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Layouts from "@/components/layouts";
+import ThemeProviderContext from "@/stores/theme";
 
 
 export const metadata: Metadata = {
@@ -13,17 +14,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body>
-        <main
-          className={`flex h-screen flex-col md:flex-row md:overflow-hidden`}
-        >
-          <Layouts>
-            {children}
-          </Layouts>
-        </main>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" suppressHydrationWarning={true}>
+			<body>
+				<ThemeProviderContext>
+					<Layouts>
+						{children}
+					</Layouts>
+				</ThemeProviderContext>
+			</body>
+		</html>
+	);
 }
