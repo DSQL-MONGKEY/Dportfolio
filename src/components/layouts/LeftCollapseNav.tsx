@@ -3,6 +3,7 @@ import { navLinks } from '@/common/constants/constants';
 import Image from 'next/image';
 import React, { useState } from 'react'
 import MenuItem from './sidebar/MenuItem';
+import Profile from './sidebar/Profile';
 
 const LeftCollapseNav = () => {
    const [isHover, setIsHover] = useState(false);
@@ -15,11 +16,11 @@ const LeftCollapseNav = () => {
       >
          <div className={`flex h-64 ${isHover ? 'items-start' : 'items-center'}`}>
             {isHover ?(
-               <p>COBA DULU</p>
+               <Profile />
             ) : (
                <div className='flex flex-col items-center gap-8'>
                   <div className='z-10 rounded-full border-2 border-white shadow-md dark:border-neutral-800'>
-                     <Image src={dimas} alt="profile" width={50} height={50} className="rounded-full" />
+                     <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" />
                   </div>
                </div>
             )}
