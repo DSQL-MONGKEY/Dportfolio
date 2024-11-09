@@ -12,7 +12,7 @@ const LeftCollapseNav = () => {
       <div
          onMouseEnter={() => setIsHover(true)}
          onMouseLeave={() => setIsHover(false)}
-         className="fixed bottom-0 left-0 z-30 hidden w-16 flex-col items-center justify-between overflow-hidden rounded-r-2xl px-2 py-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-500 hover:w-64 hover:items-stretch hover:p-4 hover:transition-all hover:duration-500 dark:shadow-neutral-800 lg:flex"
+         className="fixed bottom-0 top-0 left-0 z-30 hidden bg-[#EFECEC] dark:bg-[#6895D2] w-16 flex-col items-center justify-between overflow-hidden rounded-r-md border-r-4 border-black px-2 py-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-500 hover:w-64 hover:items-stretch hover:p-4 hover:transition-all hover:duration-500 dark:shadow-neutral-800 lg:flex"
       >
          <div className={`flex h-64 ${isHover ? 'items-start' : 'items-center'}`}>
             {isHover ?(
@@ -20,7 +20,7 @@ const LeftCollapseNav = () => {
             ) : (
                <div className='flex flex-col items-center gap-8'>
                   <div className='z-10 rounded-full border-2 border-white shadow-md dark:border-neutral-800'>
-                     <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" />
+                     <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" priority />
                   </div>
                </div>
             )}
