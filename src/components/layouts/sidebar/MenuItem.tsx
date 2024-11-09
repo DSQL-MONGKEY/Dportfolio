@@ -43,10 +43,11 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
    }
 
    const itemComponent = () => {
-      console.log(isHover)
       return (
          <div {...elementProps}>
-            <div>{icon}</div>
+            <div className="text-2xl">
+               {icon}
+            </div>
             {isHover && 
                <div className="ml-1 animate-enter-left whitespace-nowrap text-sm">
                   {title}
