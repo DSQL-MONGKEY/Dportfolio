@@ -36,10 +36,18 @@ html {
   font-family: 'outfit', sans-serif;
 }
 
+body {
+  background-color: #F6F54D;
+}
+
+[data-theme="dark"] body {
+  background-color: #1D2B53;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -99,4 +107,10 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
