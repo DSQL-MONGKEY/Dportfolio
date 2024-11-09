@@ -6,6 +6,8 @@ import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPyt
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
 import { androidBasic, backendBeginner, bangkit,  cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, xclone, ytclone } from "@assets/index"
+import { PiCoffeeDuotone } from "react-icons/pi";
+
 import { MenuItemProps } from "../types/menu"
 
 const navLinks: MenuItemProps[] = [
@@ -20,11 +22,6 @@ const navLinks: MenuItemProps[] = [
       icon: <GoQuestion/>
    },
    {
-      href: 'skills',
-      title: 'Skills',
-      icon: <GoCodeReview/>
-   },
-   {
       href: 'educations',
       title: 'Educations',
       icon: <IoSchoolOutline/>
@@ -35,6 +32,11 @@ const navLinks: MenuItemProps[] = [
       icon: <GoProject/>
    },
    {
+      href: 'skills',
+      title: 'Tech',
+      icon: <GoCodeReview/>
+   },
+   {
       href: 'projects',
       title: 'Projects',
       icon: <GoWorkflow/>
@@ -42,6 +44,11 @@ const navLinks: MenuItemProps[] = [
    {
       href: 'feeds',
       title: 'Feeds',
+      icon: <PiCoffeeDuotone/>
+   },
+   {
+      href: 'contact',
+      title: 'Contact',
       icon: <BsChatRightText/>
    },
 ]
