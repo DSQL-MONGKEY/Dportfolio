@@ -19,7 +19,7 @@ const LeftCollapseNav = () => {
                <Profile />
             ) : (
                <div className='flex flex-col items-center gap-8'>
-                  <div className='z-10 rounded-full border-2 border-white shadow-md dark:border-neutral-800 select-none'>
+                  <div className='z-10 rounded-full border-2 border-black shadow-md dark:border-neutral-800 select-none'>
                      <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" priority />
                   </div>
                </div>
