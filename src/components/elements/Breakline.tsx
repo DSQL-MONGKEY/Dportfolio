@@ -1,6 +1,6 @@
 import React from 'react'
 interface BreaklineProps {
-   className: string,
+   className?: string,
    [propName: string]: string | undefined
 }
 
