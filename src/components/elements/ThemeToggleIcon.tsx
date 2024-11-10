@@ -21,7 +21,7 @@ const ThemeToggleIcon = () => {
          onClick={toggleTheme}
          className={'rounded-xl bg-white p-2 dark:bg-neutral-800'}
       >
-         {resolvedTheme === 'dark' ? <IoIosCloudyNight /> : <IoPartlySunnySharp />}
+         {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
       </motion.button>
    )
 }
