@@ -5,11 +5,17 @@ const config: Config = {
 		content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
 			colors: {
+				'main': '#F6F54D',
+				'mainDark': '#1D2B53',
+				'calmBlue': '#6895D2',
+				'shineRed': '#F55353',
+				
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
