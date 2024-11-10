@@ -1,13 +1,17 @@
-import TrailBorder from '@/components/elements/TrailBorder'
 import React from 'react'
+import Intro from './Intro'
+import Breakline from '@/components/elements/Breakline'
+import NeoButton from '@/components/ui/NeoButton'
 
 const Home = () => {
    return (
-      <div className="">
-         <TrailBorder className='bg-white' duration='5s' color='#000000' trailSize='lg'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eum provident assumenda accusamus culpa optio, quidem explicabo dolore dicta consequuntur quasi necessitatibus blanditiis facere sint illo corporis deleniti repellat fugit.
-         </TrailBorder>
-      </div>
+      <>
+         <Intro />
+         <Breakline />
+         <NeoButton>
+            Press
+         </NeoButton>
+      </>
    )
 }
 
