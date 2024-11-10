@@ -7,7 +7,10 @@ const Profile = () => {
 
    return (
       <div>
-         <ThemeToggleIcon/>
+         <ThemeToggleIcon />
+         <div className="flex">
+            
+         </div>
       </div>
    )
 }
