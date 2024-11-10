@@ -10,7 +10,6 @@ interface MenuProps {
 }
 
 const Menu = ({ title, list }: MenuProps) => {
-   console.log(list)
    return (
       <div className="flex flex-col space-y-1 lg:p-0">
          {title && (
