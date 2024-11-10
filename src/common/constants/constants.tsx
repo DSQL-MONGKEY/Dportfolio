@@ -10,7 +10,7 @@ import { PiCoffeeDuotone } from "react-icons/pi";
 
 import { MenuItemProps } from "../types/menu"
 
-const navLinks: MenuItemProps[] = [
+export const navLinks: MenuItemProps[] = [
    {
       href: '/',
       title: 'Home',
@@ -53,7 +53,26 @@ const navLinks: MenuItemProps[] = [
    },
 ]
 
-const socialMedia = [
+export const services = [
+   {
+      title: 'Website Development',
+      subTitle: 'Create stunning website, user-friendly design with modern technologies '
+   },
+   {
+      title: 'Mobile Development',
+      subTitle: 'Create cross-platform and reliable application using React-Native'
+   },
+   {
+      title: 'IoT (Internet of Things)',
+      subTitle: 'Create and develop IoT services/devices for your needs'
+   },
+   {
+      title: 'Software Testing',
+      subTitle: 'Test your application with manual or automation testing using selenium and katalon'
+   },
+]
+
+export const socialMedia = [
    {
       title: 'Instagram',
       icon: <BsInstagram/>,
@@ -76,7 +95,7 @@ const socialMedia = [
    }
 ]
 
-const techSkills = [
+export const techSkills = [
    {
       title: 'HTML',
       icon: <SiHtml5/>,
@@ -169,7 +188,7 @@ const techSkills = [
    },
 ]
 
-const tools = [
+export const tools = [
    {
       title: 'VScode',
       icon: <TbBrandVscode/>,
@@ -222,7 +241,7 @@ const tools = [
    },
 ]
 
-const softSkills = [
+export const softSkills = [
    {
       title: 'Leadership',
       icon: <GoStarFill />,
@@ -251,7 +270,7 @@ const softSkills = [
    
 ]
 
-const educations = [
+export const educations = [
    {
       title: 'Gunadarma University',
       major: 'Computer System',
@@ -264,7 +283,7 @@ const educations = [
    },
 ]
 
-const certificates = [
+export const certificates = [
    {
       title: 'Web Programming',
       institution: 'Badan Nasional Sertifikasi Profesi(BNSP)',
@@ -356,7 +375,7 @@ const certificates = [
    
 ]
 
-const experience = [
+export const experience = [
    {
       title: 'Bangkit Academy',
       logo: bangkit,
@@ -369,7 +388,7 @@ const experience = [
    },
 ]
 
-const projects = [
+export const projects = [
    {
       title: 'Twitter Clone',
       techStack: [
@@ -662,7 +681,7 @@ const projects = [
    },
 ]
 
-const cards = [
+export const cards = [
    {
       id:0,
       name: 'Steve Jobs',
@@ -715,7 +734,7 @@ const cards = [
    },
 ]
 
-const articles = [
+export const articles = [
    {
       logo: <TbBrandNotion/>,
       title: 'Notion',
@@ -734,21 +753,7 @@ const articles = [
    },
 ]
 
-const GITHUB_ACCOUNTS = {
+export const GITHUB_ACCOUNTS = {
    username: "DSQL-MONGKEY"
 }
 
-export { 
-   navLinks, 
-   socialMedia, 
-   techSkills, 
-   tools, 
-   softSkills,
-   educations, 
-   certificates,
-   experience,
-   GITHUB_ACCOUNTS,
-   projects,
-   cards,
-   articles,
-}
