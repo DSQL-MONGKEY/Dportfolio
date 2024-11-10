@@ -35,13 +35,12 @@ html {
 .font-outfit {
   font-family: 'outfit', sans-serif;
 }
-
-body {
-  background-color: #F6F54D;
+@font-face {
+  font-family: lexend;
+  src: url(./fonts/Lexend_Mega/static/LexendMega-Bold.ttf)
 }
-
-[data-theme="dark"] body {
-  background-color: #1D2B53;
+.font-lexend {
+  font-family: 'lexend', sans-serif;
 }
 
 @layer base {
