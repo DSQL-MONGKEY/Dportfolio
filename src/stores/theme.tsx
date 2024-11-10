@@ -6,7 +6,11 @@ import { ReactNode } from 'react'
 
 const ThemeProviderContext = ({ children }: { children: ReactNode }) => {
    return (
-      <ThemeProvider>
+      <ThemeProvider 
+         attribute={'class'}
+         enableSystem
+         disableTransitionOnChange
+      >
          {children}
       </ThemeProvider>
    )
