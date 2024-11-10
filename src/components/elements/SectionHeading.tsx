@@ -8,7 +8,7 @@ interface SectionHeadingProps {
 
 const SectionHeading = ({ title, icon, className = '' }: SectionHeadingProps) => {
    return (
-      <div className={`flex items-center gap-1 text-xl font-lexend text-neutral-700 dark:text-white ${className}`}>
+      <div className={`flex items-center gap-1 text-xl font-lexend text-black dark:text-white ${className}`}>
          {icon && <>{icon}</>}
          <h2 className="capitalize">
             {title}
