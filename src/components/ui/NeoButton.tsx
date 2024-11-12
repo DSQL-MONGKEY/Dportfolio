@@ -1,22 +1,27 @@
-import React, { ReactNode } from 'react'
+'use client'
 
-interface ButtonProps {
-   children: ReactNode,
-   className?: string,
-   [propName: string]:ReactNode | string | undefined
+import { ClassValue } from 'clsx'
+
+import { cn } from '@/common/lib/utils'
+
+type Props = {
+  className?: ClassValue
+  children: React.ReactNode
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const NeoButton = ({ children, className = '', ...others }: ButtonProps) => {
+export default function NeoButton({ className, children, onClick }: Props) {
    return (
-      <button 
-         className={`rounded-md bg-black `}
-         {...others}
+      <button
+         role="button"
+         aria-label="Click to perform an action"
+         onClick={onClick}
+         className={cn(
+         'flex text-text cursor-pointer items-center rounded-base border-2 border-border dark:border-darkBorder bg-[#FEB139] px-4 py-2 text-sm font-base shadow-light dark:shadow-dark transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:hover:shadow-none',
+         className,
+         )}
       >
-         <span className={`block -translate-x-2 -translate-y-2 rounded-md border-2 border-black bg-yellow-500 dark:bg-cyan-500 p-4 text-2xl hover:-translate-y-3 active:translate-x-0 active:translate-y-0 transition-all ease-in-out duration-100 ${className}`}>
-            {children}
-         </span>
+         {children}
       </button>
    )
 }
-
-export default NeoButton
