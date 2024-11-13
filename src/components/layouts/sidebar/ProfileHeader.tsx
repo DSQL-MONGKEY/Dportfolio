@@ -27,7 +27,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
                <ThemeToggleIcon />
             </div>
 
-            <div className="z-10 -mt-11 rounded-full border-2 border-slate-500 dark:border-darkBorder shadow-light dark:shadow-dark">
+            <div className="z-10 -mt-11 rounded-full border-2 border-slate-500 dark:border-darkBorder ">
                <Image
                   src={dimas}
                   alt="profile"
