@@ -9,7 +9,7 @@ import { SiCloudflareworkers } from "react-icons/si";
 const Services = () => {
    return (
       <section>
-         <SectionHeading icon={<SiCloudflareworkers />} title="Services" />
+         <SectionHeading icon={<SiCloudflareworkers />} title={"Services"} />
          <SectionSubHeading>
             <p>The services that i can serve</p>
          </SectionSubHeading>
