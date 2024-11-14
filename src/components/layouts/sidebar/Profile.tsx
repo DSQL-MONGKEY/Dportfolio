@@ -34,7 +34,7 @@ const Profile = () => {
             <ProfileHeader expandMenu={isOpen} imageSize={imageSize} />
             <div className='text-center'>
                <h2 className="">Dimas Prasetyo</h2>
-               <p>Software Engineer</p>
+               <p>Software Developer</p>
             </div>
             {isMobile && (
                <div>
