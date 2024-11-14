@@ -10,7 +10,7 @@ React.HTMLAttributes<HTMLDivElement>
    <div
       ref={ref}
       className={cn(
-         'rounded-md shadow-light dark:shadow-dark border-2 border-slate-500 dark:border-darkBorder bg-yellow-400 dark:bg-shineRed text-black hover:dark:shadow-slate-50',
+         'rounded-md shadow-light dark:shadow-dark border-2 border-slate-500 dark:border-darkBorder bg-yellow-400 dark:bg-shineRed text-black hover:dark:shadow-slate-50 duration-300',
          className,
       )}
       {...props}
