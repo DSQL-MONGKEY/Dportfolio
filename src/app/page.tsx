@@ -1,5 +1,5 @@
 import Container from "@/components/elements/Container";
-import Home from "@/modules/home";
+import Home from "@/modules/home/index";
 
 export default function HomePage() {
 	return (
