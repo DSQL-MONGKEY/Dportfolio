@@ -2,6 +2,7 @@ import { dimas } from '@/assets'
 import ThemeToggleIcon from '@/components/elements/ThemeToggleIcon'
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -27,7 +28,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
                <ThemeToggleIcon />
             </div>
 
-            <div className="z-10 -mt-11 rounded-full border-2 border-slate-500 dark:border-darkBorder ">
+            <div className="z-10 -mt-11 rounded-full border-4 border-slate-500 dark:border-[#1D2B53] lg:hover:scale-105 transition-all ease-in-out duration-200">
                <Image
                   src={dimas}
                   alt="profile"
@@ -36,6 +37,15 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
                   className="rounded-full"
                />
             </div>
+
+            <div className='text-center mt-1'>
+                  <Link href={'/'} className="text-xl font-poppins font-sembibold">
+                     Dimas Prasetyo
+                  </Link>
+            </div>
+            <Link href={'https://www.instagram.com/dimpfe'}>
+               @dimpfe
+            </Link>
          </div>
       </div>
    )
