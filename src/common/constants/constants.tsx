@@ -55,20 +55,24 @@ export const navLinks: MenuItemProps[] = [
 
 export const services = [
    {
+      id: '72d7892ede',
       title: 'Website Development',
-      subTitle: 'Create stunning website, user-friendly design with modern technologies '
+      description: 'Create stunning website, user-friendly design with modern technologies '
    },
    {
+      id: 'cd5fc36877',
       title: 'Mobile Development',
-      subTitle: 'Create cross-platform and reliable application using React-Native'
+      description: 'Create cross-platform and reliable application using React-Native'
    },
    {
+      id: 'a9292e0942',
       title: 'IoT (Internet of Things)',
-      subTitle: 'Create and develop IoT services/devices for your needs'
+      description: 'Create and develop IoT services/devices for your needs'
    },
    {
+      id: '32e5582f4d',
       title: 'Software Testing',
-      subTitle: 'Test your application with manual or automation testing using selenium and katalon'
+      description: 'Test your application with manual or automation testing using selenium and katalon'
    },
 ]
 
@@ -751,6 +755,13 @@ export const articles = [
       title: 'Medium',
       description: '',
    },
+]
+
+export const playlist = [
+   {
+      title: 'TEST',
+      src: '../../src/music/test.mp3'
+   }
 ]
 
 export const GITHUB_ACCOUNTS = {
