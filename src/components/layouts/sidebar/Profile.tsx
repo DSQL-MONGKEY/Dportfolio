@@ -32,10 +32,7 @@ const Profile = () => {
       )}>
          <div className="flex flex-col justify-center">
             <ProfileHeader expandMenu={isOpen} imageSize={imageSize} />
-            <div className='text-center'>
-               <h2 className="">Dimas Prasetyo</h2>
-               <p>Software Developer</p>
-            </div>
+            
             {isMobile && (
                <div>
                   <ThemeToggleIcon />
