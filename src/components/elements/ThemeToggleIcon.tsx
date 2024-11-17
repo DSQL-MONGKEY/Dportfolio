@@ -19,7 +19,7 @@ const ThemeToggleIcon = () => {
          animate={{ opacity: 1, scale: 1 }}
          transition={{ duration: 0.5, delay: 0.5 }}
          onClick={toggleTheme}
-         className={'rounded-xl bg-white p-2 dark:bg-neutral-800'}
+         className={'rounded-xl bg-white border-white p-2 dark:bg-neutral-800  shadow-light dark:shadow-dark'}
       >
          {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
       </motion.button>
