@@ -35,6 +35,7 @@ import cekit from './projects/cekit.png'
 import puskesmas from './projects/puskesmas.png'
 import xclone from './projects/xclone.webp'
 
+
 export {
    // myCv,
    dimas,
