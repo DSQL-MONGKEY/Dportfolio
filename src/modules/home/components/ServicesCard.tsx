@@ -1,3 +1,4 @@
+import StaggeredPullUpText from '@/components/elements/StaggeredPullUpText'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import React from 'react'
 
@@ -11,7 +12,7 @@ const ServicesCard = ({ id, title, description }: ServicesCardProps) => {
    return (
       <Card key={id}>
          <CardContent className="flex justify-center mt-5">
-            {id == '72d7892ede' && <></>}
+            {id == '72d7892ede' && <StaggeredPullUpText text='WWW'/>}
             {id == 'cd5fc36877' && <></>}
             {id == 'a9292e0942' && <></>}
             {id == '32e5582f4d' && <></>}
