@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes'
 import { motion } from 'framer-motion';
 import { IoIosCloudyNight } from "react-icons/io";
 import { IoPartlySunnySharp } from "react-icons/io5";
+import { Button } from '../ui/Button';
 
 const ThemeToggleIcon = () => {
    const { setTheme, resolvedTheme } = useTheme();
@@ -14,15 +15,19 @@ const ThemeToggleIcon = () => {
    }
 
    return (
-      <motion.button
+      <motion.div
          initial={{ opacity: 0, scale: 0.5 }}
          animate={{ opacity: 1, scale: 1 }}
          transition={{ duration: 0.5, delay: 0.5 }}
-         onClick={toggleTheme}
-         className={'rounded-xl bg-white border-white p-2 dark:bg-neutral-800  shadow-light dark:shadow-dark'}
+         className='p-1'
       >
-         {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
-      </motion.button>
+         <Button 
+            variant={'neutral'}
+            onClick={toggleTheme}
+         >
+            {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
+         </Button>
+      </motion.div>
    )
 }
 
