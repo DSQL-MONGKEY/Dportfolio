@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { playlist } from "@/common/constants/constants";
 
 const Frequency: React.FC = () => {
 const [audioData, setAudioData] = useState<number[]>(Array(30).fill(100)); // Initial heights
