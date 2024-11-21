@@ -4,6 +4,7 @@ import { useEffect, ReactNode } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import LeftCollapseNav from './LeftCollapseNav'
+import MusicBox from './MusicBox'
 
 interface LayoutsProps {
    children: ReactNode
@@ -32,6 +33,8 @@ const Layouts = ({ children }: LayoutsProps ) => {
          </div>
 
          <LeftCollapseNav    />
+
+         <MusicBox />
       </div>
    )
 }
