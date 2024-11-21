@@ -1,27 +1,26 @@
-import StaggeredPullUpText from '@/components/elements/StaggeredPullUpText'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
+import BentoCard from '@/components/ui/BentoCard'
 import React from 'react'
 
 interface ServicesCardProps {
-   id: string,
-   title: string,
+   icon: JSX.Element
+   id: string
+   title: string
    description: string
 }
 
-const ServicesCard = ({ id, title, description }: ServicesCardProps) => {
+const ServicesCard = ({ icon, id, title, description }: ServicesCardProps) => {
    return (
-      <Card key={id}>
-         <CardContent className="flex justify-center mt-5">
-            {id == '72d7892ede' && <StaggeredPullUpText text='WWW'/>}
-            {id == 'cd5fc36877' && <></>}
-            {id == 'a9292e0942' && <></>}
-            {id == '32e5582f4d' && <></>}
-         </CardContent>
-         <CardHeader>
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
-         </CardHeader>
-      </Card>
+      <BentoCard key={id} className='flex items-center justify-center gap-5 border border-black dark:border-slate-200 hover:bg-cyan-500 hover:scale-105 hover:shadow-light dark:hover:shadow-[0px, 20px, 20px, 5px, #000] hover:-translate-y-boxShadowX duration-300'>
+         <div className='text-5xl'>
+            {icon}
+         </div>
+         <div className="flex flex-col">
+            <h3 className='text-xl font-outfit'>
+               {title}
+            </h3>
+            <p>{description}</p>
+         </div>
+      </BentoCard>
    )
 }
 
