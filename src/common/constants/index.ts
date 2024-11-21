@@ -1,0 +1,1 @@
+export const MEDIUM_ARTICLE_API = ''
