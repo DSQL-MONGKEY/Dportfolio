@@ -7,6 +7,7 @@ import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBran
 import { GrDocker } from "react-icons/gr";
 import { androidBasic, backendBeginner, bangkit,  cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, xclone, ytclone } from "@assets/index"
 import { PiCoffeeDuotone, PiNetworkFill  } from "react-icons/pi";
+import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 
 import { CiMobile3 } from "react-icons/ci";
 import { MdWeb } from "react-icons/md";
@@ -43,6 +44,11 @@ export const navLinks: MenuItemProps[] = [
       href: 'projects',
       title: 'Projects',
       icon: <GoWorkflow/>
+   },
+   {
+      href: 'playlist',
+      title: 'Playlist',
+      icon: <MdOutlinePlaylistAddCheckCircle/>
    },
    {
       href: 'feeds',
