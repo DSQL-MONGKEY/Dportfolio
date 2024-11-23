@@ -2,6 +2,7 @@ import { musicPlaylist } from '@/common/constants/music';
 import { cn } from '@/common/lib/utils';
 import React, { useState } from 'react'
 import Frequency from './audio-player/Frequency';
+import AudioPlayer from './audio-player/AudioPlayer';
 
 const MusicBox = () => {
    const [isHover, setIsHover] = useState(false);
@@ -14,7 +15,7 @@ const MusicBox = () => {
       >
          <div className={`flex h-64 ${isHover ? 'items-start' : 'items-center'}`}>
             <div className={cn(isHover ? 'block' : 'hidden')}>
-               <Frequency />
+               <AudioPlayer isHover={isHover} />
             </div>
          </div>
       </div>
