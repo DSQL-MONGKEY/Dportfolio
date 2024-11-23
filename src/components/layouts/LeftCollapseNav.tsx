@@ -18,14 +18,14 @@ const LeftCollapseNav = () => {
             {isHover ?(
                <Profile />
             ) : (
-               <div className='flex flex-col items-center gap-8'>
+               <div className='flex flex-col items-center'>
                   <div className='z-10 rounded-full border-2 border-black shadow-md dark:border-neutral-800 select-none'>
                      <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" priority />
                   </div>
                </div>
             )}
          </div>
-         <nav className="mb-6 mt-4 flex flex-col gap-3 border-t border-neutral-300 pt-4">
+         <nav className="mb-6 flex flex-col gap-3 border-t border-neutral-300 pt-4">
             {navLinks.map((item, index) => (
                <MenuItem key={index} {...item} isHover={isHover} />
             ))}
