@@ -50,7 +50,7 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
          <div {...elementProps}>
             
             {/* Sidebar hovered */}
-            <div className="text-2xl">
+            <div className="text-xl">
                {icon}
             </div>
 
