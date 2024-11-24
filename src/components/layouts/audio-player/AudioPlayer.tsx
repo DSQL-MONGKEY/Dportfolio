@@ -2,13 +2,9 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 
-
-import {    LiaPlayCircle } from "react-icons/lia";
-import { MdMotionPhotosPause } from "react-icons/md";
-import { SlControlRewind } from "react-icons/sl";
-import { TbPlayerTrackNext } from "react-icons/tb";
 import Frequency from './Frequency';
 import { Progress } from '@/components/ui/Progress';
+import Controls from './Controls';
 
 interface AudioTrack {
    musicCover: string,
@@ -43,6 +39,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
          audioElementRef.current?.play();
          setIsPlaying(true);
       }
+
    }
 
    const handleNextTrack = () => {
@@ -59,15 +56,11 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
          setProgress(
             (audioElementRef.current.currentTime / audioElementRef.current.duration) * 100
          );
-      
-         console.log(audioElementRef.current.currentTime)
       }
    }
 
    const handleLoadedMetaData = () => {
-      if(audioElementRef.current) {
-         setDuration(audioElementRef.current.duration);
-      }
+         console.log(audioElementRef.current.duration);
    }
 
    const formatTime = (time: number) => {
@@ -111,19 +104,13 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    }
 
    useEffect(() => {
-      console.log(audioData)
-
-      // if(audioElementRef.current) {
-      //    audioElementRef.current.pause();
-      //    // audioElementRef.current.src = tracks[currentTrackIndex]?.src || "";
-      //    audioElementRef.current.load();
-      //    // audioElementRef.current.currentTime = 0;
-      //    // setCurrentTime(0);
-      //    // setProgress(0);
-      //    if(isPlaying) {
-      //       audioElementRef.current.play();
-      //    }
-      // }
+      if(audioElementRef.current) {
+         if(isPlaying) {
+            audioElementRef.current.play();
+         } else {
+            audioElementRef.current.pause();
+         }
+      }
    }, [currentTrackIndex, tracks, isPlaying]);
 
    return (
@@ -135,8 +122,6 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
                onTimeUpdate={handleTimeUpdate}
                onLoadedMetadata={handleLoadedMetaData}
                src={'/music/Die with a Smile.mp3'}
-               onPause={() => console.log(currentTime)}
-               controls
                hidden={true}
             />
 
@@ -144,41 +129,23 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
                audioData={audioData} 
                ref={{ animationIdRef, audioContextRef, sourceRef }} 
             />
-            <Progress 
-               value={progress}
-               className="w-52"
-            />
-
-            <div className="flex justify-between">
-
-               {/* previous song button */}
-               <button 
-                  className="text-2xl"
-                  onClick={handlePrevTrack}>
-                  <SlControlRewind/>
-               </button>
-               
-               {/* play/pause button */}
-               <button 
-                  className="text-2xl"
-                  onClick={handlePlayPause}>
-                  {isPlaying ? (
-                     <MdMotionPhotosPause/>
-                  ) : (
-                     <LiaPlayCircle />
-                  )
-                  }
-               </button>
-               
-               {/* next song button */}
-               <button
-                  className="text-2xl"
-                  onClick={handleNextTrack}
-               >
-                  <SlControlRewind className="rotate-180" />
-               </button>
+            <div className="w-52">
+               <Progress 
+                  value={progress}
+                  className="w-52"
+               />
+               <div className="flex justify-between text-sm text-muted-foreground">
+                  <span>{formatTime(currentTime)}</span>
+                  <span>{formatTime(duration)}</span>
+               </div>
             </div>
+
+            <Controls 
+               onClick={{ handlePrevTrack, handleNextTrack, handlePlayPause }}
+               isPlaying={isPlaying}
+            />
          </div>
+
          {isHover === false && (
             <Progress 
             value={progress}
