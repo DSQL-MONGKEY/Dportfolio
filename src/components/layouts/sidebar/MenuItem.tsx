@@ -15,12 +15,12 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
 
    const activeClasses = `flex 
    ${
-      !isHover ? 'justify-center px-4 py-2 rounded-lg lg:p-2' : 'lg:rounded-lg lg:py-2 lg:px-4 transition-all ease-out'
+      isHover ? 'lg:rounded-lg lg:py-2 lg:px-4 transition-all ease-out' :'justify-center px-4 py-2 rounded-lg lg:p-2'
    } 
-      gap-2 text-neutral-700 dark:text-white hover:text-neutral-900 hover:dark:text-neutral-300 transition-all ease-out
+      gap-2 text-neutral-900 dark:text-white hover:text-neutral-900 hover:dark:text-neutral-300 transition-all ease-out
    ${
       pathname === url.pathname
-      ? 'bg-neutral-100 dark:bg-[#2C4E80] text-neutral-900 dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
+      ? 'bg-green-500 dark:bg-[#2C4E80] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
       : 'border-2 hover:border-black dark:border-white hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-[#2C4E80] hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300'
    }`
 
