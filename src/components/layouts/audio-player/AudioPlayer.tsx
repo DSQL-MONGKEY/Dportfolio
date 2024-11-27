@@ -1,10 +1,9 @@
-"use client"
-
 import React, { useEffect, useRef, useState } from 'react'
 
 import Frequency from './Frequency';
 import { Progress } from '@/components/ui/Progress';
 import Controls from './Controls';
+import { musicPlaylist } from '@/common/constants/music';
 
 interface AudioTrack {
    musicCover: string,
@@ -19,7 +18,6 @@ interface AudioPlayerProps {
 
 const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    const [audioData, setAudioData] = useState<number[]>(Array(20).fill(100)); // Initial heights
-   const [tracks, setTracks] = useState<AudioTrack[]>([]);
    const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
    const [isPlaying, setIsPlaying] = useState<boolean>(false);
    const [progress, setProgress] = useState<number>(0);
@@ -31,6 +29,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    const animationIdRef = useRef<number | null>(null);
    const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
 
+
    const handlePlayPause = () => {
       if(isPlaying) {
          audioElementRef.current?.pause();
@@ -39,15 +38,14 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
          audioElementRef.current?.play();
          setIsPlaying(true);
       }
-
    }
 
    const handleNextTrack = () => {
-      setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % tracks.length);
+      setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % musicPlaylist.length);
    }
 
    const handlePrevTrack = () => {
-      setCurrentTrackIndex((prevIndex) => prevIndex === 0 ? tracks.length - 1 : prevIndex - 1)
+      setCurrentTrackIndex((prevIndex) => prevIndex === 0 ? musicPlaylist.length - 1 : prevIndex - 1)
    }
 
    const handleTimeUpdate = () => {
@@ -56,17 +54,21 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
          setProgress(
             (audioElementRef.current.currentTime / audioElementRef.current.duration) * 100
          );
+         setDuration(audioElementRef.current.duration);
       }
    }
 
    const handleLoadedMetaData = () => {
-         console.log(audioElementRef.current.duration);
+      setDuration(audioElementRef.current?.duration);
    }
 
    const formatTime = (time: number) => {
-      const minutes  = Math.floor(time / 60);
-      const seconds  = Math.floor(time % 60);
-      return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`
+      if(time && !isNaN(time)) {
+         const minutes  = Math.floor(time / 60);
+         const seconds  = Math.floor(time % 60);
+         return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`
+      }
+      return "00:00"
    }
 
    const setupAudio = () => {
@@ -104,55 +106,52 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    }
 
    useEffect(() => {
-      if(audioElementRef.current) {
-         if(isPlaying) {
-            audioElementRef.current.play();
-         } else {
-            audioElementRef.current.pause();
-         }
+      if (isPlaying) {
+         audioElementRef.current?.play();
+      } else {
+         audioElementRef.current?.pause();
       }
-   }, [currentTrackIndex, tracks, isPlaying]);
+      
+   }, [currentTrackIndex, isPlaying]);
 
    return (
-      <div className="">
-         <div className="flex flex-col justify-center space-y-2">
+      <>
+         <div className={`flex flex-col justify-center space-y-2`}>
             <audio
                ref={audioElementRef}
                onPlay={setupAudio}
                onTimeUpdate={handleTimeUpdate}
                onLoadedMetadata={handleLoadedMetaData}
-               src={'/music/Die with a Smile.mp3'}
+               src={musicPlaylist[currentTrackIndex].src}
                hidden={true}
             />
 
             <Frequency 
-               audioData={audioData} 
+               audioData={audioData}
+               className={`bottom-0 bg-blue-300  ${isHover ? 'w-52 h-52' : 'h-52 w-16 ml-16 overflow-hidden'}`}
                ref={{ animationIdRef, audioContextRef, sourceRef }} 
             />
-            <div className="w-52">
-               <Progress 
-                  value={progress}
-                  className="w-52"
-               />
-               <div className="flex justify-between text-sm text-muted-foreground">
-                  <span>{formatTime(currentTime)}</span>
-                  <span>{formatTime(duration)}</span>
-               </div>
-            </div>
-
-            <Controls 
+            
+            {isHover ? (
+               <Controls 
                onClick={{ handlePrevTrack, handleNextTrack, handlePlayPause }}
                isPlaying={isPlaying}
+               progress={progress}
+               formatTime={formatTime}
+               currentTime={currentTime}
+               duration={duration}
             />
+            ) : (
+               <div className="h-52 relative -translate-x-48">
+                  <Progress   
+                     value={progress}
+                     className="w-52 -rotate-90"
+                  />
+               </div>
+            )}
          </div>
-
-         {isHover === false && (
-            <Progress 
-            value={progress}
-            className="w-52 rotate-90"
-            />
-         )}
-      </div>
+         
+      </>
    )
 }
 
