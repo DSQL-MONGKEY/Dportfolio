@@ -4,11 +4,12 @@ import React, { useEffect,  forwardRef } from "react";
 import { motion } from "framer-motion";
 
 interface FrequencyProps {
-   audioData: number[],
+   audioData: number[]
+   className: string
 }
 
 const Frequency = forwardRef(
-   ({ audioData }: FrequencyProps,  refs) => {
+   ({ audioData, className='' }: FrequencyProps,  refs) => {
    const { animationIdRef, audioContextRef, sourceRef } = refs;
    
    useEffect(() => {
@@ -26,9 +27,7 @@ const Frequency = forwardRef(
    }, []);
 
    return (
-      <div className="">
-         
-         <div className="flex items-end w-52 h-52">
+      <div className={`flex items-end ${className}`}>
          {audioData.map((height, index) => (
             <motion.div
                key={index}
@@ -44,7 +43,6 @@ const Frequency = forwardRef(
                }}
             />
          ))}
-         </div>
       </div>
    );
 })
