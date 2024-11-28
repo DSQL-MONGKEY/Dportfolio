@@ -1,8 +1,12 @@
+import Container from '@/components/elements/Container'
+import Tech from '@/modules/tech'
 import React from 'react'
 
 const TechPage = () => {
    return (
-      <div>TechPage</div>
+      <Container data-aos="fade-left">
+         <Tech />
+      </Container>
    )
 }
 
