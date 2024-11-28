@@ -3,8 +3,6 @@
 import React from 'react'
 import IllustrationContainer  from './IllustrationContainer'
 
-import { motion } from "framer-motion";
-
 const WebIllustration = () => {
    
    return (
