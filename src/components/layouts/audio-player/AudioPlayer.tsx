@@ -5,13 +5,6 @@ import { Progress } from '@/components/ui/Progress';
 import Controls from './Controls';
 import { musicPlaylist } from '@/common/constants/music';
 
-interface AudioTrack {
-   musicCover: string,
-   src:   string,
-   artist: string,
-   title: string
-}
-
 interface AudioPlayerProps {
    isHover: boolean
 }
@@ -59,7 +52,9 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    }
 
    const handleLoadedMetaData = () => {
-      setDuration(audioElementRef.current?.duration);
+      if(audioElementRef.current) {
+         setDuration(audioElementRef.current.duration);
+      }
    }
 
    const formatTime = (time: number) => {
