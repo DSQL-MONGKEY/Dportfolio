@@ -70,6 +70,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
       if(audioContextRef.current) return;
 
       audioContextRef.current = new (window.AudioContext ||
+         // eslint-disable-next-line @typescript-eslint/no-explicit-any
          (window as any).webkitAudioContext)();
       const audio = audioElementRef.current!;
 
