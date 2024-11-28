@@ -13,6 +13,7 @@ const Frequency = forwardRef(
    const { animationIdRef, audioContextRef, sourceRef } = refs;
    
    useEffect(() => {
+
       // Clean up on unmount
       return () => {
          if (animationIdRef.current) cancelAnimationFrame(animationIdRef.current);
@@ -21,10 +22,10 @@ const Frequency = forwardRef(
             if (sourceRef.current) {
                sourceRef.current.disconnect();
             }
-         audioContextRef.current.close();
+         audioContextRef.current?.close();
          }
       };
-   }, []);
+   }, [animationIdRef, audioContextRef, sourceRef]);
 
    return (
       <div className={`flex items-end ${className}`}>
