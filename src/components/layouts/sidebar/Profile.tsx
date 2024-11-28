@@ -10,7 +10,7 @@ import ThemeToggleIcon from '@/components/elements/ThemeToggleIcon'
 const Profile = () => {
    const isMobile = useIsMobile();
    const imageSize = isMobile ? 40 : 100;
-   const { isOpen, toggleMenu } = useMenu(); 
+   const { isOpen } = useMenu(); 
    
    useEffect(() => {
       if(isOpen) {
