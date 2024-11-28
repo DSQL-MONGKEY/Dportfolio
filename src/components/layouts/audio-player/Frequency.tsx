@@ -1,28 +1,44 @@
 "use client";
 
-import React, { useEffect,  forwardRef } from "react";
+import React, { useEffect, RefObject } from "react";
 import { motion } from "framer-motion";
 
+/**
+ * Created a custom ref of instead using forwardRef
+ * that can't passing multiple refs, it improves readability,
+ * simplifies code, and avoid many code issues
+ * 
+ * NOTE: use forwardRef only for necessary in specific scenarios
+ */
 interface FrequencyProps {
    audioData: number[]
    className: string
+   animationIdRef: RefObject<number | null>
+   audioContextRef: RefObject<AudioContext | null>
+   sourceRef: RefObject<MediaElementAudioSourceNode>  
 }
 
-const Frequency = forwardRef(
-   ({ audioData, className='' }: FrequencyProps,  refs) => {
-   const { animationIdRef, audioContextRef, sourceRef } = refs;
+
+
+const Frequency = ({ 
+   audioData, 
+   className = '', 
+   animationIdRef, 
+   audioContextRef, 
+   sourceRef }: FrequencyProps) => {
    
    useEffect(() => {
 
       // Clean up on unmount
       return () => {
          if (animationIdRef.current) cancelAnimationFrame(animationIdRef.current);
+         
          if (audioContextRef.current) {
-         // Disconnect and close audio context to prevent memory leaks
+            // Disconnect and close audio context to prevent memory leaks
             if (sourceRef.current) {
                sourceRef.current.disconnect();
             }
-         audioContextRef.current?.close();
+            audioContextRef.current?.close();
          }
       };
    }, [animationIdRef, audioContextRef, sourceRef]);
@@ -46,7 +62,7 @@ const Frequency = forwardRef(
          ))}
       </div>
    );
-})
+}
 
 Frequency.displayName = "Frequency";
 
