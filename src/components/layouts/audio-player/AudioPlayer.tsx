@@ -125,7 +125,9 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
             <Frequency 
                audioData={audioData}
                className={`bottom-0 bg-blue-300  ${isHover ? 'w-52 h-52' : 'h-52 w-16 ml-16 overflow-hidden'}`}
-               ref={{ animationIdRef, audioContextRef, sourceRef }} 
+               animationIdRef={animationIdRef}
+               audioContextRef={audioContextRef}
+               sourceRef={sourceRef}
             />
             
             {isHover ? (
