@@ -1,8 +1,12 @@
+import Container from '@/components/elements/Container'
+import Playlist from '@/modules/playlist'
 import React from 'react'
 
 const PlaylistPage = () => {
    return (
-      <div>PlaylistPage</div>
+      <Container data-aos="fade-left">
+         <Playlist />
+      </Container>
    )
 }
 
