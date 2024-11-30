@@ -13,4 +13,10 @@ export const musicPlaylist = [
       artist: 'Feby Putri ft Fiersa Besari',
       title: 'Runtuh',
    },
+   {
+      musicCover: '',
+      src:   '/music/JVKE - golden hour.mp3',
+      artist: 'JVKE',
+      title: 'Golden Hour',
+   },
 ]
