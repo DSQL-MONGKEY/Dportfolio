@@ -17,7 +17,7 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
    ${
       isHover ? 'lg:rounded-lg lg:py-2 lg:px-4 transition-all ease-out' :'justify-center px-4 py-2 rounded-lg lg:p-2'
    } 
-      gap-2 text-neutral-900 dark:text-white hover:text-neutral-900 hover:dark:text-neutral-300 transition-all ease-out
+      gap-2 text-neutral-900 font-poppins dark:text-white hover:text-neutral-900 hover:dark:text-neutral-300 transition-all ease-out
    ${
       pathname === url.pathname
       ? 'bg-green-500 dark:bg-[#2C4E80] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
@@ -50,7 +50,7 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
          <div {...elementProps}>
             
             {/* Sidebar hovered */}
-            <div className="text-xl">
+            <div className="text-xl font-bold">
                {icon}
             </div>
 
