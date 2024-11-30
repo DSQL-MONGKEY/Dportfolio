@@ -124,7 +124,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
 
             <Frequency 
                audioData={audioData}
-               className={`bottom-0 bg-blue-300  ${isHover ? 'w-52 h-52' : 'h-52 w-16 ml-16 overflow-hidden'}`}
+               className={`bottom-0 ${isHover ? 'w-52 h-52' : 'duration-300 ease-in-out h-80 w-52 ml-16 absolute overflow-hidden'}`}
                animationIdRef={animationIdRef}
                audioContextRef={audioContextRef}
                sourceRef={sourceRef}
@@ -132,15 +132,15 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
             
             {isHover ? (
                <Controls 
-               onClick={{ handlePrevTrack, handleNextTrack, handlePlayPause }}
-               isPlaying={isPlaying}
-               progress={progress}
-               formatTime={formatTime}
-               currentTime={currentTime}
-               duration={duration}
-            />
+                  onClick={{ handlePrevTrack, handleNextTrack, handlePlayPause }}
+                  isPlaying={isPlaying}
+                  progress={progress}
+                  formatTime={formatTime}
+                  currentTime={currentTime}
+                  duration={duration}
+               />
             ) : (
-               <div className="h-52 relative -translate-x-48">
+               <div className=" ">
                   <Progress   
                      value={progress}
                      className="w-52 -rotate-90"
