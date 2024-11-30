@@ -36,7 +36,7 @@ export const navLinks: MenuItemProps[] = [
       icon: <GoProject/>
    },
    {
-      href: 'skills',
+      href: 'tech',
       title: 'Tech',
       icon: <GoCodeReview/>
    },
@@ -735,7 +735,7 @@ export const cards = [
       designation: 'Legendary boxer',
       content: (
          <p>
-         A champion is someone who never gives up, even when he knows he&apos;s out of chances.
+         A champion is someone who never gives up, even when he knows he&apos;s out of chances.q
          </p>
       )
    },
@@ -755,17 +755,19 @@ export const articles = [
    {
       logo: <TbBrandNotion/>,
       title: 'Notion',
+      tags: [''],
       description: '',
    },
    {
-      logo: '',
+      logo: <TbBrandNotion />,
       title: 'Github Library',
-      tags: [],
+      tags: [''],
       description: '',
    },
    {
-      logo: '',
+      logo: <TbBrandNotion />,
       title: 'Medium',
+      tags: [''],
       description: '',
    },
 ]
