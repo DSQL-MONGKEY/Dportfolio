@@ -5,7 +5,7 @@ import ThemeProviderContext from "@/stores/theme";
 
 
 export const metadata: Metadata = {
-  title: "Dimpfe",
+  title: "Dimas Prasetyo | Portfolio",
   description: "Created with love",
 };
 
