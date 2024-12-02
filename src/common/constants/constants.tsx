@@ -1,14 +1,14 @@
-import { GoHome, GoQuestion, GoProject, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
+import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
 import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs"
 import { SiMui, SiHtml5, SiXampp, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary} from "react-icons/si"
-import { IoSchoolOutline, IoLogoJavascript } from "react-icons/io5"
+import { IoLogoJavascript } from "react-icons/io5"
 import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython } from "react-icons/fa"
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
 import { androidBasic, backendBeginner, bangkit,  cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, xclone, ytclone } from "@assets/index"
 import { PiCoffeeDuotone, PiNetworkFill  } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
-
+import { GiJourney } from "react-icons/gi";
 import { CiMobile3 } from "react-icons/ci";
 import { MdWeb } from "react-icons/md";
 
@@ -26,14 +26,10 @@ export const navLinks: MenuItemProps[] = [
       icon: <GoQuestion/>
    },
    {
-      href: 'educations',
-      title: 'Educations',
-      icon: <IoSchoolOutline/>
-   },
-   {
-      href: 'experiences',
-      title: 'Experiences',
-      icon: <GoProject/>
+      href: 'journeys',
+      title: 'Journeys',
+      icon: <GiJourney />
+
    },
    {
       href: 'tech',
