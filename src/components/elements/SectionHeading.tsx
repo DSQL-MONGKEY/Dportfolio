@@ -14,6 +14,7 @@ const SectionHeading = ({ title, icon, className = '' }: SectionHeadingProps) =>
             {title}
          </h2>
       </div>
+
    )
 }
 
