@@ -283,16 +283,35 @@ export const softSkills = [
    
 ]
 
-export const educations = [
+export const journeys = [
+   {
+      title: 'Citra Negara Vocational High Shcool',
+      role: 'Software Engineering',
+      logo: bangkit,
+      date: '2020 - 2022',
+   },
    {
       title: 'Gunadarma University',
-      major: 'Computer System',
+      role: 'Computer System',
+      logo: bangkit,
       date: '2022 - Present',
    },
    {
-      title: 'Citra Negara Vocational High Shcool',
-      major: 'Software Engineering',
-      date: '2020 - 2022',
+      title: 'Bangkit Academy',
+      role: 'Cloud Computing Cohort',
+      logo: bangkit,
+   },
+   {
+      title: 'Lembaga Pengembangan Komputer UG',
+      role: 'Workshop & Certification Profession Assistant',
+      logo: lepkom,
+      date: '2023 - Present'
+   },
+   {
+      title: 'PT. Bank CIMB Niaga',
+      role: 'Bussines Process Intern(Software Tester)',
+      logo: lepkom,
+      date: '2024 - Present'
    },
 ]
 
@@ -386,19 +405,6 @@ export const certificates = [
       desc: 'Learn how to start career as Software Engineer'
    },
    
-]
-
-export const experience = [
-   {
-      title: 'Bangkit Academy',
-      logo: bangkit,
-      role: 'Cloud Computing Cohort'
-   },
-   {
-      title: 'Lembaga Pengembangan Komputer UG',
-      logo: lepkom,
-      role: 'Workshop & Certification Profession Assistant'
-   },
 ]
 
 export const projects = [
