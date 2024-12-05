@@ -1,8 +1,11 @@
 import React from 'react'
+import ItemContainer from './ItemContainer'
 
 const Journeys = () => {
    return (
-      <div>Journeys</div>
+      <>
+         <ItemContainer  />
+      </>
    )
 }
 
