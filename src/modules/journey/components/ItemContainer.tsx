@@ -23,7 +23,7 @@ const ItemContainer = ({ className = '' }: ItemContainerProps) => {
             src={''}
          />
 
-         <div className=''>
+         <div className={`space-y-2 px-2 py-3 ${className}`}>
             <h3>COMPANY NAME</h3>
             <p>JOB ROLE</p>
          </div>
