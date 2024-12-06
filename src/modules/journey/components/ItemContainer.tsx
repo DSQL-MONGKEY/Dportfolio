@@ -1,18 +1,15 @@
 import Image from 'next/image'
-import React from 'react'
-
-type dataTypes = {
-   title: string,
-   role: string
-   logo: string,
-   date: string,
-}
+import React, { RefObject } from 'react'
 
 interface ItemContainerProps {
-   // data: dataTypes
-   className?: string
+   // title: string,
+   // role: string
+   // logo: string,
+   // date: string,
    imgHeight?: number
    imgWidth?: number
+   className?: string
+   ref: RefObject<HTMLElement>
 }
 
 const ItemContainer = ({ className = '' }: ItemContainerProps) => {
