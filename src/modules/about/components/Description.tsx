@@ -46,7 +46,6 @@ const Description = () => {
                </p>
             </div>
          </div>
-
       </section>
    )
 }
