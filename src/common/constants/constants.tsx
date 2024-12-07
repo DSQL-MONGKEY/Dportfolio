@@ -288,30 +288,31 @@ export const journeys = [
       title: 'Citra Negara Vocational High Shcool',
       role: 'Software Engineering',
       logo: bangkit,
-      date: '2020 - 2022',
+      date: 'August 2020 - August 2022',
    },
    {
       title: 'Gunadarma University',
       role: 'Computer System',
       logo: bangkit,
-      date: '2022 - Present',
+      date: 'September 2022 - Present',
    },
    {
       title: 'Bangkit Academy',
       role: 'Cloud Computing Cohort',
       logo: bangkit,
+      date: 'February 2024 - July 2024',
    },
    {
       title: 'Lembaga Pengembangan Komputer UG',
       role: 'Workshop & Certification Profession Assistant',
       logo: lepkom,
-      date: '2023 - Present'
+      date: 'March 2024 - Present'
    },
    {
       title: 'PT. Bank CIMB Niaga',
       role: 'Bussines Process Intern(Software Tester)',
       logo: lepkom,
-      date: '2024 - Present'
+      date: 'August 2024 - Present'
    },
 ]
 
