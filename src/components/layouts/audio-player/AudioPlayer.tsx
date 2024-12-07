@@ -15,7 +15,8 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    const [isPlaying, setIsPlaying] = useState<boolean>(false);
    const [progress, setProgress] = useState<number>(0);
    const [currentTime, setCurrentTime] = useState<number>(0);
-   const [duration, setDuration] = useState<number>(0);  
+   const [duration, setDuration] = useState<number>(0);
+   const [title, setTitle] = useState<string>('');
    const audioElementRef = useRef<HTMLAudioElement | null>(null);
    const audioContextRef = useRef<AudioContext | null>(null);
    const analyserRef = useRef<AnalyserNode | null>(null);
@@ -35,10 +36,12 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
 
    const handleNextTrack = () => {
       setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % musicPlaylist.length);
+      audioElementRef.current?.play()
    }
 
    const handlePrevTrack = () => {
       setCurrentTrackIndex((prevIndex) => prevIndex === 0 ? musicPlaylist.length - 1 : prevIndex - 1)
+      audioElementRef.current?.play()
    }
 
    const handleTimeUpdate = () => {
@@ -107,7 +110,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
       } else {
          audioElementRef.current?.pause();
       }
-      
+      setTitle(musicPlaylist[currentTrackIndex].title)
    }, [currentTrackIndex, isPlaying]);
 
    return (
@@ -118,6 +121,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
                onPlay={setupAudio}
                onTimeUpdate={handleTimeUpdate}
                onLoadedMetadata={handleLoadedMetaData}
+               onEnded={handleNextTrack}
                src={musicPlaylist[currentTrackIndex].src}
                hidden={true}
             />
@@ -133,6 +137,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
             {isHover ? (
                <Controls 
                   onClick={{ handlePrevTrack, handleNextTrack, handlePlayPause }}
+                  title={title}
                   isPlaying={isPlaying}
                   progress={progress}
                   formatTime={formatTime}
