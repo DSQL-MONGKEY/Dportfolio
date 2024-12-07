@@ -36,7 +36,7 @@ const AnimatedPath = ({
    duration = Math.random() * 3 + 4,
    delay = 0,
    pathColor = 'gray',
-   pathWidth = 2,
+   pathWidth = 10,
    pathOpacity = 0.2,
    gradientStartColor = '#ffaa40',
    gradientStopColor = '#9c40ff',
@@ -47,7 +47,7 @@ const AnimatedPath = ({
 }: AnimatedPathProps) => {
    const id = useId();
    const [pathD, setPathD] = useState('');
-   const [svgDimentions, setSvgDimentions] = useState({ width: 0, height: 0 })
+   const [svgDimensions, setSvgDimentions] = useState({ width: 0, height: 0 })
 
    const gradientCoordinates = reverse
       ?  {
@@ -115,11 +115,11 @@ const AnimatedPath = ({
    return (
       <svg
          fill='none'
-         width={svgDimentions.width}
-         height={svgDimentions.height}
+         width={svgDimensions.width}
+         height={svgDimensions.height}
          xmlns="http://www.w3.org/2000/svg"
-         className={cn('pointer-events-none aboslute left-8 top-0 transform-gpu stroke-2', className)}
-         viewBox={`0 0 ${svgDimentions.width} ${svgDimentions.height}`}
+         className={cn('pointer-events-none absolute  transform-gpu stroke-2', className)}
+         viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
       >
          <path
             d={pathD}
