@@ -1,10 +1,10 @@
 import React from 'react'
-import ItemContainer from './ItemContainer'
+import Timeline from './Timeline';
 
 const Journeys = () => {
    return (
       <>
-         <ItemContainer  />
+         <Timeline />
       </>
    )
 }
