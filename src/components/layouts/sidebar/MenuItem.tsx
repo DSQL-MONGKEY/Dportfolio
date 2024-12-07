@@ -17,11 +17,11 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
    ${
       isHover ? 'lg:rounded-lg lg:py-2 lg:px-4 transition-all ease-out' :'justify-center px-4 py-2 rounded-lg lg:p-2'
    } 
-      gap-2 text-neutral-900 font-poppins dark:text-white hover:text-neutral-900 hover:dark:text-neutral-300 transition-all ease-out
+      gap-2 text-neutral-900 font-poppins dark:text-neutral-300 hover:text-neutral-950 hover:dark:text-white transition-all ease-out
    ${
       pathname === url.pathname
-      ? 'bg-green-500 dark:bg-[#2C4E80] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
-      : 'border-2 hover:border-black dark:border-white hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-[#2C4E80] hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300'
+      ? 'bg-[#8ad451] dark:bg-[#FF8400] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
+      : 'border-2 border-slate-300 hover:border-black dark:border-slate-200 hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-[#2192FF] hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300'
    }`
 
    
@@ -50,7 +50,7 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
          <div {...elementProps}>
             
             {/* Sidebar hovered */}
-            <div className="text-xl font-bold">
+            <div className="text-2xl font-bold">
                {icon}
             </div>
 
