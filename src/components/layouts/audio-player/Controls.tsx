@@ -1,3 +1,4 @@
+import Marquee from '@/components/ui/Marquee';
 import { Progress } from '@/components/ui/Progress';
 import React, { ReactNode } from 'react'
 
@@ -11,6 +12,7 @@ interface ControlsProps {
       handleNextTrack: () => void
       handlePlayPause: () => void
    }
+   title: string
    isPlaying: boolean
    progress: number
    formatTime: (time: number) => ReactNode
@@ -18,7 +20,7 @@ interface ControlsProps {
    duration: number
 }
 
-const Controls = ({ onClick, isPlaying, progress, formatTime, currentTime, duration }: ControlsProps) => {
+const Controls = ({ onClick, title, isPlaying, progress, formatTime, currentTime, duration }: ControlsProps) => {
    const { handlePrevTrack, handleNextTrack, handlePlayPause } = onClick;
 
    return (
@@ -32,6 +34,14 @@ const Controls = ({ onClick, isPlaying, progress, formatTime, currentTime, durat
                   <span>{formatTime(currentTime)}</span>
                   <span>{formatTime(duration)}</span>
                </div>
+               <Marquee
+                  repeat={4}
+                  className={`[--duration:5s]`} 
+                  key={title}               >
+                     <span>
+                        {title}
+                     </span>
+               </Marquee>
             </div>
 
          <div className="flex justify-between">
