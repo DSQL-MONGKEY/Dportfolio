@@ -1,21 +1,25 @@
 import Image from 'next/image'
-import React, { RefObject } from 'react'
+import React, { forwardRef, RefObject } from 'react'
 
 interface ItemContainerProps {
    // title: string,
    // role: string
    // logo: string,
    // date: string,
+   image?: string,
    imgHeight?: number
    imgWidth?: number
    className?: string
-   ref: RefObject<HTMLElement>
+   ref: RefObject<HTMLDivElement>
 }
 
-const ItemContainer = ({ className = '' }: ItemContainerProps) => {
+const ItemContainer = forwardRef<
+   HTMLDivElement,
+   ItemContainerProps
+   >(({ className = '',  }, ref) => {
    
    return (
-      <div className='flex flex-col md:flex-row items-center gap-1 h-28 w-72 bg-blue-200'>
+      <div ref={ref} className='flex flex-col md:flex-row items-center gap-1 h-28 w-72 bg-blue-200'>
          <Image
             height={100}
             width={100}
@@ -29,6 +33,8 @@ const ItemContainer = ({ className = '' }: ItemContainerProps) => {
          </div>
       </div>
    )
-}
+})
+
+ItemContainer.displayName = "ItemContainer";
 
 export default ItemContainer
