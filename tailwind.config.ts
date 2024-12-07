@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindCSSAnimate from "tailwindcss-animate";
 
 const config: Config = {
 		darkMode: ["class"],
@@ -86,6 +87,18 @@ const config: Config = {
 					from: { height: 'var(--radix-accordion-content-height)' },
 					to: { height: '0' }
 				},
+				marquee: {
+					from: { transform: "translateX(0)" },
+					to: { 
+							transform: "translateX(calc(-100% - var(--gap)))"
+					},
+				},
+				"marquee-vertical": {
+					from: { transform: "translateY(0)" },
+					to: { 
+						transform: "translateY(calc(-100% - var(--gap)))" 
+					},
+				},
 				slide: {
 					'0%': { transform: 'translateX(0)' },
 					'20%': { transform: 'translateX(-100%)' },
@@ -119,7 +132,9 @@ const config: Config = {
 				'slide-infinite': 'slideInfinite 100s linear infinite',
 				'rain-arrow': 'rainArrow 1s ease-out infinite',
 				'enter-left': 'enterLeft 0.5s ease-in-out',
-				'right-infinite': 'rightInfinite 2s linear infinite'
+				'right-infinite': 'rightInfinite 2s linear infinite',
+				marquee: "marquee var(--duration) linear infinite",
+				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
 			},
 		},
 		boxShadow: {
@@ -142,7 +157,6 @@ const config: Config = {
 			paytone: ['var(--font-paytone)']
 		}
 	},
-	// eslint-disable-next-line @typescript-eslint/no-require-imports
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindCSSAnimate],
 };
 export default config;
