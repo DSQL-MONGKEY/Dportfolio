@@ -1,35 +1,39 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React, { forwardRef, RefObject } from 'react'
 
 interface ItemContainerProps {
-   // title: string,
-   // role: string
-   // logo: string,
-   // date: string,
-   image?: string,
+   title: string
+   role: string
+   logo: StaticImageData
+   date: string
    imgHeight?: number
    imgWidth?: number
    className?: string
-   ref: RefObject<HTMLDivElement>
+   ref: RefObject<HTMLImageElement>
 }
 
 const ItemContainer = forwardRef<
-   HTMLDivElement,
+   HTMLImageElement,
    ItemContainerProps
-   >(({ className = '',  }, ref) => {
+   >(({ className = '', title, role, logo, date, }, ref) => {
    
    return (
-      <div ref={ref} className='flex flex-col md:flex-row items-center gap-1 h-28 w-72 bg-blue-200'>
-         <Image
-            height={100}
-            width={100}
-            alt='img'
-            src={''}
-         />
+      <div  className='flex flex-col md:flex-row items-center gap-1 h-28 w-72  z-30'>
+         <div className='p-2 rounded-full'>
+            <Image
+               ref={ref}
+               height={100}
+               width={100}
+               alt='img'
+               src={logo}
+               className='rounded-full'
+            />
+         </div>
 
          <div className={`space-y-2 px-2 py-3 ${className}`}>
-            <h3>COMPANY NAME</h3>
-            <p>JOB ROLE</p>
+            <h3>{title}</h3>
+            <p>{role}</p>
+            <span>{date}</span>
          </div>
       </div>
    )
