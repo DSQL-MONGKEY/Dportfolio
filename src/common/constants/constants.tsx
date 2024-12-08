@@ -5,7 +5,7 @@ import { IoLogoJavascript } from "react-icons/io5"
 import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython } from "react-icons/fa"
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
-import { androidBasic, backendBeginner, bangkit,  cekit, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, uiux, valo, xclone, ytclone } from "@assets/index"
+import { androidBasic, backendBeginner, bangkit,  cekit, cimb, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, ug, uiux, valo, xclone, ytclone } from "@assets/index"
 import { PiCoffeeDuotone, PiNetworkFill  } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
@@ -13,6 +13,7 @@ import { CiMobile3 } from "react-icons/ci";
 import { MdWeb } from "react-icons/md";
 
 import { MenuItemProps } from "../types/menu"
+import { cn } from "../lib/utils"
 
 export const navLinks: MenuItemProps[] = [
    {
@@ -287,13 +288,13 @@ export const journeys = [
    {
       title: 'Citra Negara Vocational High Shcool',
       role: 'Software Engineering',
-      logo: bangkit,
-      date: 'August 2020 - August 2022',
+      logo: cn,
+      date: 'August 2020 - 2022',
    },
    {
       title: 'Gunadarma University',
       role: 'Computer System',
-      logo: bangkit,
+      logo: ug,
       date: 'September 2022 - Present',
    },
    {
@@ -311,7 +312,7 @@ export const journeys = [
    {
       title: 'PT. Bank CIMB Niaga',
       role: 'Bussines Process Intern(Software Tester)',
-      logo: lepkom,
+      logo: cimb,
       date: 'August 2024 - Present'
    },
 ]
