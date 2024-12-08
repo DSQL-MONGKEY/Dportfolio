@@ -118,7 +118,7 @@ const AnimatedPath = ({
          width={svgDimensions.width}
          height={svgDimensions.height}
          xmlns="http://www.w3.org/2000/svg"
-         className={cn('pointer-events-none absolute  transform-gpu stroke-2', className)}
+         className={cn('pointer-events-none absolute transform-gpu stroke-2', className)}
          viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
       >
          <path
