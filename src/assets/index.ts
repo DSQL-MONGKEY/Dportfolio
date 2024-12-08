@@ -34,10 +34,16 @@ import porto from './projects/porto.png'
 import cekit from './projects/cekit.png'
 import puskesmas from './projects/puskesmas.png'
 import xclone from './projects/xclone.webp'
+import cimb from './cimb.webp'
+import ug from './logo-ug.webp'
+import cn from './cn.webp'
 
 
 export {
    // myCv,
+   cimb,
+   cn,
+   ug,
    dimas,
    dlogo,
    agrokimia,
