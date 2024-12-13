@@ -5,12 +5,19 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import LeftCollapseNav from './LeftCollapseNav'
 import MusicBox from './MusicBox'
+import { usePathname, useSearchParams } from 'next/navigation'
 
 interface LayoutsProps {
    children: ReactNode
 }
 
 const Layouts = ({ children }: LayoutsProps ) => {
+   const pathName = usePathname();
+   const searchParams = useSearchParams();
+   const readMode = searchParams.get("read-mode");
+
+   const hideSidebar = ['/me'].includes(pathName) || readMode == 'true'; 
+
    
    useEffect(() =>{
       AOS.init({
@@ -32,7 +39,7 @@ const Layouts = ({ children }: LayoutsProps ) => {
 
          </div>
 
-         <LeftCollapseNav    />
+         {!hideSidebar && <LeftCollapseNav />}
 
          <MusicBox />
       </div>
