@@ -20,7 +20,7 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
       gap-2 text-neutral-900 font-poppins dark:text-neutral-300 hover:text-neutral-950 hover:dark:text-white transition-all ease-out
    ${
       pathname === url.pathname
-      ? 'bg-[#8ad451] dark:bg-[#FF8400] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
+      ? 'bg-[#8ad451] dark:bg-[#2192FF] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
       : 'border-2 border-slate-300 hover:border-black dark:border-slate-200 hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-[#2192FF] hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300'
    }`
 
