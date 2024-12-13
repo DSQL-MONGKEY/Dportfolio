@@ -11,9 +11,10 @@ import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
 import { CiMobile3 } from "react-icons/ci";
 import { MdWeb } from "react-icons/md";
+import { ImFlag } from "react-icons/im";
 
 import { MenuItemProps } from "../types/menu"
-import { cn } from "../lib/utils"
+
 
 export const navLinks: MenuItemProps[] = [
    {
@@ -288,32 +289,37 @@ export const journeys = [
    {
       title: 'Citra Negara Vocational High Shcool',
       role: 'Software Engineering',
-      logo: cn,
+      logo: <ImFlag />,
       date: 'August 2020 - 2022',
+      isPresent: false
    },
    {
       title: 'Gunadarma University',
       role: 'Computer System',
       logo: ug,
       date: 'September 2022 - Present',
+      isPresent: true
+   },
+   {
+      title: 'Lembaga Pengembangan Komputer UG',
+      role: 'Workshop Insturctor & Certification Profession Assistant',
+      logo: lepkom,
+      date: 'March 2024 - Present',
+      isPresent: true
    },
    {
       title: 'Bangkit Academy',
       role: 'Cloud Computing Cohort',
       logo: bangkit,
       date: 'February 2024 - July 2024',
-   },
-   {
-      title: 'Lembaga Pengembangan Komputer UG',
-      role: 'Workshop & Certification Profession Assistant',
-      logo: lepkom,
-      date: 'March 2024 - Present'
+      isPresent: false
    },
    {
       title: 'PT. Bank CIMB Niaga',
       role: 'Bussines Process Intern(Software Tester)',
       logo: cimb,
-      date: 'August 2024 - Present'
+      date: 'August 2024 - Present',
+      isPresent: true
    },
 ]
 
