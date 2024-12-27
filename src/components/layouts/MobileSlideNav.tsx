@@ -25,7 +25,14 @@ const MobileSlideNav = () => {
    }, [isOpen]);
 
    return (
-      <div></div>
+      <div className="flex flex-col rounde-b-md px-4 py-4 shadow-sm lg:hideen">
+         <div className="flex w-full items-center justify-between">
+            <div className="flex space-x-2">
+               
+            </div>
+         </div>
+
+      </div>
    )
 }
 
