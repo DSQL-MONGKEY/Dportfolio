@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import Menu from './sidebar/Menu';
+import Menu from './Menu';
 import { navLinks } from '@/common/constants/constants';
 
 const MobileMenu = () => {
@@ -13,6 +13,7 @@ const MobileMenu = () => {
       >
          <div>
             <Menu list={navLinks} />
+            
          </div>
       </motion.div>
    )
