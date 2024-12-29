@@ -13,5 +13,5 @@ export const useMenu = create<InitialModalState & InitialModalAction>()(set => (
    isOpen: false,
    showMenu: () => set({ isOpen: true }),
    hideMenu: () => set({ isOpen: false }),
-   toggleMenu: () => set(prev => ({ isOpen: prev.isOpen }))
+   toggleMenu: () => set(prev => ({ isOpen: !prev.isOpen }))
 }))
