@@ -1,11 +1,15 @@
 "use client"
 
 import React, { useEffect } from 'react'
-import { motion } from 'framer-motion';
-import Menu from './sidebar/Menu';
-import { navLinks } from '@/common/constants/constants';
+import { AnimatePresence } from 'framer-motion';
 import useIsMobile from '@/hooks/useIsMobile';
 import { useMenu } from '@/stores/menu';
+import Image from 'next/image';
+import { dimas } from '@/assets';
+import ThemeToggleIcon from '../elements/ThemeToggleIcon';
+import ExpandButton from './sidebar/ExpandButton';
+import MobileMenu from './sidebar/MobileMenu';
+import Link from 'next/link';
 
 
 const MobileSlideNav = () => {
@@ -13,6 +17,7 @@ const MobileSlideNav = () => {
    const { isOpen, toggleMenu } = useMenu();
 
    useEffect(() => {
+      console.log(isOpen)
       if(isOpen) {
          document.body.style.overflow = 'hidden'
       } else {
@@ -25,13 +30,33 @@ const MobileSlideNav = () => {
    }, [isOpen]);
 
    return (
-      <div className="flex flex-col rounde-b-md px-4 py-4 shadow-sm lg:hideen">
+      <div className="flex flex-col rounded-b-md px-4 py-4 shadow-sm lg:hidden">
          <div className="flex w-full items-center justify-between">
-            <div className="flex space-x-2">
-               
+            <div className="flex space-x-2 items-center">
+               <Image
+                  height={40}
+                  width={40}
+                  src={dimas}
+                  alt='Profile Photo'
+                  className="rounded-full"
+               />
+               <Link href={'/'}>
+                  <h2 className='font-poppins text-lg'>
+                     Dimas Prasetyo 🐼
+                  </h2>
+               </Link>
+            </div>
+
+            <div className='flex space-x-2 items-center'>
+               <ThemeToggleIcon />
+               <ExpandButton isExpanded={isOpen} setIsExpanded={toggleMenu} />
             </div>
          </div>
-
+         {isMobile && (
+            <AnimatePresence>
+               {isOpen && <MobileMenu />} 
+            </AnimatePresence>
+         )}
       </div>
    )
 }
