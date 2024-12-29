@@ -22,7 +22,7 @@ const ThemeToggleIcon = () => {
          className='p-1'
       >
          <Button 
-            variant={'neutral'}
+            variant={'default'}
             onClick={toggleTheme}
          >
             {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
