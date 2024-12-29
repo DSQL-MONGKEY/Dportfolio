@@ -2,19 +2,18 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import Menu from './Menu';
 import { navLinks } from '@/common/constants/constants';
+import Breakline from '@/components/elements/Breakline';
 
 const MobileMenu = () => {
    return (
       <motion.div
-         className='my-3 flex flex-col h-screen'
          initial={{ x: -100 }}
-         animate={{ opacity: 1, y: 0 }}
+         animate={{ opacity: 1, x: 0 }}
          transition={{ duration: 0.3 }}
+         className='my-3 flex flex-col h-screen'
       >
-         <div>
+            <Breakline className='mt-2' />
             <Menu list={navLinks} />
-            
-         </div>
       </motion.div>
    )
 }
