@@ -315,8 +315,8 @@ export const journeys = [
       isPresent: false
    },
    {
-      title: 'PT. Bank CIMB Niaga',
-      role: 'Bussines Process Intern(Software Tester)',
+      title: 'PT. Bank CIMB Niaga Tbk',
+      role: 'Bussines Process & Solution Excellence Intern (Software Tester)',
       logo: cimb,
       date: 'August 2024 - Present',
       isPresent: true
