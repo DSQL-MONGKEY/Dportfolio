@@ -6,6 +6,7 @@ import 'aos/dist/aos.css'
 import LeftCollapseNav from './LeftCollapseNav'
 import MusicBox from './MusicBox'
 import { usePathname, useSearchParams } from 'next/navigation'
+import MobileSlideNav from './MobileSlideNav'
 
 interface LayoutsProps {
    children: ReactNode
@@ -30,6 +31,8 @@ const Layouts = ({ children }: LayoutsProps ) => {
       <div className="flex h-full w-full flex-col justify-center overflow-x-hidden ">
          
          <div className="flex w-full flex-col justify-center lg:flex-row lg: gap-5">
+            
+            <MobileSlideNav />
 
             <main className="no-scrollbar h-full w-full scroll-smooth transition-all duration-300 lg:ml-20 lg:min-h-screen lg:max-w-[854px]">
                {children}
