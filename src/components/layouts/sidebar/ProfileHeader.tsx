@@ -14,7 +14,7 @@ interface ProfileHeaderProps {
 const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
    return (
       <div className={clsx(
-         'flex w-full flex-grow items-center gap-4 lg:flex-col lg:gap-0.5', expandMenu && 'flex-col !items-start bg-blue-200'
+         'flex w-full flex-grow items-center gap-4 lg:flex-col lg:gap-0.5', expandMenu && 'flex-col !items-start'
       )}>
          <div className="relative hidden w-full flex-col items-center overflow-hidden pb-2 lg:flex  ">
 
@@ -24,7 +24,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
             </div>
 
             {/* theme toggle icon */}
-            <div className="absolute -right-1 botton-[55px] z-10 rounded-xl py-2 pr-2">
+            <div className="absolute -right-1 z-10 rounded-xl py-2 pr-2">
                <ThemeToggleIcon />
             </div>
 
