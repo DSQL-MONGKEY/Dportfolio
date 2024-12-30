@@ -27,7 +27,7 @@ const Profile = () => {
 
    return (
       <div className={clsx(
-         'fixed z-20 w-full bg-white p-5 shadow-sm dark:border-b dark:border-neutral-800 dark:bg-dark lg:relative lg:border-none lg:!bg-transparent lg:p-0 xl:shadow-none',
+         'fixed z-20 w-full p-5 shadow-sm dark:border-b dark:border-neutral-800 dark:bg-dark lg:relative lg:border-none lg:!bg-transparent lg:p-0 xl:shadow-none',
          isOpen && 'pb-0'
       )}>
          <div className="flex flex-col justify-center">
