@@ -1,3 +1,5 @@
+"use client"
+
 import { dimas } from '@/assets';
 import { navLinks } from '@/common/constants/constants';
 import Image from 'next/image';
