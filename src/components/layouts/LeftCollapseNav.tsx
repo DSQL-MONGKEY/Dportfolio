@@ -6,6 +6,7 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import MenuItem from './sidebar/MenuItem';
 import Profile from './sidebar/Profile';
+import ThemeToggleIcon from '../elements/ThemeToggleIcon';
 
 const LeftCollapseNav = () => {
    const [isHover, setIsHover] = useState(false);
@@ -20,10 +21,11 @@ const LeftCollapseNav = () => {
             {isHover ?(
                <Profile />
             ) : (
-               <div className='flex flex-col items-center'>
+               <div className='flex flex-col items-center gap-5'>
                   <div className='z-10 rounded-full border-2 border-black shadow-md dark:border-neutral-800 select-none'>
                      <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" priority />
                   </div>
+                  <ThemeToggleIcon />
                </div>
             )}
          </div>
