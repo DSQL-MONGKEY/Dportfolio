@@ -1,5 +1,6 @@
 import Marquee from '@/components/ui/Marquee';
 import { Progress } from '@/components/ui/Progress';
+import useIsMobile from '@/hooks/useIsMobile';
 import React, { ReactNode } from 'react'
 
 import {    LiaPlayCircle } from "react-icons/lia";
@@ -22,13 +23,14 @@ interface ControlsProps {
 
 const Controls = ({ onClick, title, isPlaying, progress, formatTime, currentTime, duration }: ControlsProps) => {
    const { handlePrevTrack, handleNextTrack, handlePlayPause } = onClick;
+   const isMobile = useIsMobile();
 
    return (
       <>
-         <div className="w-52">
+         <div className={isMobile ? 'w-full' : 'w-52'}>
                <Progress 
                   value={progress}
-                  className="w-52"
+                  className="w-full"
                />
                <div className="flex justify-between text-sm text-neutral-900 ">
                   <span>{formatTime(currentTime)}</span>
