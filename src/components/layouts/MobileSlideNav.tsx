@@ -17,7 +17,6 @@ const MobileSlideNav = () => {
    const { isOpen, toggleMenu } = useMenu();
 
    useEffect(() => {
-      console.log(isOpen)
       if(isOpen) {
          document.body.style.overflow = 'hidden'
       } else {
@@ -30,7 +29,7 @@ const MobileSlideNav = () => {
    }, [isOpen]);
 
    return (
-      <div className="flex flex-col rounded-b-md px-4 py-4 shadow-sm lg:hidden">
+      <div className="flex flex-col rounded-b-md px-4 py-4 shadow-sm lg:hidden z-50">
          <div className="flex w-full items-center justify-between">
             <div className="flex space-x-2 items-center">
                <Image
@@ -54,7 +53,7 @@ const MobileSlideNav = () => {
          </div>
          {isMobile && (
             <AnimatePresence>
-               {isOpen && <MobileMenu />} 
+               <MobileMenu isOpen={isOpen} /> 
             </AnimatePresence>
          )}
       </div>
