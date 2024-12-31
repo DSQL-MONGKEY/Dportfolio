@@ -28,17 +28,20 @@ const Frequency = ({
    sourceRef }: FrequencyProps) => {
    
    useEffect(() => {
+      const currentSourceRef = sourceRef.current;
+      const currentAnimationIdRef = animationIdRef.current;
+      const currentAudioContextRef = audioContextRef.current;
 
       // Clean up on unmount
       return () => {
-         if (animationIdRef.current) cancelAnimationFrame(animationIdRef.current);
+         if (currentAnimationIdRef) cancelAnimationFrame(currentAnimationIdRef);
          
-         if (audioContextRef.current) {
+         if (currentAudioContextRef) {
             // Disconnect and close audio context to prevent memory leaks
-            if (sourceRef.current) {
-               sourceRef.current.disconnect();
+            if (currentSourceRef) {
+               currentSourceRef.disconnect();
             }
-            audioContextRef.current?.close();
+            currentAudioContextRef.close();
          }
       };
    }, [animationIdRef, audioContextRef, sourceRef]);
