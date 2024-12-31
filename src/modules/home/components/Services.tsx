@@ -16,9 +16,9 @@ const Services = () => {
             </SectionSubHeading>
          </div>
          
-         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:grid-rows-3 mt-6">
+         <div className="grid grid-cols-1 gap-3 mt-6">
             {services.map((item, idx) => (
-               <ServicesCard key={idx} icon={item.icon} id={item.id} title={item.title} description={item.description} />
+               <ServicesCard key={item.id} icon={item.icon} index={idx} title={item.title} description={item.description} />
             ))}
          </div>
       </section>
