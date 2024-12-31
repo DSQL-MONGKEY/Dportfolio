@@ -1,6 +1,6 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
 import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs"
-import { SiMui, SiHtml5, SiXampp, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary} from "react-icons/si"
+import { SiMui, SiHtml5, SiXampp, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython } from "react-icons/fa"
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
@@ -9,9 +9,8 @@ import { androidBasic, backendBeginner, bangkit,  cekit, cimb, fo, frontendBegin
 import { PiCoffeeDuotone, PiNetworkFill  } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
-import { CiMobile3 } from "react-icons/ci";
-import { MdWeb } from "react-icons/md";
 import { ImFlag } from "react-icons/im";
+import { BiSolidMobileVibration } from "react-icons/bi";
 
 import { MenuItemProps } from "../types/menu"
 
@@ -62,13 +61,13 @@ export const navLinks: MenuItemProps[] = [
 
 export const services = [
    {
-      icon: <MdWeb /> ,
+      icon: <SiTorbrowser /> ,
       id: '72d7892ede',
       title: 'Website Development',
       description: 'Create stunning website, user-friendly design with modern technologies '
    },
    {
-      icon: <CiMobile3 />,
+      icon: <BiSolidMobileVibration />,
       id: 'cd5fc36877',
       title: 'Mobile Development',
       description: 'Create cross-platform and reliable application using React-Native'
@@ -319,7 +318,64 @@ export const journeys = [
       role: 'Bussines Process & Solution Excellence Intern (Software Tester)',
       logo: cimb,
       date: 'August 2024 - Present',
-      isPresent: true
+      isPresent: true,
+      coworks: [
+         {
+            name: 'Rene Indra Nugraha',
+            role: 'Head of Bussines Process & Solution Excellence',
+            image: ''
+         },
+         {
+            name: 'Septian Hadinata',
+            role: 'Bussines Process & Solution Excellence Lead',
+            image: ''
+         },
+         {
+            name: 'S Gilang Sukma kencana',
+            role: 'Bussines Process & Solution Excellence Staff',
+            image: ''
+         },
+         {
+            name: 'Hanafi Khusuma Yudha',
+            role: 'Bussines Process & Solution Excellence Staff',
+            image: ''
+         },
+         {
+            name: 'Yurina Indria Tasya',
+            role: 'Bussines Process & Solution Excellence Staff',
+            image: ''
+         },
+         {
+            name: 'Aishi Hamarin',
+            role: 'Compliance Staff',
+            image: ''
+         },
+         {
+            name: 'Noviyanti Putri',
+            role: 'UAT Partner Staff',
+            image: ''
+         },
+         {
+            name: 'Istikhomah',
+            role: 'UAT Partner Staff',
+            image: ''
+         },
+         {
+            name: 'Firdaus',
+            role: 'The Complete Intern CIMB NIAGA',
+            image: ''
+         },
+         {
+            name: 'Layla Alfissofyah',
+            role: 'The Complete Intern CIMB NIAGA',
+            image: ''
+         },
+         {
+            name: 'Syaikha Berlian Azzahra',
+            role: 'The Complete Intern CIMB NIAGA',
+            image: ''
+         },
+      ]
    },
 ]
 
