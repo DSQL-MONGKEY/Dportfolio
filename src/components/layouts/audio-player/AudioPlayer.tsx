@@ -1,27 +1,40 @@
+"use client"
+
 import React, { useEffect, useRef, useState } from 'react'
 
 import Frequency from './Frequency';
 import { Progress } from '@/components/ui/Progress';
 import Controls from './Controls';
 import { musicPlaylist } from '@/common/constants/music';
+import { useMusic } from '@/stores/music';
 
 interface AudioPlayerProps {
-   isHover: boolean
+   isHover?: boolean
+   isMobile?: boolean
 }
 
-const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
+const AudioPlayer = ({ isHover = true, isMobile }: AudioPlayerProps) => {
    const [audioData, setAudioData] = useState<number[]>(Array(20).fill(100)); // Initial heights
-   const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
-   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-   const [progress, setProgress] = useState<number>(0);
-   const [currentTime, setCurrentTime] = useState<number>(0);
-   const [duration, setDuration] = useState<number>(0);
-   const [title, setTitle] = useState<string>('');
    const audioElementRef = useRef<HTMLAudioElement | null>(null);
    const audioContextRef = useRef<AudioContext | null>(null);
    const analyserRef = useRef<AnalyserNode | null>(null);
    const animationIdRef = useRef<number | null>(null);
    const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
+
+   const { 
+      isPlaying,
+      setIsPlaying,
+      currentTime,
+      setCurrentTime,
+      progress,
+      setProgress,
+      duration,
+      setDuration,
+      title,
+      setTitle,
+      currentTrackIndex,
+      setCurrentTrackIndex,
+   } = useMusic();
 
 
    const handlePlayPause = () => {
@@ -35,12 +48,14 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
    }
 
    const handleNextTrack = () => {
-      setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % musicPlaylist.length);
+      const nextIndex = (currentTrackIndex + 1) % musicPlaylist.length;
+      setCurrentTrackIndex(nextIndex);
       audioElementRef.current?.play()
    }
 
    const handlePrevTrack = () => {
-      setCurrentTrackIndex((prevIndex) => prevIndex === 0 ? musicPlaylist.length - 1 : prevIndex - 1)
+      const prevIndex = currentTrackIndex - 1;
+      setCurrentTrackIndex(prevIndex)
       audioElementRef.current?.play()
    }
 
@@ -111,7 +126,7 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
          audioElementRef.current?.pause();
       }
       setTitle(musicPlaylist[currentTrackIndex].title)
-   }, [currentTrackIndex, isPlaying]);
+   }, [currentTrackIndex, isPlaying, setTitle]);
 
    return (
       <>
@@ -126,13 +141,15 @@ const AudioPlayer = ({ isHover }: AudioPlayerProps) => {
                hidden={true}
             />
 
-            <Frequency 
-               audioData={audioData}
-               className={`bottom-0 ${isHover ? 'w-52 h-52' : 'duration-300 ease-in-out h-80 w-52 ml-16 absolute overflow-hidden'}`}
-               animationIdRef={animationIdRef}
-               audioContextRef={audioContextRef}
-               sourceRef={sourceRef}
-            />
+            {!isMobile && (
+               <Frequency 
+                  audioData={audioData}
+                  className={`bottom-0 ${isHover ? 'h-52 w-52' : 'duration-300 ease-in-out h-80 w-52 ml-16 absolute overflow-hidden'}`}
+                  animationIdRef={animationIdRef}
+                  audioContextRef={audioContextRef}
+                  sourceRef={sourceRef}
+               />
+            )}
             
             {isHover ? (
                <Controls 
