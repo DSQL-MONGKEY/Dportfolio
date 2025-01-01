@@ -14,7 +14,7 @@ const ServicesCard = ({ icon, index, title, description }: ServicesCardProps) =>
    return (
    <div id={title} key={title} className={clsx('flex gap-5 h-36 rounded-md shadow-light justify-between items-center bg-green-600 dark:bg-[#FF8343] border-4 border-black', index % 2 == 0 ? 'flex-row' : 'flex-row-reverse' )}>
          <div className={`w-1/4 flex md:justify-center bg-slate-100 dark:bg-neutral-200 p-4 shadow-light dark:shadow-dark border-2 border-black ${index % 2 == 0 ? 'rounded-r-full' : 'rounded-l-full'}`}>
-            <span className="text-7xl text-neutral-700 dark:text-cyan-700">
+            <span className="text-6xl sm:text-7xl text-neutral-700 dark:text-cyan-700">
                {icon}
             </span>
          </div>
