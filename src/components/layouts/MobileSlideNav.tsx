@@ -41,7 +41,7 @@ const MobileSlideNav = () => {
                />
                <Link href={'/'}>
                   <h2 className='font-poppins text-lg'>
-                     Dimas Prasetyo 🐼
+                     Dimas Prasetyo 🍉
                   </h2>
                </Link>
             </div>
