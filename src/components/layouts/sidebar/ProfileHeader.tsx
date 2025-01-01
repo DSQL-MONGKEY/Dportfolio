@@ -39,11 +39,17 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
             </div>
 
             <div className='text-center mt-1'>
-                  <Link href={'/'} className="text-xl font-poppins font-sembibold">
+                  <Link 
+                     href={'/'}
+                     className="text-xl font-poppins font-sembibold">
                      Dimas Prasetyo
                   </Link>
             </div>
-            <Link href={'https://www.instagram.com/dimpfe'}>
+            <Link 
+               href={'https://www.instagram.com/dimpfe'}
+               target='_blank'
+               rel='noopener noreferrer'
+            >
                @dimpfe
             </Link>
          </div>
