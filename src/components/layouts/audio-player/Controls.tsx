@@ -32,7 +32,7 @@ const Controls = ({ onClick, title, isPlaying, progress, formatTime, currentTime
                   value={progress}
                   className="w-full"
                />
-               <div className="flex justify-between text-sm text-neutral-900 dark:text-neutral-200 mt-3">
+                  <div className="flex justify-between text-sm text-neutral-900 dark:text-neutral-200 mt-3 md:mt-1">
                   <span>{formatTime(currentTime)}</span>
                   <span>{formatTime(duration)}</span>
                </div>
