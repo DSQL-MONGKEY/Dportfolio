@@ -109,147 +109,172 @@ export const socialMedia = [
    }
 ]
 
-export const techSkills = [
+export const skillSet = [
    {
       title: 'HTML',
+      label: 'tech',
       icon: <SiHtml5/>,
       level: 'Advanced'
    },
    {
       title: 'CSS',
+      label: 'tech',
       icon: <FaCss3/>,
       level: 'Advanced'
    },
    {
       title: 'Javascript',
+      label: 'tech',
       icon: <IoLogoJavascript/>,
       level: 'Advanced'
    },
    {
       title: 'Typescript',
+      label: 'tech',
       icon: <TbBrandTypescript/>,
       level: 'Basic'
    },
    {
       title: 'PHP',
+      label: 'tech',
       icon: <FaPhp/>,
       level: 'Basic'
    },
    {
       title: 'Python',
+      label: 'tech',
       icon: <FaPython/>,
       level: 'Basic'
    },
    {
       title: 'Golang',
+      label: 'tech',
       icon: <TbBrandGolang />,
       level: 'Basic'
    },
    {
       title: 'Kotlin',
+      label: 'tech',
       icon: <TbBrandKotlin/>,
       level: 'Basic'
    },
    {
       title: 'Node Js',
+      label: 'tech',
       icon: <FaNodeJs/>,
       level: 'Intermediete'
    },
    {
       title: 'React Js',
+      label: 'tech',
       icon: <FaReact/>,
       level: 'Intermediete'
    },
    {
       title: 'Next Js',
+      label: 'tech',
       icon: <TbBrandNextjs/>,
       level: 'Basic'
    },
    {
       title: 'React Native',
+      label: 'tech',
       icon: <FaReact/>,
       level: 'Basic'
    },
    {
       title: 'MySQL',
+      label: 'tech',
       icon: <TbBrandMysql/>,
       level: 'Intermediete'
    },
    {
       title: 'MongoDB',
+      label: 'tech',
       icon: <TbBrandMongodb/>,
       level: 'Intermediete'
    },
    {
       title: 'Tailwind CSS',
+      label: 'tech',
       icon: <TbBrandTailwind/>,
       level: 'Advanced'
    },
    {
       title: 'Material UI',
+      label: 'tech',
       icon: <SiMui/>,
       level: 'Basic'
    },
    {
       title: 'Bootstrap',
+      label: 'tech',
       icon: <FaBootstrap/>,
       level: 'Advanced'
    },
    {
       title: 'Vite',
+      label: 'tech',
       icon: <TbBrandVite/>,
       level: 'Basic'
    },
-]
-
-export const tools = [
    {
       title: 'VScode',
+      label: 'tools',
       icon: <TbBrandVscode/>,
       level: 'Advanced'
    },
    {
       title: 'IntelliJ IDEA',
+      label: 'tools',
       icon: <SiIntellijidea/>,
       level: 'Basic'
    },
    {
       title: 'Cisco',
+      label: 'tools',
       icon: <SiCisco/>,
       level: 'Basic'
    },
    {
       title: 'Android Studio',
+      label: 'tools',
       icon: <SiAndroidstudio/>,
       level: 'Basic'
    },
    {
       title: 'Docker',
+      label: 'tools',
       icon: <GrDocker/>,
       level: 'Basic'
    },
    {
       title: 'Git',
+      label: 'tools',
       icon: <FaGitAlt/>,
       level: 'Advanced'
    },
    {
       title: 'Github',
+      label: 'tools',
       icon: <BsGithub/>,
       level: 'Advanced'
    },
    {
       title: 'XAMPP',
+      label: 'tools',
       icon: <SiXampp/>,
       level: 'Intermediete'
    },
    {
       title: 'Figma',
+      label: 'tools',
       icon: <FaFigma/>,
       level: 'Basic'
    },
    {
       title: 'Notion',
+      label: 'tools',
       icon: <TbBrandNotion/>,
       level: 'Basic'
    },
