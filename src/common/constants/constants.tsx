@@ -1,8 +1,9 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
-import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs"
+import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta } from "react-icons/bs"
 import { SiMui, SiHtml5, SiXampp, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
-import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython } from "react-icons/fa"
+import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress } from "react-icons/fa"
+
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
 import { androidBasic, backendBeginner, bangkit,  cekit, cimb, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, ug, uiux, valo, xclone, ytclone } from "@assets/index"
@@ -240,6 +241,18 @@ export const skillSet = [
       title: 'Android Studio',
       label: 'tools',
       icon: <SiAndroidstudio/>,
+      level: 'Basic'
+   },
+   {
+      title: 'Wordpress',
+      label: 'tools',
+      icon: <FaWordpress/>,
+      level: 'Basic'
+   },
+   {
+      title: 'Meta Ads',
+      label: 'tools',
+      icon: <BsMeta/>,
       level: 'Basic'
    },
    {
