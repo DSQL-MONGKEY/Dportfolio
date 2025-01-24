@@ -13,11 +13,10 @@ interface CardProps {
 
 const Card = ({ title, id, label, icon, level }: CardProps) => {
    return (
-      <div key={id} id={level} className="flex justify-center items-center flex-col gap-2 p-4 border-2 border-black dark:border-neutral-200  rounded-lg">
+      <div key={id+level} id={label} className="flex justify-center items-center flex-col gap-2 p-4 dark:border-neutral-200  rounded-lg">
          <span className="text-2xl">
             {icon}
          </span>
-         {label}
          <p className="font-poppins text-md">{title}</p>
       </div>
    )
