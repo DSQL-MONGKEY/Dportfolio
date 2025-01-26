@@ -6,7 +6,7 @@ const Board = () => {
 
 
    return (
-      <div className="p-2 border-2 border-black rounded-lg">
+      <div className="p-2 border-2 border-black dark:border-neutral-200 rounded-lg">
          <div className="flex flex-row flex-wrap justify-evenly gap-3 ">
             {skillSet.map((skill, index) => (
                <Card 
