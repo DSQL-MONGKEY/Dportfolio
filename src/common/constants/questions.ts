@@ -689,7 +689,7 @@ export const riddles = [
             "isCorrect": false
          }
       ],
-      clue: "Terdiri dari 5 huruf dan huruf ke 4 nya 'A'",
+      clue: "Terdiri dari 5 huruf dan huruf ke 4 nya adalah 'A'",
       solution: "Karena lalu lintas sudah diatur oleh polisi, maka lalu lintas akan menjadi lancar"
    },
    {
@@ -713,7 +713,31 @@ export const riddles = [
             "isCorrect": false
          }
       ],
-      clue: "Terdiri dari 5 huruf dan huruf ke 4 nya ada 'U'",
+      clue: "Terdiri dari 5 huruf dan huruf ke 4 nya adalah 'U'",
       solution: "Jika semua tahanan batuk, maka penjara bakalan heboh",
+   },
+   {
+      "type": "riddles",
+      "question": "Yang membantu dokter...?",
+      "choice": [
+         {
+            "answer": "Suster",
+            "isCorrect": false
+         },
+         {
+            "answer": "Sembuh",
+            "isCorrect": true
+         },
+         {
+            "answer": "Siapa aja",
+            "isCorrect": false
+         },
+         {
+            "answer": "Terimakasih",
+            "isCorrect": false
+         }
+      ],
+      clue: "Waduuh, ga ada clue buat pertanyaan ini! kira kira apa yaa?",
+      solution: "Karena yang membantu dokter jadinya bisa sembuh, coba kalo bukan dokter",
    },
 ]
