@@ -16,7 +16,7 @@ const Quest = () => {
          <SectionSubHeading>
             <p>Do you wanna play some mini games with me?</p>
          </SectionSubHeading>
-         <div className='mt-8'>
+         <div className='flex mt-8 w-full justify-center sm:justify-end'>
             <QuestButton
                title='Play!'
                onClick={() => {}}
