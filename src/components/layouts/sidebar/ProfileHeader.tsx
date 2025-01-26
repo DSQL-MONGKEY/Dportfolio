@@ -16,11 +16,11 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
       <div className={clsx(
          'flex w-full flex-grow items-center gap-4 lg:flex-col lg:gap-0.5', expandMenu && 'flex-col !items-start'
       )}>
-         <div className="relative hidden w-full flex-col items-center overflow-hidden pb-2 lg:flex  ">
+         <div className="relative hidden w-full flex-col items-center overflow-hidden pb-2 lg:flex">
 
             {/* backdrop image */}
-            <div className="h-24 w-full overflow-hidden rounded-lg dark:brightness-50">
-
+            <div className="h-32 w-full overflow-hidden  bg-[#FBFF00] dark:bg-[#FF6363] rounded-lg border-2 border-black">
+               <div className="w-full bottom-0 h-[200px] bg-[#B983FF] dark:bg-main rotate-45 translate-y-[17px] border-2 border-black"></div>
             </div>
 
             {/* theme toggle icon */}
@@ -28,12 +28,12 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
                <ThemeToggleIcon />
             </div>
 
-            <div className="z-10 -mt-11 rounded-full border-4 border-slate-500 dark:border-[#1D2B53] lg:hover:scale-105 transition-all ease-in-out duration-200">
+            <div className="group z-10 -mt-16 rounded-full border-2 border-black dark:border-[#1D2B53]  transition-all ease-in-out duration-200 bg-black">
                <Image
                   src={dimas}
                   alt="profile"
-                  width={expandMenu ? 80 : imageSize * 0.9}
-                  height={expandMenu ? 80 : imageSize * 0.9}
+                  width={expandMenu ? 100 : imageSize * 0.9}
+                  height={expandMenu ? 100 : imageSize * 0.9}
                   className="rounded-full"
                />
             </div>
