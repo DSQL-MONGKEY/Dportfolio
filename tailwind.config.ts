@@ -16,7 +16,7 @@ const config: Config = {
 				'mainDark': '#1D2B53',
 				'calmBlue': '#6895D2',
 				'shineRed': '#F55353',
-
+				'lightGreen': '#8ad451',
 				// light mode
 				bg: '#E0E7F1',
 				text: '#000',
