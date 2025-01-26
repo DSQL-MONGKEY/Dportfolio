@@ -18,11 +18,11 @@ const ThemeToggleIcon = () => {
          initial={{ opacity: 0, scale: 0.5 }}
          animate={{ opacity: 1, scale: 1 }}
          transition={{ duration: 0.5 }}
-         className='p-1'
+         className='bg-black rounded-md group'
       >
          <button
             onClick={toggleTheme}
-            className='p-2 rounded-md bg-neutral-200 dark:bg-main dark:text-black shadow-light border-2 border-black hover:scale-110 active:scale-90 transition-all duration-300'>
+            className='p-2 rounded-md group-hover:-translate-x-[4px] group-hover:-translate-y-[4px] group-active:translate-x-[0px] group-active:translate-y-[0px] bg-neutral-200 dark:bg-main dark:text-black border-2 border-black transition-all duration-100'>
                {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
          </button>
       </motion.div>
