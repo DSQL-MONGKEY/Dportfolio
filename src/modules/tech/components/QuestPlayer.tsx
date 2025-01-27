@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import QuestPickCategory from './QuestPickCategory';
 import Units from './Units';
 import { generalQuestions, historyQuestions, riddles, techQuestions } from '@/common/constants/questions';
+import QuestHeader from './QuestHeader';
 
 interface QuestionTypes { 
    type: string
@@ -41,6 +42,7 @@ const QuestPlayer = () => {
 
    return (
       <div className="mt-2 flex flex-col justify-between gap-5 p-3 w-full min-h-[550px] max-h-[600px] sm:min-h-[450px] bg-neutral-100 dark:bg-zinc-800 border-2 border-black shadow-light rounded-md">
+         <QuestHeader />
          {!isPlaying && (
             <>
                <div className="w-full h-full flex flex-grow justify-center items-center">
