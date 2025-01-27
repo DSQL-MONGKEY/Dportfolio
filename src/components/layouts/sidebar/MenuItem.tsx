@@ -23,7 +23,7 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
       gap-2 text-neutral-900 font-poppins dark:text-neutral-300 hover:text-neutral-950 hover:dark:text-white transition-all ease-out
    ${
       pathname === url.pathname
-      ? 'bg-[#8ad451] dark:bg-[#2192FF] dark:!text-white border-2 border-black shadow-light dark:shadow-dark'
+      ? 'bg-[#8ad451] dark:bg-[#2192FF] dark:text-white border-2 border-black shadow-light dark:shadow-dark'
       : clsx('border-2 hover:border-black hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-[#2192FF] hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300', isMobile ? 'border-4 border-neutral-900 dark:border-black dark:border-4 dark:text-neutral-900 hover:dark:!border-neutral-900 dark:bg-[#C3C0F3] bg-slate-200' : 'border-slate-300 dark:border-neutral-900 dark:text-neutral-900 bg-slate-200')
    }`
 
