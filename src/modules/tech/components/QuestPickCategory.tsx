@@ -10,15 +10,14 @@ const QuestPickCategory = ({ category, setCategory, categories }: QuestPickCateg
    return (
       <>
          {categories.map((item, index) => (
-            <div key={index} className="group bg-black rounded-md h-24">
+            <div key={index} className="group bg-black rounded-md h-16 sm:h-24">
                <button 
                   onClick={() => setCategory(item)}
-                  className={`${category == item ? 'bg-green-500' : 'bg-slate-200'} h-full border-2 w-full border-black rounded-md group-hover:-translate-x-[10px] group-hover:-translate-y-[10px]
+                  className={`${category == item ? 'bg-green-500 dark:bg-[#F5004F]' : 'bg-slate-200 dark:bg-[#FFC700]'} h-full border-2 w-full border-black rounded-md group-hover:-translate-x-[10px] group-hover:-translate-y-[10px]
                   group-active:-translate-x-[0px] group-active:-translate-y-[0px]
-                  
                   transition-all duration-100`}
                >
-                  <span className="text-xl sm:text-2xl font-paytone text-neutral-800 capitalize dark:text-neutral-100">
+                  <span className={`${category == item ? 'text-white': 'text-neutral-800'} text-xl sm:text-2xl font-paytone capitalize `}>
                      {item}
                   </span>
                </button>
