@@ -6,8 +6,14 @@ import SectionHeading from '@/components/elements/SectionHeading'
 import { MdOutlineGames } from "react-icons/md";
 import SectionSubHeading from '@/components/elements/SectionSubHeading';
 import QuestPlayer from './QuestPlayer';
+import { useMiniGames } from '@/stores/mini-games';
 
 const Quest = () => {
+   const {
+      isPlaying,
+      setIsPlaying
+   } = useMiniGames();
+
    return (
       <div className='flex flex-col'>
          <SectionHeading
@@ -16,12 +22,12 @@ const Quest = () => {
          />
          <SectionSubHeading>
             <p>Do you wanna play some mini games with me?</p>
-         </SectionSubHeading>
+      </SectionSubHeading>
          <QuestPlayer />
          <div className='flex mt-8 w-full justify-center sm:justify-end'>
             <QuestButton
                title='Play!'
-               onClick={() => {}}
+               onClick={() => setIsPlaying(!isPlaying)}
             />
          </div>
       </div>
