@@ -4,7 +4,7 @@ import React from 'react'
 
 interface QuestButtonProps {
    title: string
-   onClick: () => void  
+   onClick: () => void
 }
 
 const QuestButton = ({ title, onClick }: QuestButtonProps) => {
