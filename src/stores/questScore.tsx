@@ -30,6 +30,6 @@ export const useQuestScore = create<InitialQuestScoreState & InitialQuestScoreAc
    setWrongAnswer: (wrongAnswer) => set({ wrongAnswer }),
    setCurrentScore: (currentScore) => set({ currentScore }),
    setPreviousScore: (previousScore) => set({ previousScore }),
-   setTotalScore: (totalScore) => set({ totalScore }),
+   setTotalScore: (prevScore) => set(({ totalScore: prevScore })),
    setTotalMatches: (totalMatches) => set({ totalMatches }),
 }))
