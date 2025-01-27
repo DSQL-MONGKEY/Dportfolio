@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
 export interface InitialMiniGamesState {
+   category: string,
    isPlaying: boolean,
    isGameOver: boolean,
    isComplete: boolean,
@@ -9,6 +10,7 @@ export interface InitialMiniGamesState {
 }
 
 export interface InitialMiniGamesAction {
+   setCategory: (category: string) => void,
    setIsPlaying: (isPlaying: boolean) => void,
    setIsGameOver: (isGameOver: boolean) => void,
    setIsComplete: (isComplete: boolean) => void,
@@ -17,11 +19,13 @@ export interface InitialMiniGamesAction {
 }
 
 export const useMiniGames = create<InitialMiniGamesState & InitialMiniGamesAction>()(set => ({
+   category: '',
    isPlaying: false,
    isGameOver: false,
    isComplete: false,
    isDeadTime: 0,
    progress: 0,
+   setCategory: (category) => set({ category }),
    setIsPlaying: () => set(prev => ({ isPlaying: !prev.isPlaying })),
    setIsGameOver: (isGameOver) => set({ isGameOver }),
    setIsComplete: (isComplete) => set({ isComplete }),
