@@ -7,6 +7,9 @@ export interface InitialMiniGamesState {
    isComplete: boolean,
    isDeadTime: number,
    progress: number,
+   streaksAnswer: number,
+   currentScore: number,
+
 }
 
 export interface InitialMiniGamesAction {
@@ -16,6 +19,8 @@ export interface InitialMiniGamesAction {
    setIsComplete: (isComplete: boolean) => void,
    setIsDeadTime: (isDeadTime: number) => void,
    setProgress: (progress: number) => void,
+   setStreaksAnswer: (streaksAnswer: number) => void,
+   setCurrentScore: (currentScore: number) => void,
 }
 
 export const useMiniGames = create<InitialMiniGamesState & InitialMiniGamesAction>()(set => ({
@@ -25,10 +30,16 @@ export const useMiniGames = create<InitialMiniGamesState & InitialMiniGamesActio
    isComplete: false,
    isDeadTime: 0,
    progress: 0,
+   streaksAnswer: 0,
+   currentScore: 0,
+
    setCategory: (category) => set({ category }),
-   setIsPlaying: () => set(prev => ({ isPlaying: !prev.isPlaying })),
    setIsGameOver: (isGameOver) => set({ isGameOver }),
    setIsComplete: (isComplete) => set({ isComplete }),
    setIsDeadTime: (isDeadTime) => set({ isDeadTime }),
+   setIsPlaying: () => set(prev => ({ isPlaying: !prev.isPlaying })),
    setProgress: (progress) => set({ progress }),
+   setStreaksAnswer: (streaksAnswer) => set({ streaksAnswer }),
+   setCurrentScore: (currentScore) => set({ currentScore }),
+
 }))
