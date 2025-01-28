@@ -1,11 +1,11 @@
 "use client"
 
 import React from 'react'
-import QuestButton from './QuestButton'
+import QuestButton from './quest/QuestButton'
 import SectionHeading from '@/components/elements/SectionHeading'
 import { MdOutlineGames } from "react-icons/md";
 import SectionSubHeading from '@/components/elements/SectionSubHeading';
-import QuestPlayer from './QuestPlayer';
+import QuestPlayer from './quest/QuestPlayer';
 import { useMiniGames } from '@/stores/mini-games';
 
 const Quest = () => {
@@ -26,7 +26,7 @@ const Quest = () => {
          <QuestPlayer />
          <div className='flex mt-8 w-full justify-center sm:justify-end'>
             <QuestButton
-               title='Play!'
+               title={isPlaying ? 'Stop?' : 'Play!'}
                onClick={() => setIsPlaying(!isPlaying)}
             />
          </div>
