@@ -7,7 +7,7 @@ import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPyt
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
 import { androidBasic, backendBeginner, bangkit,  cekit, cimb, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, ug, uiux, valo, xclone, ytclone } from "@assets/index"
-import { PiCoffeeDuotone, PiNetworkFill  } from "react-icons/pi";
+import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
 import { ImFlag } from "react-icons/im";
@@ -289,6 +289,12 @@ export const skillSet = [
       title: 'Notion',
       label: 'tools',
       icon: <TbBrandNotion/>,
+      level: 'Basic'
+   },
+   {
+      title: 'Macro Excel',
+      label: 'tools',
+      icon: <PiMicrosoftExcelLogo />,
       level: 'Basic'
    },
 ]
