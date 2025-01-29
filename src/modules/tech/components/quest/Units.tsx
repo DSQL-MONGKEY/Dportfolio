@@ -70,7 +70,7 @@ const Units = ({ categoryData }: UnitsProps) => {
       }
       return (
          <div className="w-full h-full flex flex-col flex-grow justify-center items-center">
-               <span className="text-blue-500 text-xl sm:text-2xl font-paytone">{finalMessage}</span>
+               <span className="text-blue-500 text-center text-xl sm:text-2xl font-paytone">{finalMessage}</span>
             <h2 className="text-sm sm:text-lg font-paytone text-center">
                Terima kasih telah bermain.
             </h2>
