@@ -3,6 +3,7 @@
 import React from 'react'
 import ItemContainer from './ItemContainer'
 import { journeys } from '@/common/constants/constants'
+import ItemDetails from './ItemDetails'
 
 
 const Timeline = () => {
@@ -11,13 +12,23 @@ const Timeline = () => {
       <section>
          <div className='flex flex-col gap-5'>
             {journeys.map((data, idx) => (
-               <ItemContainer
-                  key={idx}
-                  title={data.title}
+               <ItemDetails 
+                  key={idx} 
+                  title={data.title} 
+                  logo={data.logo}
                   role={data.role}
                   date={data.date}
-                  className={idx % 2 == 0 ? 'flex-row-reverse' : 'flex-row'}
-               />
+                  isPresent={data.isPresent}
+                  jobDesc={data.jobDesc}
+                  coworks={data.coworks}
+               >
+                     <ItemContainer
+                        title={data.title}
+                        role={data.role}
+                        date={data.date}
+                        className={idx % 2 == 0 ? 'flex-row-reverse' : 'flex-row'}
+                     />
+               </ItemDetails>
             ))}
          </div>
       </section>
