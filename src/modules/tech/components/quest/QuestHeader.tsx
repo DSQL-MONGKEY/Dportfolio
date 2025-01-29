@@ -7,7 +7,7 @@ import React from 'react'
 const QuestHeader = () => {
    const {
       currentScore,
-      streaksAnswer,
+      streaksScore,
    } = useMiniGames();
 
  
@@ -26,9 +26,9 @@ const QuestHeader = () => {
             <div className='flex flex-row items-center gap-1'>
                <span className="text-lg sm:text-xl">🔥</span>
                <span className='text-md sm:text-xl font-paytone'>
-               {streaksAnswer > 0 ? (
-                  <NumberTicker value={streaksAnswer} />
-               ) : streaksAnswer}
+               {streaksScore > 0 ? (
+                  <NumberTicker value={streaksScore} />
+               ) : streaksScore}
                </span>
             </div>
             
