@@ -14,6 +14,7 @@ const Quest = () => {
       setIsPlaying
    } = useMiniGames();
 
+
    return (
       <div className='flex flex-col'>
          <SectionHeading
