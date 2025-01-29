@@ -6,11 +6,10 @@ import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPyt
 
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
-import { androidBasic, backendBeginner, bangkit,  cekit, cimb, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, lepkom, notion, porto, projectManagement, puskesmas, reactApp, sofw, sql, ug, uiux, valo, xclone, ytclone } from "@assets/index"
+import { aishi, androidBasic, backendBeginner, bangkit,  cekit, cimb, firdaus, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
 import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
-import { ImFlag } from "react-icons/im";
 import { BiSolidMobileVibration } from "react-icons/bi";
 
 import { MenuItemProps } from "../types/menu"
@@ -332,30 +331,62 @@ export const journeys = [
    {
       title: 'Citra Negara Vocational High Shcool',
       role: 'Software Engineering',
-      logo: <ImFlag />,
+      logo: ug,
       date: 'August 2020 - 2022',
-      isPresent: false
+      isPresent: false,
+      jobDesc: '',
+      coworks: [
+         {
+            name: 'Rene Indra Nugraha',
+            role: 'Head of Bussines Process & Solution Excellence',
+            image: rene
+         },
+      ]
    },
    {
       title: 'Gunadarma University',
       role: 'Computer System',
       logo: ug,
       date: 'September 2022 - Present',
-      isPresent: true
+      isPresent: true,
+      jobDesc: '',
+      coworks: [
+         {
+            name: 'Rene Indra Nugraha',
+            role: 'Head of Bussines Process & Solution Excellence',
+            image: rene
+         },
+      ]
    },
    {
       title: 'Lembaga Pengembangan Komputer UG',
       role: 'Workshop Insturctor & Certification Profession Assistant',
       logo: lepkom,
       date: 'March 2024 - Present',
-      isPresent: true
+      isPresent: true,
+      jobDesc: 'As an Assistant and IT Support at LePKom UG (Lembaga Pengembangan Komputer Universitas Gundarama), I was responsible for maintaining and upgrading applications on lab computers used for professional certification and graduation exams, as well as resolving technical issues to ensure smooth operations. I also assisted participants during LePKom Workshops, providing support for technical and programming-related problems. My role included handling lab maintenance, ensuring all systems and equipment were functioning optimally to support academic and professional activities. This experience strengthened my technical troubleshooting skills and ability to provide effective IT solutions in a dynamic environment.',
+      coworks: [
+         {
+            name: 'Rene Indra Nugraha',
+            role: 'Head of Bussines Process & Solution Excellence',
+            image: rene
+         },
+      ]
    },
    {
       title: 'Bangkit Academy',
       role: 'Cloud Computing Cohort',
       logo: bangkit,
       date: 'February 2024 - July 2024',
-      isPresent: false
+      isPresent: false,
+      jobDesc: 'As a Cloud Computing Cohort/Backend Engineer at Bangkit Academy 2024, I was honored to be one of the 4,650 selected participants out of over 57,000+ registrants in Batch 1. During the program, I designed the backend infrastructure for our capstone project using Google Cloud Platform (GCP). Additionally, I developed a Flask-API to bridge communication between the mobile application and machine learning models, deploying it on the Cloud Run service. This experience at Bangkit Academy enhanced my expertise in cloud-based solutions, backend development, and system integration, while collaborating with a diverse and talented team.',
+      coworks: [
+         {
+            name: 'Rene Indra Nugraha',
+            role: 'Head of Bussines Process & Solution Excellence',
+            image: rene
+         },
+      ]
    },
    {
       title: 'PT. Bank CIMB Niaga Tbk',
@@ -363,61 +394,95 @@ export const journeys = [
       logo: cimb,
       date: 'August 2024 - Present',
       isPresent: true,
+      jobDesc: 'As a Software Tester in the banking system field, I am responsible for conducting User Acceptance Testing (UAT) on core banking system scenarios, including operating AS400 machines to test new features. Additionally, I develop Business Process Engines using a macro Excel approach to enhance efficiency and automate business processes. My role involves ensuring all testing scenarios run smoothly, identifying potential issues, and verifying that the system functions according to business requirements.',
       coworks: [
          {
             name: 'Rene Indra Nugraha',
             role: 'Head of Bussines Process & Solution Excellence',
-            image: ''
+            tag: 'reneindra',
+            link: 'https://www.instagram.com/reneindra/',
+            image: rene,
+            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
          },
          {
             name: 'Septian Hadinata',
             role: 'Bussines Process & Solution Excellence Lead',
-            image: ''
+            tag: 'tian_nata',
+            link: 'https://www.instagram.com/tian_nata/',
+            image: nata,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'S Gilang Sukma kencana',
             role: 'Bussines Process & Solution Excellence Staff',
-            image: ''
+            tag: '',
+            link: '',
+            image: rene,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Hanafi Khusuma Yudha',
             role: 'Bussines Process & Solution Excellence Staff',
-            image: ''
+            tag: 'hankyudha',
+            link: 'https://www.instagram.com/hankyudha/',
+            image: rene,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Yurina Indria Tasya',
             role: 'Bussines Process & Solution Excellence Staff',
-            image: ''
+            tag: 'yurinatasya',
+            link: 'https://www.instagram.com/yurinatasya/',
+            image: tasya,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Aishi Hamarin',
             role: 'Compliance Staff',
-            image: ''
+            tag: 'aishihamarin',
+            link: 'https://www.instagram.com/aishihamarin/',
+            image: aishi,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Noviyanti Putri',
             role: 'UAT Partner Staff',
-            image: ''
+            tag: 'noviyanti_p',
+            link: 'https://www.instagram.com/noviyanti_p/',
+            image: yanti,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Istikhomah',
             role: 'UAT Partner Staff',
-            image: ''
+            tag: 'noviyanti_p',
+            link: 'https://www.instagram.com/noviyanti_p/',
+            image: yanti,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Firdaus',
             role: 'The Complete Intern CIMB NIAGA',
-            image: ''
+            tag: 'zhvxe',
+            link: 'https://www.instagram.com/zhvxe/',
+            image: firdaus,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Layla Alfissofyah',
             role: 'The Complete Intern CIMB NIAGA',
-            image: ''
+            tag: 'laylaalfis',
+            link: 'https://www.instagram.com/laylaalfis/',
+            image: layla,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
             name: 'Syaikha Berlian Azzahra',
             role: 'The Complete Intern CIMB NIAGA',
-            image: ''
+            tag: 'syaikhaazzahra',
+            link: 'https://www.instagram.com/syaikhaazzahra/',
+            image: syaikha,
+            opinion: 'Sangat baik, sangat keren sekali COY!'
          },
       ]
    },
