@@ -5,6 +5,7 @@ const Journeys = () => {
    return (
       <>
          <Timeline />
+         
       </>
    )
 }
