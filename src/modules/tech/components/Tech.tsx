@@ -8,7 +8,6 @@ const Tech = () => {
    return (
       <>
          <Header />
-         <Breakline />
          <Board />
          <Breakline />
          <Quest />
