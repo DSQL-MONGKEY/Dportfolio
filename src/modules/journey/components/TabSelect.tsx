@@ -12,8 +12,8 @@ interface TabSelectProps {
 
 const TabSelect = ({ handleCaseButton, handleSelectProfile , coworks }: TabSelectProps) => {
    return (
-      <div className='flex flex-row items-center no-scrollbar overflow-y-hidden overflow-x-scroll w-full border-2 border-black dark:border-neutral-200 bg-neutral-100 dark:bg-zinc-900 rounded-md space-x-3 gap-2 p-2'>
-         <div id='my-works' className='p-2 border-r-2 border-black'>
+      <div className='flex flex-row items-center no-scrollbar overflow-y-hidden overflow-x-scroll w-full border-2 border-black bg-neutral-100 dark:bg-zinc-900 rounded-md space-x-3 gap-2 p-2'>
+         <div id='my-works' className='p-2 pr-4 border-r-2 border-black'>
             <button onClick={handleCaseButton}>
                <FaBriefcase className='text-3xl' />
             </button>
