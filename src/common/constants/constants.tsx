@@ -339,7 +339,10 @@ export const journeys = [
          {
             name: 'Rene Indra Nugraha',
             role: 'Head of Bussines Process & Solution Excellence',
-            image: rene
+            image: rene,
+            tag: 'reneindra',
+            link: 'https://www.instagram.com/reneindra/',
+            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
          },
       ]
    },
@@ -354,7 +357,10 @@ export const journeys = [
          {
             name: 'Rene Indra Nugraha',
             role: 'Head of Bussines Process & Solution Excellence',
-            image: rene
+            image: rene,
+            tag: 'reneindra',
+            link: 'https://www.instagram.com/reneindra/',
+            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
          },
       ]
    },
@@ -369,7 +375,10 @@ export const journeys = [
          {
             name: 'Rene Indra Nugraha',
             role: 'Head of Bussines Process & Solution Excellence',
-            image: rene
+            image: rene,
+            tag: 'reneindra',
+            link: 'https://www.instagram.com/reneindra/',
+            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
          },
       ]
    },
@@ -384,7 +393,11 @@ export const journeys = [
          {
             name: 'Rene Indra Nugraha',
             role: 'Head of Bussines Process & Solution Excellence',
-            image: rene
+            image: rene,
+            tag: 'reneindra',
+            link: 'https://www.instagram.com/reneindra/',
+            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
+
          },
       ]
    },
