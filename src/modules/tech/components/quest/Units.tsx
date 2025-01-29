@@ -29,14 +29,18 @@ const Units = ({ categoryData }: UnitsProps) => {
    const {
       currentScore,
       setCurrentScore,
+      streaksScore,
+      setStreaksScore
    } = useMiniGames();
 
    const correctAnswer = () => {
       correct();
       setCurrentScore(currentScore + 10);
+      setStreaksScore(streaksScore + 1)
    }
    const uncorrectAnswer = () => {
       uncorrect();
+      setStreaksScore(0);
    }
 
    const handleAnswer = (isCorrect: boolean) => {
@@ -56,6 +60,7 @@ const Units = ({ categoryData }: UnitsProps) => {
 
    if(shuffledIndexes.length === 0) {
       let finalMessage= '';
+      
       if(currentScore >=75) {
          handleWinning();
          finalMessage = "Selamat! Kamu berhasil memenangkan permainan ini!";
