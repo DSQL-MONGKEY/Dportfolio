@@ -8,6 +8,8 @@ import ItemDetails from './ItemDetails'
 
 const Timeline = () => {
 
+   
+
    return (
       <section>
          <div className='flex flex-col gap-5'>
@@ -22,16 +24,16 @@ const Timeline = () => {
                   jobDesc={data.jobDesc}
                   coworks={data.coworks}
                >
-                     <ItemContainer
-                        title={data.title}
-                        role={data.role}
-                        date={data.date}
-                        className={idx % 2 == 0 ? 'flex-row-reverse' : 'flex-row'}
-                     />
+                  <ItemContainer
+                     title={data.title}
+                     role={data.role}
+                     date={data.date}
+                     className={idx % 2 == 0 ? 'flex-row-reverse' : 'flex-row'}
+                  />
                </ItemDetails>
             ))}
          </div>
-      </section>
+      </section> 
    )
 }
 
