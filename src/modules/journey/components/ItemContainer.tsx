@@ -17,7 +17,7 @@ const ItemContainer = ({ className = '', title, role, date, }: ItemContainerProp
             <ImFlag className='text-xl md:text-5xl' />
          </div>
 
-         <div className={`space-y-2 px-2 py-3 ${className}`}>
+         <div className={`space-y-2 px-2 py-3 ${className} text-start`}>
             <h3 className='text-xl md:text-3xl font-paytone'>{title}</h3>
             <p className='font-outfit text-sm md:text-xl'>{role}</p>
             <span className='font-outfit text-sm md:text-md'>{date}</span>
