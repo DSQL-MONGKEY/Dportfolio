@@ -47,10 +47,20 @@ import layla from './coworks/layla.webp'
 import syaikha from './coworks/syaikha.webp'
 import yanti from './coworks/yanti.webp'
 import firdaus from './coworks/firdaus.webp'
+import rama from './coworks/rama.webp'
+import arrashi from './coworks/arrashi.webp'
+import edi from './coworks/edi.webp'
+import burhan from './coworks/burhan.webp'
+import harry from './coworks/harry.webp'
 
 
 export {
    // myCv,
+   harry,
+   rama,
+   arrashi,
+   edi,
+   burhan,
    rene,
    firdaus,
    nata,
