@@ -38,9 +38,27 @@ import cimb from './cimb.webp'
 import ug from './logo-ug.webp'
 import cn from './cn.webp'
 
+// coworks
+import rene from './coworks/rene.webp'
+import nata from './coworks/nata.webp'
+import aishi from './coworks/aishi.webp'
+import tasya from './coworks/tasya.webp'
+import layla from './coworks/layla.webp'
+import syaikha from './coworks/syaikha.webp'
+import yanti from './coworks/yanti.webp'
+import firdaus from './coworks/firdaus.webp'
+
 
 export {
    // myCv,
+   rene,
+   firdaus,
+   nata,
+   aishi,
+   tasya,
+   layla,
+   syaikha,
+   yanti,
    cimb,
    cn,
    ug,
