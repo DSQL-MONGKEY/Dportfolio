@@ -9,8 +9,10 @@ import {
 } from "@/components/ui/drawer"
 import {
    Dialog,
-   // DialogContent,
-   // DialogTrigger,
+   DialogContent,
+   DialogDescription,
+   DialogTitle,
+   DialogTrigger,
 } from "@/components/ui/dialog"
 import useIsMobile from '@/hooks/useIsMobile';
 import { StaticImageData } from 'next/image';
@@ -38,6 +40,7 @@ interface ItemDetailsProps {
 }
 
 
+
 const ItemDetails = ({ children, title, jobDesc, role, coworks }: ItemDetailsProps) => {
    const isMobile = useIsMobile();
    const [selectedProfile, setSelectedProfile] = useState<CoworksTypes>({
@@ -61,8 +64,41 @@ const ItemDetails = ({ children, title, jobDesc, role, coworks }: ItemDetailsPro
    if(!isMobile) {
       return(
          <Dialog>
-            {children}
-
+            <DialogTrigger>{children}</DialogTrigger>
+            <DialogContent>
+               <DialogTitle hidden></DialogTitle>
+               <DialogDescription hidden></DialogDescription>
+               <div className='flex flex-col h-full justify-between p-4 gap-3'>
+                  {isSelected ? 
+                     <Users
+                        link={selectedProfile.link}
+                        name={selectedProfile.name}
+                        tag={selectedProfile.tag}
+                        role={selectedProfile.role}
+                        opinion={selectedProfile.opinion}
+                     /> :
+                     <div className='flex flex-col w-full gap-2'>
+                        <div className='flex flex-col bg-neutral-100 dark:bg-zinc-900 rounded-md border-2 border-black shadow-light p-2 justify-center'>
+                           <span className='font-poppins '>
+                              {title}
+                           </span>
+                           <span className='border-b-2 border-black my-1'></span>
+                           <span className='font-poppins'>
+                              {role}
+                           </span>
+                        </div>
+                        <p className='tracking-wider text-start font-semibold p-1'>
+                           {jobDesc}
+                        </p>
+                     </div>
+                  }
+                  <TabSelect
+                     handleCaseButton={handleCaseButton}
+                     handleSelectProfile={handleSelectProfile}
+                     coworks={coworks}
+                  />
+               </div>
+            </DialogContent>
          </Dialog>
       )
    }
