@@ -6,7 +6,7 @@ import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPyt
 
 import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
 import { GrDocker } from "react-icons/gr";
-import { aishi, androidBasic, backendBeginner, bangkit,  cekit, cimb, firdaus, fo, frontendBeginner, frontendReact, google, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
+import { aishi, androidBasic, arrashi, backendBeginner, bangkit,  burhan,  cekit, cimb, edi, firdaus, fo, frontendBeginner, frontendReact, google, harry, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, rama, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
 import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
@@ -334,7 +334,7 @@ export const journeys = [
       logo: ug,
       date: 'August 2020 - 2022',
       isPresent: false,
-      jobDesc: '',
+      jobDesc: 'Learning the fundamentals of software development, including programming, system design, and database management, with a focus on algorithms, data structures, and efficient software solutions. This field also hones analytical and problem-solving skills essential for the tech industry.',
       coworks: [
          {
             name: 'Rene Indra Nugraha',
@@ -352,15 +352,55 @@ export const journeys = [
       logo: ug,
       date: 'September 2022 - Present',
       isPresent: true,
-      jobDesc: '',
+      jobDesc: 'Studying electronics to develop computer systems and implementing them in IoT projects that integrate multiple fields of computer science and electrical engineering. Focused on understanding hardware, designing circuits, and analyzing the processes behind how a computer executes commands.',
       coworks: [
          {
-            name: 'Rene Indra Nugraha',
-            role: 'Head of Bussines Process & Solution Excellence',
+            name: 'Rama Idsan',
+            role: 'LepKom Asistant | Network Engineer',
+            image: rama,
+            tag: 'rama_idsan',
+            link: 'https://www.instagram.com/rama_idsan/',
+            opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
+         },
+         {
+            name: 'Arrashi Satyadi',
+            role: 'LepKom Asistant | Network Engineer',
+            image: arrashi,
+            tag: 'satyadis_',
+            link: 'https://www.linkedin.com/in/arrashi-satyadi-476918241/',
+            opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
+         },
+         {
+            name: 'Fataa Alhaq',
+            role: 'Computer System Student',
             image: rene,
-            tag: 'reneindra',
-            link: 'https://www.instagram.com/reneindra/',
-            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
+            tag: 'fataaalhaq',
+            link: 'https://www.instagram.com/fataaalhaq/',
+            opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
+         },
+         {
+            name: 'Edi Darmawan',
+            role: 'Computer System Student',
+            image: edi,
+            tag: '3dy_darmawan',
+            link: 'https://www.instagram.com/3dy_darmawan/',
+            opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
+         },
+         {
+            name: 'Burhan Adji Zarkasih',
+            role: 'LepKom Asistant | Network Engineer | Cyber Security',
+            image: burhan,
+            tag: 'burhandjzr',
+            link: 'https://www.instagram.com/burhandjzr/',
+            opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
+         },
+         {
+            name: 'Harry Mahardika',
+            role: 'Machine Learning Engineer',
+            image: harry,
+            tag: 'harry.mrdk',
+            link: 'https://www.instagram.com/harry.mrdk/',
+            opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
          },
       ]
    },
@@ -419,7 +459,7 @@ export const journeys = [
          },
          {
             name: 'Septian Hadinata',
-            role: 'Bussines Process & Solution Excellence Lead',
+            role: 'Bussines Process & Solution Excellence Specialist',
             tag: 'tian_nata',
             link: 'https://www.instagram.com/tian_nata/',
             image: nata,
@@ -490,7 +530,7 @@ export const journeys = [
             opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
-            name: 'Syaikha Berlian Azzahra',
+            name: 'Syaikha Berlian .A',
             role: 'The Complete Intern CIMB NIAGA',
             tag: 'syaikhaazzahra',
             link: 'https://www.instagram.com/syaikhaazzahra/',
