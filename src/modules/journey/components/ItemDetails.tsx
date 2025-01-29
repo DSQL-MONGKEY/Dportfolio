@@ -82,8 +82,7 @@ const ItemDetails = ({ children, title, jobDesc, role, coworks }: ItemDetailsPro
                            <span className='font-poppins '>
                               {title}
                            </span>
-                           <span className='border-b-2 border-black my-1'></span>
-                           <span className='font-poppins'>
+                           <span className='font-outfit text-sm'>
                               {role}
                            </span>
                         </div>
