@@ -6,8 +6,7 @@ const Board = () => {
 
 
    return (
-      <div className="p-2 border-2 border-black dark:border-neutral-200 rounded-lg">
-         <div className="flex flex-row flex-wrap justify-evenly gap-3 ">
+      <div className="grid grid-cols-4 md:flex md:flex-wrap md:justify-around p-2 border-2 border-black dark:border-neutral-200 rounded-lg no-scrollbar h-72 max-h-96 overflow-y-scroll overflow-x-hidden mt-5">
             {skillSet.map((skill, index) => (
                <Card 
                   key={index} 
@@ -18,7 +17,6 @@ const Board = () => {
                   level={skill.level} 
                />
             ))}
-         </div>
       </div>
    )
 }
