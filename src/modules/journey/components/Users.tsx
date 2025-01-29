@@ -12,13 +12,13 @@ interface UsersProps {
 const Users = ({ link, name, tag, role, opinion }: UsersProps) => {
    return (
    <>
-      <div id='user-profile' className='flex flex-row w-full md:bg-neutral-100 md:dark:bg-zinc-900 md:rounded-md md:border-2 md:border-black md:p-2 shadow-light'>
+      <div id='user-profile' className='flex flex-row w-full md:bg-neutral-100 md:dark:bg-zinc-900 lg:rounded-md lg:border-2 lg:border-black lg:p-2 lg:shadow-light'>
          <div className='flex flex-col'>
             <Link href={link!} className='space-x-2'>
                <span className='font-poppins text-lg'>
                   {name}
                </span>
-               <span className='font-poppins opacity-40'>
+               <span className='font-poppins opacity-30 dark:opacity-40'>
                   @{tag}
                </span>
             </Link>
