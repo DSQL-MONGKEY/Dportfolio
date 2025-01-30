@@ -6,8 +6,9 @@ import { Suspense } from "react";
 
 
 export const metadata: Metadata = {
-  title: "Dimas Prasetyo | Portfolio Website",
-  description: "Created with love",
+	title: "Dimas Prasetyo | Portfolio Website",
+	description: "Created with love",
+	
 };
 
 export default function RootLayout({
