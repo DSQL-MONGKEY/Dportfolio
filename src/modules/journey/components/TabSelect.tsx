@@ -2,6 +2,7 @@ import React from 'react'
 import { CoworksTypes } from './ItemDetails'
 import Image from 'next/image'
 import { FaBriefcase } from "react-icons/fa";
+import { panda } from '@/assets';
 
 
 interface TabSelectProps {
@@ -28,7 +29,7 @@ const TabSelect = ({ handleCaseButton, handleSelectProfile , coworks }: TabSelec
                width={50}
                height={50}
                alt={data.name || 'picture'}
-               src={data?.image}
+               src={data?.image == '' ? panda : data?.image}
                className="rounded-full border-2 border-black"
             />
             </button>
