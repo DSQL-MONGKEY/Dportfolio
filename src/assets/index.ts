@@ -52,11 +52,20 @@ import arrashi from './coworks/arrashi.webp'
 import edi from './coworks/edi.webp'
 import burhan from './coworks/burhan.webp'
 import harry from './coworks/harry.webp'
+import man from './man-photo.webp'
+import women from './women.webp'
+import panda from './panda.webp'
+
+import icon from './icon.png'
 
 
 export {
    // myCv,
+   icon,
    harry,
+   man,
+   women,
+   panda,
    rama,
    arrashi,
    edi,
