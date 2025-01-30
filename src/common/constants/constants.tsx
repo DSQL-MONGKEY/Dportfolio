@@ -373,7 +373,7 @@ export const journeys = [
          {
             name: 'Fataa Alhaq',
             role: 'Computer System Student',
-            image: rene,
+            image: '',
             tag: 'fataaalhaq',
             link: 'https://www.instagram.com/fataaalhaq/',
             opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
