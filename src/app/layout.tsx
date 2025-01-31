@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 	formatDetection: {
 		telephone: false,
 	},
-	// metadataBase: new URL(''),
+	metadataBase: new URL(process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : process.env.DOMAIN || ''),
 	description: METADATA.description,
 	keywords: METADATA.keyword,
 	creator: METADATA.creator,
