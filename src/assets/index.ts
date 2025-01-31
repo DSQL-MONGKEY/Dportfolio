@@ -56,12 +56,10 @@ import man from './man-photo.webp'
 import women from './women.webp'
 import panda from './panda.webp'
 
-import icon from './icon.png'
 
 
 export {
    // myCv,
-   icon,
    harry,
    man,
    women,
