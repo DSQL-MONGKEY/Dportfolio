@@ -9,7 +9,7 @@ const ThemeProviderContext = ({ children }: { children: ReactNode }) => {
       <ThemeProvider 
          attribute={'class'}
          enableSystem
-         disableTransitionOnChange
+         defaultTheme='light'
       >
          {children}
       </ThemeProvider>
