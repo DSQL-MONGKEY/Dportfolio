@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from './Header'
+import Showcase from './Showcase'
 
 const Projects = () => {
    return (
-      <div>Projects</div>
+      <>
+         <Header />
+         <Showcase />
+      </>
    )
 }
 
