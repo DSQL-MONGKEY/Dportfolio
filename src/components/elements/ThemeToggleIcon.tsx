@@ -22,7 +22,7 @@ const ThemeToggleIcon = () => {
       >
          <button
             onClick={toggleTheme}
-            className='p-2 rounded-md group-hover:-translate-x-[4px] group-hover:-translate-y-[4px] group-active:translate-x-[0px] group-active:translate-y-[0px] bg-neutral-200 dark:bg-main dark:text-black border-2 border-black transition-all duration-100'>
+            className='p-2 rounded-md group-hover:-translate-x-[4px] group-hover:-translate-y-[4px] group-active:translate-x-[0px] group-active:translate-y-[0px] bg-neutral-100 text-neutral-700 dark:bg-main dark:text-neutral-900 border-2 border-black transition-all duration-100'>
                {resolvedTheme === 'dark' ? <IoPartlySunnySharp /> : <IoIosCloudyNight />}
          </button>
       </motion.div>
