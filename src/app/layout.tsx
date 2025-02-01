@@ -35,7 +35,24 @@ export const metadata: Metadata = {
 	robots: {
 		index: true,
 		follow: true,
-	}
+	},
+	icons: [
+		{
+			url: 'img/logo-192.png',
+			sizes: '192x192',
+			type: 'image/png'
+		},
+		{
+			url: 'img/logo-384.png',
+			sizes: '384x384',
+			type: 'image/png'
+		},
+		{
+			url: 'img/logo-512.png',
+			sizes: '192x192',
+			type: 'image/png'
+		},
+	]
 };
 
 export const themeColor:Viewport = {
