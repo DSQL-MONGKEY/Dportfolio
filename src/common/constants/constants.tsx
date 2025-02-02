@@ -470,7 +470,7 @@ export const journeys = [
             role: 'Bussines Process & Solution Excellence Staff',
             tag: '',
             link: '',
-            image: rene,
+            image: '',
             opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
@@ -478,7 +478,7 @@ export const journeys = [
             role: 'Bussines Process & Solution Excellence Staff',
             tag: 'hankyudha',
             link: 'https://www.instagram.com/hankyudha/',
-            image: rene,
+            image: '',
             opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
@@ -510,7 +510,7 @@ export const journeys = [
             role: 'UAT Partner Staff',
             tag: 'noviyanti_p',
             link: 'https://www.instagram.com/noviyanti_p/',
-            image: yanti,
+            image: '',
             opinion: 'Sangat baik, sangat keren sekali COY!'
          },
          {
