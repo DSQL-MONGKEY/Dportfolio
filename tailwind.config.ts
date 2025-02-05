@@ -17,6 +17,7 @@ const config: Config = {
 				'calmBlue': '#6895D2',
 				'shineRed': '#F55353',
 				'lightGreen': '#8ad451',
+				'nicheBlue': '#B983FF',
 				// light mode
 				bg: '#E0E7F1',
 				text: '#000',
