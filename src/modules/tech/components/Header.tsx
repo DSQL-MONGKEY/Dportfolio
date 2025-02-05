@@ -1,20 +1,18 @@
+import SectionHeading from '@/components/elements/SectionHeading'
+import SectionSubHeading from '@/components/elements/SectionSubHeading'
 import React from 'react'
+import { GiTechnoHeart } from "react-icons/gi";
 
 const Header = () => {
    return (
-      <div className="bg-black border-2 border-black dark:border-neutral-100 rounded-lg">
-         <div className="flex flex-col gap-4 relative justify-center items-center p-5 bg-neutral-100 dark:bg-zinc-800 -translate-y-[8px] -translate-x-[8px] hover:translate-y-[0px] hover:translate-x-[0px] transition-all ease-in-out duration-200 rounded-lg border-2 border-black dark:border-neutral-100 select-none">
-            <div>
-               <h1 className="font-paytone text-4xl sm:text-5xl md:text-6xl text-neutral-700 dark:text-neutral-100">
-                  Tech and Tools
-               </h1>
-            </div>
-            <div>
-               <p className="font-outfit font-bold text-lg text-neutral-700 dark:text-neutral-300">
-                  That I used to built your request
-               </p>
-            </div>
-         </div>
+      <div>
+         <SectionHeading 
+            title='Techys' 
+            icon={<GiTechnoHeart />} 
+         />
+         <SectionSubHeading>
+            Technologies & Tools that i&apos;ve worked with
+         </SectionSubHeading>
       </div>
    )
 }
