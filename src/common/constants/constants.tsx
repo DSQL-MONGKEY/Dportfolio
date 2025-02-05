@@ -1,6 +1,6 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
 import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta } from "react-icons/bs"
-import { SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
+import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
 import { GiBearFace, GiSpermWhale  } from "react-icons/gi";
@@ -230,7 +230,7 @@ export const tech = [
       onLearn: false,
    },
    {
-      title: 'three Js',
+      title: 'three.js',
       label: 'tech',
       icon: <TbBrandThreejs/>,
       level: 'Basic',
@@ -305,7 +305,7 @@ export const devOps = [
    {
       title: 'Google Cloud',
       label: 'tools',
-      icon: <BsGithub/>,
+      icon: <SiGooglecloud/>,
       level: 'Intermediete',
       onLearn: true,
    },
@@ -435,13 +435,6 @@ export const tools = [
       title: 'Gitlab',
       label: 'tools',
       icon: <FaGitlab/>,
-      level: 'Basic',
-      onLearn: false,
-   },
-   {
-      title: 'OpenAI',
-      label: 'tools',
-      icon: <SiOpenai/>,
       level: 'Basic',
       onLearn: false,
    },
