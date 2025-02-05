@@ -1,18 +1,18 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
 import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta } from "react-icons/bs"
-import { SiMui, SiHtml5, SiXampp, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
+import { SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
-import { FaCss3, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress } from "react-icons/fa"
-
-import { TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang} from "react-icons/tb"
-import { GrDocker } from "react-icons/gr";
-import { aishi, androidBasic, arrashi, backendBeginner, bangkit,  burhan,  cekit, cimb, edi, firdaus, fo, frontendBeginner, frontendReact, google, harry, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, rama, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
+import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
+import { GiBearFace, GiSpermWhale  } from "react-icons/gi";
+import { TbBrandPowershell, TbBrandThreejs, TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang, TbBrandReactNative } from "react-icons/tb"
+import { GrDocker, } from "react-icons/gr";
 import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
-import { BiSolidMobileVibration } from "react-icons/bi";
+import { BiSolidMobileVibration, BiLogoPostgresql  } from "react-icons/bi";
 
 import { MenuItemProps } from "../types/menu"
+import { aishi, androidBasic, arrashi, backendBeginner, bangkit,  burhan,  cekit, cimb, edi, firdaus, fo, frontendBeginner, frontendReact, google, harry, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, rama, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
 
 
 export const navLinks: MenuItemProps[] = [
@@ -109,194 +109,358 @@ export const socialMedia = [
    }
 ]
 
-export const skillSet = [
-   {
-      title: 'HTML',
-      label: 'tech',
-      icon: <SiHtml5/>,
-      level: 'Advanced'
-   },
-   {
-      title: 'CSS',
-      label: 'tech',
-      icon: <FaCss3/>,
-      level: 'Advanced'
-   },
+export const tech = [
    {
       title: 'Javascript',
       label: 'tech',
       icon: <IoLogoJavascript/>,
-      level: 'Advanced'
+      level: 'Advanced',
+      onLearn: false,
    },
    {
       title: 'Typescript',
       label: 'tech',
       icon: <TbBrandTypescript/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'C Lang',
+      label: 'tech',
+      icon: <SiCplusplus/>,
+      level: 'Basic',
+      onLearn: true,
    },
    {
       title: 'PHP',
       label: 'tech',
       icon: <FaPhp/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Python',
       label: 'tech',
       icon: <FaPython/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Golang',
       label: 'tech',
       icon: <TbBrandGolang />,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: true,
    },
    {
       title: 'Kotlin',
       label: 'tech',
       icon: <TbBrandKotlin/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Node Js',
       label: 'tech',
       icon: <FaNodeJs/>,
-      level: 'Intermediete'
+      level: 'Intermediete',
+      onLearn: false,
    },
    {
       title: 'React Js',
       label: 'tech',
       icon: <FaReact/>,
-      level: 'Intermediete'
+      level: 'Intermediete',
+      onLearn: false,
    },
    {
       title: 'Next Js',
       label: 'tech',
       icon: <TbBrandNextjs/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'React Native',
       label: 'tech',
-      icon: <FaReact/>,
-      level: 'Basic'
+      icon: <TbBrandReactNative/>,
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'MySQL',
       label: 'tech',
       icon: <TbBrandMysql/>,
-      level: 'Intermediete'
+      level: 'Intermediete',
+      onLearn: false,
+   },
+   {
+      title: 'PostgreSQL',
+      label: 'tech',
+      icon: <BiLogoPostgresql/>,
+      level: 'Basic',
+      onLearn: true,
    },
    {
       title: 'MongoDB',
       label: 'tech',
       icon: <TbBrandMongodb/>,
-      level: 'Intermediete'
+      level: 'Intermediete',
+      onLearn: false,
    },
    {
       title: 'Tailwind CSS',
       label: 'tech',
       icon: <TbBrandTailwind/>,
-      level: 'Advanced'
+      level: 'Advanced',
+      onLearn: false,
+   },
+   {
+      title: 'ShadCN',
+      label: 'tech',
+      icon: <SiShadcnui/>,
+      level: 'Advanced',
+      onLearn: false,
    },
    {
       title: 'Material UI',
       label: 'tech',
       icon: <SiMui/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'three Js',
+      label: 'tech',
+      icon: <TbBrandThreejs/>,
+      level: 'Basic',
+      onLearn: true,
    },
    {
       title: 'Bootstrap',
       label: 'tech',
       icon: <FaBootstrap/>,
-      level: 'Advanced'
+      level: 'Advanced',
+      onLearn: false,
    },
    {
-      title: 'Vite',
+      title: 'Framer Motion',
       label: 'tech',
-      icon: <TbBrandVite/>,
-      level: 'Basic'
+      icon: <SiFramer/>,
+      level: 'Advanced',
+      onLearn: false,
    },
    {
-      title: 'VScode',
-      label: 'tools',
-      icon: <TbBrandVscode/>,
-      level: 'Advanced'
+      title: 'React Query',
+      label: 'tech',
+      icon: <SiReactquery/>,
+      level: 'Advanced',
+      onLearn: false,
    },
    {
-      title: 'IntelliJ IDEA',
-      label: 'tools',
-      icon: <SiIntellijidea/>,
-      level: 'Basic'
+      title: 'Zustand',
+      label: 'tech',
+      icon: <GiBearFace/>,
+      level: 'Advanced',
+      onLearn: false,
    },
    {
-      title: 'Cisco',
-      label: 'tools',
-      icon: <SiCisco/>,
-      level: 'Basic'
-   },
-   {
-      title: 'Android Studio',
-      label: 'tools',
-      icon: <SiAndroidstudio/>,
-      level: 'Basic'
+      title: 'Redux',
+      label: 'tech',
+      icon: <SiRedux/>,
+      level: 'Basic',
+      onLearn: true,
    },
    {
       title: 'Wordpress',
       label: 'tools',
       icon: <FaWordpress/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: true,
    },
-   {
-      title: 'Meta Ads',
-      label: 'tools',
-      icon: <BsMeta/>,
-      level: 'Basic'
-   },
+]
+
+export const devOps = [
    {
       title: 'Docker',
       label: 'tools',
       icon: <GrDocker/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Git',
       label: 'tools',
       icon: <FaGitAlt/>,
-      level: 'Advanced'
+      level: 'Advanced',
+      onLearn: false,
    },
    {
       title: 'Github',
       label: 'tools',
       icon: <BsGithub/>,
-      level: 'Advanced'
+      level: 'Advanced',
+      onLearn: false,
    },
    {
-      title: 'XAMPP',
+      title: 'Google Cloud',
       label: 'tools',
-      icon: <SiXampp/>,
-      level: 'Intermediete'
+      icon: <BsGithub/>,
+      level: 'Intermediete',
+      onLearn: true,
+   },
+   {
+      title: 'Bash',
+      label: 'tools',
+      icon: <SiGnubash/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Powershell',
+      label: 'tools',
+      icon: <TbBrandPowershell/>,
+      level: 'Intermediete',
+      onLearn: false,
+   },
+   {
+      title: 'Linux',
+      label: 'tools',
+      icon: <FaLinux/>,
+      level: 'Intermediete',
+      onLearn: true,
+   },
+   {
+      title: 'Postman',
+      label: 'tools',
+      icon: <SiPostman/>,
+      level: 'Intermediete',
+      onLearn: false,
+   },
+   {
+      title: 'Proxmox',
+      label: 'tools',
+      icon: <SiProxmox/>,
+      level: 'basic',
+      onLearn: true,
+   },
+   {
+      title: 'Nginx',
+      label: 'tools',
+      icon: <SiNginx/>,
+      level: 'basic',
+      onLearn: true,
+   },
+   {
+      title: 'Cloudinary',
+      label: 'tools',
+      icon: <SiCloudinary/>,
+      level: 'basic',
+      onLearn: false,
+   },
+   {
+      title: 'Vite',
+      label: 'tech',
+      icon: <TbBrandVite/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Vercel',
+      label: 'tech',
+      icon: <SiVercel/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+]
+
+export const tools = [
+   {
+      title: 'VScode',
+      label: 'tools',
+      icon: <TbBrandVscode/>,
+      level: 'Advanced',
+      onLearn: false,
+   },
+   {
+      title: 'IntelliJ IDEA',
+      label: 'tools',
+      icon: <SiIntellijidea/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Cisco',
+      label: 'tools',
+      icon: <SiCisco/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Android Studio',
+      label: 'tools',
+      icon: <SiAndroidstudio/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Meta Ads',
+      label: 'tools',
+      icon: <BsMeta/>,
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Figma',
       label: 'tools',
       icon: <FaFigma/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'OpenAI',
+      label: 'tools',
+      icon: <SiOpenai/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Deepseek',
+      label: 'tools',
+      icon: <GiSpermWhale/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'Gitlab',
+      label: 'tools',
+      icon: <FaGitlab/>,
+      level: 'Basic',
+      onLearn: false,
+   },
+   {
+      title: 'OpenAI',
+      label: 'tools',
+      icon: <SiOpenai/>,
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Notion',
       label: 'tools',
       icon: <TbBrandNotion/>,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
    {
       title: 'Macro Excel',
       label: 'tools',
       icon: <PiMicrosoftExcelLogo />,
-      level: 'Basic'
+      level: 'Basic',
+      onLearn: false,
    },
 ]
+
 
 export const softSkills = [
    {
