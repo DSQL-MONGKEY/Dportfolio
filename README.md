@@ -1,17 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dportfolio V2
+
+## Fully Free and customizable
+- You can clone it for free and make it your own, i hope this portfolio help you a lot for show your works and what you can do to the world,
+  *don't forget to starred this repo ok!*
 
 ## Getting Started
 
-First, run the development server:
+- First, clone the repository with github CLI / terminal or etc:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+git clone https://github.com/DSQL-MONGKEY/Dportfolio.git
+```
+
+- Second, move to project directory and install all dependencies in terminal/git CLI, etc.
+  but in some condition you're not working with *pnpm* you can actually use npm, yarn, or anything.
+- If you don't have pnpm you can install it first with
+  ```bash
+  npm install -g pnpm@latest-10
+  ```
+
+```bash
+pnpm install
+```
+
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
