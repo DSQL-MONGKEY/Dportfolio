@@ -14,24 +14,35 @@ git clone https://github.com/DSQL-MONGKEY/Dportfolio.git
 
 - Second, move to project directory and install all dependencies in terminal/git CLI, etc.
   but in some condition you're not working with *pnpm* you can actually use npm, yarn, or anything.
-- If you don't have pnpm you can install it first with
+- If you don't have pnpm yet, you can install it first with this command above:
   ```bash
   npm install -g pnpm@latest-10
   ```
-
+ 
+- Run this command to install all dependecies in this project:
 ```bash
 pnpm install
 ```
 
+- Aftrer installation done, you can run this command to run the project
 ```bash
 pnpm dev
 ```
 
+- Makesure port 3000 is not used on other application
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Customizable
+- You can customize the information about you mostly on "constant.tsx" file, but on several content you must edit directly in the related file
+- Makesure you read the basic concept of <strong>Next.JS Framework</strong> to make you easily editing content and better understanding
+  for "how something works", "how can it be there", and etc.
+
+## Thanks!!
+- Thankyou for using this portfolio template, i hope this repo would be help full for you!
 
 ## Learn More
 
