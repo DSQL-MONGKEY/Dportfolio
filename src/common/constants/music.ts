@@ -15,14 +15,14 @@ export const musicPlaylist = [
    },
    {
       musicCover: '',
-      src:   '/music/Never Enough.mp3',
-      artist: 'Loren Allred',
-      title: 'Never Enough - Loren Allred',
+      src:   '/music/Feast - Nina (Official Lyric Video).mp3',
+      artist: 'Nina',
+      title: 'Feast - Nina',
    },
    {
       musicCover: '',
-      src:   '/music/JVKE - golden hour.mp3',
-      artist: 'JVKE',
-      title: 'Golden Hour - JVKE',
+      src:   '/music/Never Enough.mp3',
+      artist: 'Loren Allred',
+      title: 'Never Enough - Loren Allred',
    },
 ]
