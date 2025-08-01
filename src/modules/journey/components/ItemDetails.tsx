@@ -31,7 +31,7 @@ export interface CoworksTypes {
 interface ItemDetailsProps {
    children: ReactNode
    title: string
-   logo?: StaticImageData 
+   logo?: StaticImageData | '' 
    role: string
    date: string
    isPresent: boolean
