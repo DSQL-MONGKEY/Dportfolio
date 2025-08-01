@@ -494,12 +494,28 @@ export const journeys = [
       jobDesc: 'Learning the fundamentals of software development, including programming, system design, and database management, with a focus on algorithms, data structures, and efficient software solutions. This field also hones analytical and problem-solving skills essential for the tech industry.',
       coworks: [
          {
-            name: 'Rene Indra Nugraha',
-            role: 'Head of Bussines Process & Solution Excellence',
-            image: rene,
-            tag: 'reneindra',
-            link: 'https://www.instagram.com/reneindra/',
-            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
+            name: 'Muhammad Rizki',
+            role: 'Fullstack Developer & Jurnalist',
+            image: '',
+            tag: 'm.rizki_array',
+            link: 'https://www.instagram.com/m.rizki_array/',
+            opinion: 'Saya senang dapat mengenal nya dan dia adalah teman yang baik.'
+         },
+         {
+            name: 'Muhammad Calvin Pradana',
+            role: 'Fullstack Developer',
+            image: '',
+            tag: '-',
+            link: '-',
+            opinion: 'Sukses Selalu!'
+         },
+         {
+            name: 'Kaviga Yudhistira',
+            role: 'Civil Engineering Student',
+            image: '',
+            tag: 'yudhistirakav_',
+            link: 'https://www.instagram.com/yudhistirakav_/',
+            opinion: 'Saya senang dapat mengenal nya dan dia adalah teman yang baik.'
          },
       ]
    },
@@ -536,6 +552,14 @@ export const journeys = [
             opinion: 'He demonstrates exceptional social skills, fostering strong relationships through genuine kindness and selflessness. His ability to collaborate effectively makes him a valuable team player, always actively contributing and supporting others without hesitation. Academically, his dedication and hard work are evident in his continuous pursuit of knowledge and excellence. His strong teamwork ethic ensures that he consistently stands out through his proactive involvement and impactful contributions.'
          },
          {
+            name: 'M. Syukri Rahman',
+            role: 'Computer System Student',
+            image: '',
+            tag: 'sykrii11',
+            link: 'https://www.instagram.com/sykrii11/',
+            opinion: 'Dimas adalah orang yang sangat menyenangkan dan terkadang dapat memberikan solusi tak terduga dari masalah yang ada di pekerjaan'
+         },
+         {
             name: 'Edi Darmawan',
             role: 'Computer System Student',
             image: edi,
@@ -570,12 +594,52 @@ export const journeys = [
       jobDesc: 'As an Assistant and IT Support at LePKom UG (Lembaga Pengembangan Komputer Universitas Gundarama), I was responsible for maintaining and upgrading applications on lab computers used for professional certification and graduation exams, as well as resolving technical issues to ensure smooth operations. I also assisted participants during LePKom Workshops, providing support for technical and programming-related problems. My role included handling lab maintenance, ensuring all systems and equipment were functioning optimally to support academic and professional activities. This experience strengthened my technical troubleshooting skills and ability to provide effective IT solutions in a dynamic environment.',
       coworks: [
          {
-            name: 'Rene Indra Nugraha',
-            role: 'Head of Bussines Process & Solution Excellence',
-            image: rene,
-            tag: 'reneindra',
-            link: 'https://www.instagram.com/reneindra/',
-            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
+            name: 'Harry Mahardika',
+            role: 'Machine Learning Engineer',
+            image: harry,
+            tag: 'harry.mrdk',
+            link: 'https://www.instagram.com/harry.mrdk/',
+            opinion: 'Sukses Selalu!'
+         },
+         {
+            name: 'Jessica Theresia',
+            role: 'Machine Learning Engineer',
+            image: '',
+            tag: 'jessica_trs',
+            link: 'https://www.instagram.com/jessica_trs/',
+            opinion: 'Dimas adalah teman sekaligus rekan kerja yang dapat diandalkan.'
+         },
+         {
+            name: 'Jessica Valencia',
+            role: 'Machine Learning Engineer',
+            image: '',
+            tag: 'jevaa_zh',
+            link: 'https://www.instagram.com/jevaa_zh/',
+            opinion: 'Sukses Selalu!'
+         },
+         {
+            name: 'Jessica Marta',
+            role: 'Informatics Student',
+            image: '',
+            tag: 'jessicalaen',
+            link: 'https://www.instagram.com/jessicalaen/',
+            opinion: 'Sukses Selalu!'
+         },
+         {
+            name: 'M. Ibrahim',
+            role: 'Information System Student',
+            image: '',
+            tag: '-',
+            link: 'https://www.instagram.com/',
+            opinion: 'Sukses Selalu!'
+         },
+         {
+            name: 'Rama Satriana',
+            role: 'Informatics Student',
+            image: '',
+            tag: '-',
+            link: 'https://www.instagram.com/',
+            opinion: 'Sukses Selalu!'
          },
       ]
    },
@@ -588,12 +652,39 @@ export const journeys = [
       jobDesc: 'As a Cloud Computing Cohort/Backend Engineer at Bangkit Academy 2024, I was honored to be one of the 4,650 selected participants out of over 57,000+ registrants in Batch 1. During the program, I designed the backend infrastructure for our capstone project using Google Cloud Platform (GCP). Additionally, I developed a Flask-API to bridge communication between the mobile application and machine learning models, deploying it on the Cloud Run service. This experience at Bangkit Academy enhanced my expertise in cloud-based solutions, backend development, and system integration, while collaborating with a diverse and talented team.',
       coworks: [
          {
-            name: 'Rene Indra Nugraha',
-            role: 'Head of Bussines Process & Solution Excellence',
-            image: rene,
-            tag: 'reneindra',
-            link: 'https://www.instagram.com/reneindra/',
-            opinion: 'Dimas adalah rekan kerja yang sangat andal dan profesional. Dia selalu menyelesaikan tugas dengan teliti dan tepat waktu, serta memiliki kemampuan komunikasi yang baik dalam tim. Sikapnya yang ramah, mudah bekerja sama, dan selalu siap membantu membuat suasana kerja menjadi lebih menyenangkan dan produktif. Dimas adalah aset berharga bagi tim kami.'
+            name: 'Rivaldo Elia',
+            role: 'ELectrical & Machine Learning Engineer',
+            image: '',
+            tag: 'iamvaldoo',
+            link: 'https://www.instagram.com/iamvaldoo/',
+            opinion: 'Sukses Selalu!'
+
+         },
+         {
+            name: 'Alfa',
+            role: 'Machine Learning Engineer',
+            image: '',
+            tag: '-',
+            link: 'https://www.instagram.com/',
+            opinion: 'Sukses Selalu!'
+
+         },
+         {
+            name: 'Deo Ginting',
+            role: 'Machine Learning Engineer',
+            image: '',
+            tag: '-',
+            link: 'https://www.instagram.com/',
+            opinion: 'Sukses Selalu!'
+
+         },
+         {
+            name: 'Pany Irene Matondang',
+            role: 'Informatics Student',
+            image: '',
+            tag: 'matondangpany',
+            link: 'https://www.instagram.com/matondangpany/',
+            opinion: 'Sukses Selalu!'
 
          },
       ]
@@ -693,6 +784,24 @@ export const journeys = [
             link: 'https://www.instagram.com/syaikhaazzahra/',
             image: syaikha,
             opinion: 'Sangat baik, sangat keren sekali COY!'
+         },
+      ]
+   },
+   {
+      title: 'PT. Kereta Api Indonesia(KAI)',
+      role: 'IT Support & Developer',
+      logo: ug,
+      date: 'February 2025 - June 2025',
+      isPresent: false,
+      jobDesc: 'Support the facility monitoring division with excellence and on-point solution using Macro Excel for drawing automation Grafik Perjalanan Kereta Api(GAPEKA) and helping re-design internal web application for digital transformation',
+      coworks: [
+         {
+            name: 'Afrizal Bahar',
+            role: 'Facility Monitoring Staff',
+            tag: 'afrzlb28',
+            link: 'https://www.instagram.com/afrzlb28/',
+            image: '',
+            opinion: 'TOPP DAHH!'
          },
       ]
    },
