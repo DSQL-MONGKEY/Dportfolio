@@ -18,7 +18,7 @@ const Users = ({ link, name, tag, role, opinion }: UsersProps) => {
                <span className='font-poppins text-lg'>
                   {name}
                </span>
-               <span className='font-poppins text-neutral-500 sm:opacity-30 sm:dark:opacity-40'>
+               <span className='font-poppins text-zinc-500'>
                   @{tag}
                </span>
             </Link>
