@@ -25,4 +25,10 @@ export const musicPlaylist = [
       artist: 'Loren Allred',
       title: 'Never Enough - Loren Allred',
    },
+   {
+      musicCover: '',
+      src:   '/music/JVKE - golden hour.mp3',
+      artist: 'JVKE',
+      title: 'JVKE - Golden Hour',
+   },
 ]
