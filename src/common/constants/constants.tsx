@@ -793,7 +793,7 @@ export const journeys = [
       logo: ug,
       date: 'February 2025 - June 2025',
       isPresent: false,
-      jobDesc: 'Support the facility monitoring division with excellence and on-point solution using Macro Excel for drawing automation Grafik Perjalanan Kereta Api(GAPEKA) and helping re-design internal web application for digital transformation',
+      jobDesc: 'Support the facility monitoring division with excellence and on-point solution using Macro Excel for automate generate Grafik Perjalanan Kereta Api(GAPEKA) and helping re-design internal web application in digital transformation project',
       coworks: [
          {
             name: 'Afrizal Bahar',
