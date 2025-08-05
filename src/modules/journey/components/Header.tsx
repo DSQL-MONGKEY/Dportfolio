@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaWalking } from 'react-icons/fa'
+import { TbHandClick } from 'react-icons/tb'
 
 const Header = () => {
    return (
@@ -14,6 +15,10 @@ const Header = () => {
             </span>
             , each step below is not just a career change - it&apos;s a trail of courage, self-discovery, and a willingness to grow from ground zero. This is not just a timeline, but a reflection on the courage to metamorphose.
          </p>
+         <span className='flex w-full font-outfit justify-end items-center'>
+            <TbHandClick />
+            click&apos;it for details
+         </span>
       </div>
    )
 }
