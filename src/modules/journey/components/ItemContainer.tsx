@@ -1,4 +1,3 @@
-import { cn } from '@/common/lib/utils';
 import React from 'react'
 import { ImFlag } from "react-icons/im";
 
@@ -23,15 +22,6 @@ const ItemContainer = ({ className = '', title, role, date, }: ItemContainerProp
             <span className='font-outfit text-sm md:text-md'>{date}</span>
          </div>
 
-         <svg 
-            fill='none'
-            xmlns="http://www.w3.org/2000/svg"
-            className={cn('pointer-events-none absolute transform-gpu stroke-2')}
-         >
-            <path
-               d=''
-            />
-         </svg>
       </div>
    )
 }
