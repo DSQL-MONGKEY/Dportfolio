@@ -902,6 +902,7 @@ export const certificates = [
 export const projects = [
    {
       title: 'Twitter Clone',
+      isFeatured: true,
       techStack: [
          {
             tags: 'Javascript',
@@ -947,13 +948,59 @@ export const projects = [
             tags: 'Cloudinary',
             color: 'text-blue-600'
          },
-         ],
+      ],
       desc: 'Fullstack twitter/X clone with MERN stack that have similar functionality like the real app. In this included auth functionality and as a user we could make an post, follow other user, put some like on other user post, and upload or change the image profile that we want. This project have 95% similar functionality',
       image: xclone,
       link: 'https://github.com/DSQL-MONGKEY/twitter-clone'
    },
    {
+      title: 'LoRa Climber Tracker',
+      isFeatured: true,
+      techStack: [
+         {
+            tags: 'Javascript',
+            color: 'text-yellow-800'
+         },
+         {
+            tags: 'TailwindCSS',
+            color: 'text-blue-500'
+         },
+         {
+            tags: 'Shadcn-UI',
+            color: 'text-zinc-500'
+         },
+         {
+            tags: 'NextJS',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'Tanstack-query',
+            color: 'text-rose-800'
+         },
+         {
+            tags: 'Zustand',
+            color: 'text-gray-700'
+         },
+         {
+            tags: 'Supabase',
+            color: 'text-pink-600'
+         },
+         {
+            tags: 'NodeJS',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'Clerk',
+            color: 'text-blue-600'
+         },
+         ],
+      desc: 'This project addresses the safety issues of mountain climbers in areas with minimal cellular signal. We designed and implemented the LoRa Tracking System, a reliable location-tracking prototype.Utilizing LoRa 433MHz and GPS technology, the system wirelessly sends real-time position data from a device carried by the climber to a monitoring station. This data is then displayed on a web dashboard, enabling the base camp team to track climber movements and provide a rapid response in emergency situations. This project demonstrates LoRa as an effective and power-efficient solution for long-range communication in extreme environments.',
+      image: xclone,
+      link: 'https://github.com/DSQL-MONGKEY/maps-tracker-dashboard'
+   },
+   {
       title: 'Puskesmas Queue',
+      isFeatured: false,
       techStack: [
          {
             tags: 'PHP',
@@ -982,6 +1029,7 @@ export const projects = [
    },
    {
       title: 'Youtube Clone',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Typescript',
@@ -1006,6 +1054,7 @@ export const projects = [
    },
    {
       title: 'Portfolio Website',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Typescript',
@@ -1034,6 +1083,7 @@ export const projects = [
    },
    {
       title: 'Google Clone',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Javascript',
@@ -1062,6 +1112,7 @@ export const projects = [
    },
    {
       title: 'Notion Clone',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Typescript',
@@ -1110,6 +1161,7 @@ export const projects = [
    },
    {
       title: 'Cekit',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Typescript',
@@ -1134,6 +1186,7 @@ export const projects = [
    },
    {
       title: 'Fo-Dashboard UI/UX',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Figma',
@@ -1147,6 +1200,7 @@ export const projects = [
    },
    {
       title: 'Mobile App Fo-Dashboard',
+      isFeatured: true,
       techStack: [
          {
             tags: 'React Native',
@@ -1176,6 +1230,7 @@ export const projects = [
    },
    {
       title: 'Mobile App Valoranism',
+      isFeatured: false,
       techStack: [
          {
             tags: 'Kotlin',
