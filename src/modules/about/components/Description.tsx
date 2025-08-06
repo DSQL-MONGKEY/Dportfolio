@@ -1,19 +1,9 @@
 import React from 'react'
-import { MdRoundaboutRight } from "react-icons/md";
-
 
 const Description = () => {
    return (
       <section className="flex flex-col">
-         <div className="flex gap-1 space-y-2">
-            <MdRoundaboutRight className="h-10 w-10"/>
-            <h2 className="text-3xl font-lexend text-neutral-900 dark:text-slate-200">About</h2>
-         </div>
-         <p className="font-outfit text-md text-neutral-900 dark:text-slate-200">
-            A Little Piece of my life
-         </p>
-
-         <div className="mt-10 gap-1 space-y-2">
+         <div className="gap-1 space-y-2">
             <h3 className="text-xl lg:text-4xl text-neutral-900 dark:text-slate-200 font-outfit">
                Wassup homies! <br/> I&apos;m&nbsp;
                <span className="text-slate-200 dark:text-green-500 bg-blue-500">Dimas Prasetyo</span>🐼 
