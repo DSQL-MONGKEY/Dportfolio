@@ -35,7 +35,7 @@ export const musicPlaylist = [
       musicCover: '',
       src:   '/music/Opick - Ya Maulana.mp3',
       artist: 'BATAS SENJA',
-      title: 'NANTI KITA SEPERTI INI - BATAS SENJA'
+      title: 'Ya Maulana - Opick'
    },
    {
       musicCover: '',
