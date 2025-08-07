@@ -24,7 +24,7 @@ const ItemProject = ({ className='', title, techStack, desc, link, isFeatured }:
                {title}
             </h3>
             {isFeatured && (
-               <div>Featured</div>
+               <span className="font-outfit">Featured</span>
             )}
          </div>
 
