@@ -805,6 +805,17 @@ export const journeys = [
          },
       ]
    },
+   {
+      title: 'DSCVRY PTE. LTD',
+      role: 'Fullstack Engineer',
+      logo: ug,
+      date: 'July 2025 - Present',
+      isPresent: false,
+      jobDesc: 'Developing multi-platform application for the company\'s new PoC product, focusing on enhancing user experience and functionality. Deliver technical solutions for product system requirements.',
+      coworks: [
+         
+      ]
+   },
 ]
 
 export const certificates = [
