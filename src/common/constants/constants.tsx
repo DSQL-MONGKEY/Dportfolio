@@ -806,7 +806,7 @@ export const journeys = [
       ]
    },
    {
-      title: 'DSCVRY PTE. LTD',
+      title: 'DSCVRY PTE. LTD (SG)',
       role: 'Fullstack Engineer',
       logo: ug,
       date: 'July 2025 - Present',

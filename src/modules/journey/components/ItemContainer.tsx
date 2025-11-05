@@ -11,7 +11,7 @@ interface ItemContainerProps {
 const ItemContainer = ({ className = '', title, role, date, }: ItemContainerProps) => {
    
    return (
-      <div  className={`group flex flex-row items-center gap-5 transition-all ease-in-out ${className}`}>
+      <div  className={`group flex flex-row items-center justify-between gap-5 transition-all ease-in-out ${className}`}>
          <div className='flex justify-center items-center  bg-slate-200 dark:bg-green-500 dark:group-hover:bg-sky-500  group-hover:bg-sky-500 group-hover:text-white duration-300 border-l-4 border-t-4 border-r-8 border-b-8 shadow-light dark:shadow-dark border-black p-6 md:p-14 rounded-xl group-hover:scale-105'>
             <ImFlag className='text-xl md:text-5xl' />
          </div>

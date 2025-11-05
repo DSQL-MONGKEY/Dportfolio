@@ -64,39 +64,39 @@ const ItemDetails = ({ children, title, jobDesc, role, coworks }: ItemDetailsPro
    if(isMobile) {
       return(
          <Drawer>
-         <DrawerTrigger>{children}</DrawerTrigger>
-         <DrawerContent>
-            <div className='flex flex-col h-full justify-between p-4 gap-3'>
-               {isSelected ? 
-                  <Users
-                     link={selectedProfile.link}
-                     name={selectedProfile.name}
-                     tag={selectedProfile.tag}
-                     role={selectedProfile.role}
-                     opinion={selectedProfile.opinion}
-                  /> :
-                  <div className='flex flex-col w-full gap-2'>
-                     <div className='flex flex-col'>
-                        <span className='font-poppins'>
-                           {title}
-                        </span>
-                        <span className='font-poppins'>
-                           {role}
-                        </span>
+            <DrawerTrigger>{children}</DrawerTrigger>
+            <DrawerContent>
+               <div className='flex flex-col h-full justify-between p-4 gap-3'>
+                  {isSelected ? 
+                     <Users
+                        link={selectedProfile.link}
+                        name={selectedProfile.name}
+                        tag={selectedProfile.tag}
+                        role={selectedProfile.role}
+                        opinion={selectedProfile.opinion}
+                     /> :
+                     <div className='flex flex-col w-full gap-2'>
+                        <div className='flex flex-col'>
+                           <span className='font-poppins'>
+                              {title}
+                           </span>
+                           <span className='font-poppins'>
+                              {role}
+                           </span>
+                        </div>
+                        <p className='tracking-wider text-start font-semibold'>
+                           {jobDesc}
+                        </p>
                      </div>
-                     <p className='tracking-wider text-start font-semibold'>
-                        {jobDesc}
-                     </p>
-                  </div>
-               }
-               <TabSelect
-                  handleCaseButton={handleCaseButton}
-                  handleSelectProfile={handleSelectProfile}
-                  coworks={coworks}
-               />
-            </div>
-         </DrawerContent>
-      </Drawer>
+                  }
+                  <TabSelect
+                     handleCaseButton={handleCaseButton}
+                     handleSelectProfile={handleSelectProfile}
+                     coworks={coworks}
+                  />
+               </div>
+            </DrawerContent>
+         </Drawer>
       )
    }
 
