@@ -15,7 +15,10 @@ const JourneyBottomLine = () => {
                </span>
             </div>
             <span className='font-outfit text-xs'>
-               2023 - Surviving
+               2023 - Still here
+            </span>
+            <span className='font-outfit text-xs italic'>
+               Honorary Title - Glorified Google-fu practitioner, Openrouter free models malpracticist
             </span>
          </div>
          </div>
