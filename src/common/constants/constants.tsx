@@ -1,5 +1,5 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
-import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta } from "react-icons/bs"
+import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta, BsUniversalAccess } from "react-icons/bs"
 import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
@@ -51,6 +51,11 @@ export const navLinks: MenuItemProps[] = [
       href: 'feeds',
       title: 'Feeds',
       icon: <PiCoffeeDuotone/>
+   },
+   {
+      href: 'universe',
+      title: 'Universe',
+      icon: <BsUniversalAccess />
    },
    {
       href: 'contact',
@@ -911,6 +916,51 @@ export const certificates = [
 ]
 
 export const projects = [
+   {
+      title: 'Cloud Storage SFTPGo & File Automation N8N',
+      isFeatured: true,
+      techStack: [
+         {
+            tags: 'Docker',
+            color: 'text-blue-500'
+         },
+         {
+            tags: 'SFTPGo',
+            color: 'text-yellow-700'
+         },
+         {
+            tags: 'N8N',
+            color: 'text-rose-500'
+         },
+         {
+            tags: 'Javascript',
+            color: 'text-yellow-500'
+         },
+         {
+            tags: 'Cloudflare',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'Apache Tika',
+            color: 'text-cyan-800'
+         },
+         {
+            tags: 'Ubuntu',
+            color: 'text-rose-700'
+         },
+         {
+            tags: 'PostgreSQL',
+            color: 'text-cyan-400'
+         },
+         {
+            tags: '',
+            color: 'text-cyan-400'
+         },
+      ],
+      desc: 'Designed and deployed a self-hosted cloud storage solution using SFTPGo running within a Docker container. The system features a custom Telegram Bot interface, allowing users to upload, retrieve, and manage files remotely via chat. All file operations and logic are orchestrated using n8n automation workflows, creating a seamless "ChatOps" experience for server management without requiring a traditional web dashboard.',
+      image: xclone,
+      link: 'https://github.com/DSQL-MONGKEY/maps-tracker-dashboard'
+   },
    {
       title: 'LoRa Climber Tracker',
       isFeatured: true,

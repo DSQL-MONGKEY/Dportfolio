@@ -14,17 +14,16 @@ const MenuItem = ({ href, title, icon, className = '', children, isHover, onClic
    const isMobile = useIsMobile();
    const isExternalUrl = href?.includes('http')
    const pathname = usePathname()
-  const url = new URL(href, 'http://localhost:3000')
+   const url = new URL(href, 'http://localhost:3000')
 
    const activeClasses = `flex 
    ${
       isHover ? 'lg:rounded-lg lg:py-2 lg:px-4 transition-all ease-out' :'justify-center px-4 py-2 rounded-lg lg:p-2'
    } 
-      gap-2 text-neutral-900 font-poppins dark:text-neutral-300 hover:text-neutral-950 hover:dark:text-white transition-all ease-out
+      gap-2 text-neutral-900 font-poppins dark:text-neutral-300 hover:text-neutral-100 hover:dark:text-neutral-900 hover:dark:bg-neutral-100 hover:bg-neutral-900 transition-all ease-out
    ${
       pathname === url.pathname
-      ? 'bg-[#8ad451] dark:bg-[#2192FF] dark:text-white border-2 border-black shadow-light dark:shadow-dark'
-      : clsx('border-2 hover:border-black hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-[#2192FF] hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300', isMobile ? 'border-4 border-neutral-900 dark:border-black dark:border-4 dark:text-neutral-900 hover:dark:!border-neutral-900 dark:bg-[#C3C0F3] bg-slate-200' : 'border-slate-300 dark:border-neutral-900 dark:text-neutral-900 bg-slate-200')
+      ? clsx('border-2 hover:border-black hover:dark:!border-black hover:shadow-light hover:dark:lg:bg-neutral-100 hover:lg:bg-neutral-900 hover:lg:rounded-lg lg:hover:gap-3 lg:transition-all lg:duration-300', isMobile ? 'border-4 border-neutral-900 dark:border-black dark:border-4 dark:text-neutral-900 hover:dark:!border-neutral-900 dark:bg-neutral-100 bg-neutral-900 text-white' : 'border-neutral-900 dark:border-neutral-900 dark:text-neutral-100 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900') : 'bg-neutral-100 dark:bg-neutral-900 dark:text-white border-2 border-black shadow-light dark:shadow-dark'
    }`
 
    

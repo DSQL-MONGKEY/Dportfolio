@@ -6,7 +6,7 @@ const Description = () => {
          <div className="gap-1 space-y-2">
             <h3 className="text-xl lg:text-4xl text-neutral-900 dark:text-slate-200 font-outfit">
                Wassup homies! <br/> I&apos;m&nbsp;
-               <span className="text-slate-200 dark:text-green-500 bg-blue-500">Dimas Prasetyo</span>🐼 
+               <span className="text-slate-200 dark:text-green-400 bg-blue-400 dark:bg-neutral-100 p-0.5 rounded-xl">Dimas Prasetyo</span>🐼 
                <br/> a Software Engineer based in Indonesia
             </h3>
 

@@ -13,8 +13,8 @@ const config: Config = {
 		extend: {
 			colors: {
 				'main': '#ACFADF',
-				'mainDark': '#1D2B53',
-				'calmBlue': '#6895D2',
+				'mainDark': '#1B211A',
+				'calmBlue': '#5C3E94',
 				'shineRed': '#F55353',
 				'lightGreen': '#8ad451',
 				'nicheBlue': '#B983FF',
@@ -155,7 +155,8 @@ const config: Config = {
 		},
 		fontFamily: {
 			outfit: ['var(--font-outfit)'],
-			paytone: ['var(--font-paytone)']
+			paytone: ['var(--font-paytone)'],
+			mono: ['var(--font-mono)']
 		}
 	},
 	plugins: [tailwindCSSAnimate],

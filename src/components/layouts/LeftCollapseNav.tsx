@@ -7,6 +7,8 @@ import React, { useState } from 'react'
 import MenuItem from './sidebar/MenuItem';
 import Profile from './sidebar/Profile';
 import ThemeToggleIcon from '../elements/ThemeToggleIcon';
+import LinkButtonIcon from '../elements/LinkButtonIcon';
+import { BsGithub, BsInstagram } from 'react-icons/bs';
 
 const LeftCollapseNav = () => {
    const [isHover, setIsHover] = useState(false);
@@ -21,11 +23,19 @@ const LeftCollapseNav = () => {
             {isHover ?(
                <Profile />
             ) : (
-               <div className='flex flex-col items-center gap-5'>
+               <div className='flex flex-col items-center gap-5 h-full'>
                   <div className='z-10 rounded-full border-2 border-black shadow-md dark:border-neutral-800 select-none'>
                      <Image src={dimas} alt="profile-photo" width={50} height={50} className="rounded-full" priority />
                   </div>
                   <ThemeToggleIcon />
+                  <LinkButtonIcon 
+                     link={'https://www.instagram.com/dimpfe'} 
+                     icon={<BsInstagram />} 
+                  />
+                  <LinkButtonIcon 
+                     link={'https://github.com/DSQL-MONGKEY'} 
+                     icon={<BsGithub />} 
+                  />
                </div>
             )}
          </div>

@@ -4,6 +4,7 @@ import React from 'react'
 import ItemContainer from './ItemContainer'
 import { journeys } from '@/common/constants/constants'
 import ItemDetails from './ItemDetails'
+import JourneyBottomLine from './JourneyBottomLine'
 
 
 const Timeline = () => {
@@ -32,6 +33,7 @@ const Timeline = () => {
                   />
                </ItemDetails>
             ))}
+            <JourneyBottomLine />
          </div>
       </section> 
    )

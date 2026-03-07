@@ -9,6 +9,24 @@ export const musicPlaylist = [
    },
    {
       musicCover: '',
+      src:   '/music/Charlie Puth - Light Switch [Official Music Video].mp3',
+      artist: 'Charlie Puth',
+      title: 'Light Switch - Charlie Puth',
+   },
+   {
+      musicCover: '',
+      src:   '/music/Nadhif Basalamah - bergema sampai selamanya (Official Lyric Video).mp3',
+      artist: 'Nadhif Basalamah',
+      title: 'Nadhif Basalamah - bergema sampai selamanya'
+   },
+   {
+      musicCover: '',
+      src:   '/music/Nadhif Basalamah - kota ini tak sama tanpamu (Official Lyric Video).mp3',
+      artist: 'Nadhif Basalamah',
+      title: 'Nadhif Basalamah - kota ini tak sama tanpamu'
+   },
+   {
+      musicCover: '',
       src:   '/music/H.E.R. - Best Part Ft. Daniel Caesar.mp3',
       artist: 'H.E.R. - Daniel Caesar',
       title: 'Best Part - H.E.R Ft. Daniel Caesar'
@@ -18,12 +36,6 @@ export const musicPlaylist = [
       src:   '/music/Love In The Dark - Adele.mp3',
       artist: 'Adele',
       title: 'Love In The Dark - Adele'
-   },
-   {
-      musicCover: '',
-      src:   '/music/if u could see me cryin in my room - Arash Buana, Raissa Anggiani.mp3',
-      artist: 'Arash Buana - Raissa Anggiani',
-      title: 'if u could see me cryin in my room - Arash Buana, Raissa Anggiani'
    },
    {
       musicCover: '',
@@ -49,16 +61,5 @@ export const musicPlaylist = [
       artist: 'Nina',
       title: 'Feast - Nina',
    },
-   {
-      musicCover: '',
-      src:   '/music/Never Enough.mp3',
-      artist: 'Loren Allred',
-      title: 'Never Enough - Loren Allred',
-   },
-   {
-      musicCover: '',
-      src:   '/music/JVKE - golden hour.mp3',
-      artist: 'JVKE',
-      title: 'JVKE - Golden Hour',
-   },
+   
 ]
