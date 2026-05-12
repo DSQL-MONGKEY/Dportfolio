@@ -494,7 +494,7 @@ export const journeys = [
       title: 'Citra Negara Vocational High Shcool',
       role: 'Software Engineering',
       logo: ug,
-      date: 'August 2020 - 2022',
+      date: 'August 2020 - August 2022',
       isPresent: false,
       jobDesc: 'Learning the fundamentals of software development, including programming, system design, and database management, with a focus on algorithms, data structures, and efficient software solutions. This field also hones analytical and problem-solving skills essential for the tech industry.',
       coworks: [
@@ -698,7 +698,7 @@ export const journeys = [
       title: 'PT. Bank CIMB Niaga Tbk',
       role: 'Bussines Process & Solution Excellence Intern (Software Tester)',
       logo: cimb,
-      date: 'August 2024 - Present',
+      date: 'August 2024 - December 2024',
       isPresent: true,
       jobDesc: 'As a Software Tester in the banking system field, I am responsible for conducting User Acceptance Testing (UAT) on core banking system scenarios, including operating AS400 machines to test new features. Additionally, I develop Business Process Engines using a macro Excel approach to enhance efficiency and automate business processes. My role involves ensuring all testing scenarios run smoothly, identifying potential issues, and verifying that the system functions according to business requirements.',
       coworks: [
@@ -794,7 +794,7 @@ export const journeys = [
    },
    {
       title: 'PT. Kereta Api Indonesia(KAI)',
-      role: 'IT Support & Developer',
+      role: 'IT Support & Developer (freelance)',
       logo: ug,
       date: 'February 2025 - June 2025',
       isPresent: false,
@@ -814,11 +814,26 @@ export const journeys = [
       title: 'DSCVRY PTE. LTD (SG)',
       role: 'Fullstack Engineer',
       logo: ug,
-      date: 'July 2025 - Present',
+      date: 'July 2025 - November 2025',
       isPresent: true,
-      jobDesc: 'Developing multi-platform application for the company\'s new PoC product, focusing on enhancing user experience and functionality. Deliver technical solutions for product system requirements.',
+      jobDesc: 'Develop multi-platform application for the company\'s new PoC product, focusing on architecting system that support real-time functionality with IoT-devices via MQTT. Responsible to deliver techinal solution covering bakcend, frontend(dashboard), mobile application and also IoT-devices.',
       coworks: [
-         
+         {
+            name: 'Sam Ralial',
+            role: 'DevOps & Firmware Engineer',
+            tag: 'samralial',
+            link: '',
+            image: '',
+            opinion: 'Good Job, keep it up!'
+         },
+         {
+            name: 'Fandi Isnadi',
+            role: 'Hardware Engineer',
+            tag: 'fandi__74',
+            link: 'https://www.instagram.com/fandi__74/',
+            image: '',
+            opinion: 'Still need to improve on backend development, but your frontend and mobile development is really good!'
+         },
       ]
    },
 ]

@@ -12,9 +12,9 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				'main': '#ACFADF',
-				'mainDark': '#1B211A',
-				'calmBlue': '#5C3E94',
+				'main': '#FFFFFF',
+				'mainDark': '#000000',
+				'calmBlue': '#151515',
 				'shineRed': '#F55353',
 				'lightGreen': '#8ad451',
 				'nicheBlue': '#B983FF',

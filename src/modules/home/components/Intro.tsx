@@ -20,7 +20,7 @@ const Intro = () => {
                <ul className='flex gap-3 ml-5 my-3 dark:text-white '>
                   <li className='flex gap-1 items-center font-poppins'>
                      <div className='w-3 h-3 dark:bg-calmBlue bg-mainDark rounded shadow-xl'></div>
-                     Frontend/Fullstack
+                     Software / IoT Engineer
                   </li>
                   <li className='flex gap-1 items-center font-poppins'>
                      <div className='w-3 h-3 dark:bg-calmBlue bg-mainDark rounded '></div>

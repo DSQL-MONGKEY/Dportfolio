@@ -39,7 +39,7 @@ const LeftCollapseNav = () => {
                </div>
             )}
          </div>
-         <nav className="mb-6 flex flex-col gap-3 border-t border-neutral-500 dark:border-neutral-300 pt-4">
+         <nav className="mb-6 flex flex-col gap-3 border-t border-neutral-500 dark:border-neutral-900 pt-4">
             {navLinks.map((item, index) => (
                <MenuItem key={index} {...item} isHover={isHover} />
             ))}
