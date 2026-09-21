@@ -5,6 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import LeftCollapseNav from './LeftCollapseNav'
 import MusicBox from './MusicBox'
+import AudioEngine from './audio-player/AudioEngine'
 import { usePathname, useSearchParams } from 'next/navigation'
 import MobileSlideNav from './MobileSlideNav'
 
@@ -18,6 +19,7 @@ const Layouts = ({ children }: LayoutsProps ) => {
    const readMode = searchParams.get("read-mode");
 
    const hideSidebar = ['/me'].includes(pathName) || readMode == 'true'; 
+   const hideMusicBox = pathName === '/playlist';
 
    
    useEffect(() =>{
@@ -44,7 +46,9 @@ const Layouts = ({ children }: LayoutsProps ) => {
 
          {!hideSidebar && <LeftCollapseNav />}
 
-         <MusicBox />
+         <AudioEngine />
+
+         {!hideMusicBox && <MusicBox />}
       </div>
    )
 }

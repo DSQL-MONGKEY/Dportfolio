@@ -1,5 +1,5 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
-import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta, BsUniversalAccess } from "react-icons/bs"
+import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta, BsUniversalAccess, BsTiktok } from "react-icons/bs"
 import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
@@ -43,9 +43,9 @@ export const navLinks: MenuItemProps[] = [
       icon: <GoWorkflow/>
    },
    {
-      href: 'playlist',
-      title: 'Playlist',
-      icon: <MdOutlinePlaylistAddCheckCircle/>
+      href: 'contact',
+      title: 'Contact',
+      icon: <BsChatRightText/>
    },
    {
       href: 'feeds',
@@ -53,14 +53,14 @@ export const navLinks: MenuItemProps[] = [
       icon: <PiCoffeeDuotone/>
    },
    {
+      href: 'playlist',
+      title: 'Playlist',
+      icon: <MdOutlinePlaylistAddCheckCircle/>
+   },
+   {
       href: 'universe',
       title: 'Universe',
       icon: <BsUniversalAccess />
-   },
-   {
-      href: 'contact',
-      title: 'Contact',
-      icon: <BsChatRightText/>
    },
 ]
 
@@ -95,12 +95,17 @@ export const socialMedia = [
    {
       title: 'Instagram',
       icon: <BsInstagram/>,
-      link: 'https://www.instagram.com/dimpfe/'
+      link: 'https://www.instagram.com/dimaspfe/'
+   },
+   {
+      title: 'TikTok',
+      icon: <BsTiktok/>,
+      link: 'https://www.tiktok.com/@dimaspfe'
    },
    {
       title: 'Linkedin',
       icon: <BsLinkedin/>,
-      link: 'https://www.linkedin.com/in/dimp-fe/'
+      link: 'https://www.linkedin.com/in/dimaspfe'
    },
    {
       title: 'Github',
@@ -932,6 +937,39 @@ export const certificates = [
 
 export const projects = [
    {
+      title: 'M2MWizard | Machine to Machine Simcard Management System',
+      isFeatured: true,
+      techStack: [
+         {
+            tags: 'Typescript',
+            color: 'text-yellow-500'
+         },
+         {
+            tags: 'NextJS',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'IAK',
+            color: 'text-cyan-800'
+         },
+         {
+            tags: 'Clerk',
+            color: 'text-rose-700'
+         },
+         {
+            tags: 'PostgreSQL',
+            color: 'text-cyan-400'
+         },
+         {
+            tags: 'Bun',
+            color: 'text-cyan-400'
+         },
+      ],
+      desc: 'M2MWiz is a full-stack web application built with Next.js, designed for managing projects, phone numbers, quotas, and user organizations. It features a dashboard for users to create and manage projects, handle phone number assignments, track credits, and more. The app integrates authentication via Clerk, a modern UI with shadcn/ui components, and a PostgreSQL database for data persistence.',
+      image: xclone,
+      link: 'https://github.com/acabtech/M2MWiz'
+   },
+   {
       title: 'Cloud Storage SFTPGo & File Automation N8N',
       isFeatured: true,
       techStack: [
@@ -967,19 +1005,19 @@ export const projects = [
             tags: 'PostgreSQL',
             color: 'text-cyan-400'
          },
-         {
-            tags: '',
-            color: 'text-cyan-400'
-         },
       ],
       desc: 'Designed and deployed a self-hosted cloud storage solution using SFTPGo running within a Docker container. The system features a custom Telegram Bot interface, allowing users to upload, retrieve, and manage files remotely via chat. All file operations and logic are orchestrated using n8n automation workflows, creating a seamless "ChatOps" experience for server management without requiring a traditional web dashboard.',
       image: xclone,
-      link: 'https://github.com/DSQL-MONGKEY/maps-tracker-dashboard'
+      link: ''
    },
    {
       title: 'LoRa Climber Tracker',
       isFeatured: true,
       techStack: [
+         {
+            tags: 'LoRa',
+            color: 'text-yellow-800'
+         },
          {
             tags: 'IoT',
             color: 'text-yellow-800'

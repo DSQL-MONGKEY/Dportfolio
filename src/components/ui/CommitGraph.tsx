@@ -1,44 +1,68 @@
 import React from "react";
-
 import { cn } from "@/common/lib/utils";
-const getColor = (count: number): string => {
-const colors: { [key: number]: string } = {
-   0: "bg-gray-300",
-   1: "bg-green-200",
-   2: "bg-green-400",
+import { ContributionDay } from "@/common/lib/github";
+
+interface CommitGraphProps {
+   days: ContributionDay[]
+}
+
+export const levelClasses: Record<number, string> = {
+   0: "bg-mainDark/10 dark:bg-darkText/10",
+   1: "bg-lightGreen/40",
+   2: "bg-lightGreen/70",
+   3: "bg-lightGreen",
+   4: "bg-[#3DA35D]",
 };
-return colors[count] ?? "bg-green-600";
+
+const buildWeeks = (days: ContributionDay[]) => {
+   const weeks: (ContributionDay | null)[][] = [];
+   let week: (ContributionDay | null)[] = Array(new Date(days[0].date).getUTCDay()).fill(null);
+
+   days.forEach((day) => {
+      week.push(day);
+      if (week.length === 7) {
+         weeks.push(week);
+         week = [];
+      }
+   });
+
+   if (week.length) {
+      while (week.length < 7) week.push(null);
+      weeks.push(week);
+   }
+
+   return weeks;
 };
-function CommitGraph() {
-const commitsData = Array.from({ length: 53 }, () =>
-   Array.from({ length: 7 }, () => Math.floor(Math.random() * 4)),
-);
-return (
-   <section>
-      <div className="flex w-52 flex-col items-center justify-center p-6">
-         <div id="contributions" className="flex gap-1">
-            {commitsData.map((week, i) => (
-               <div
-               key={`week-${i}`}
-               id={`week-${i}`}
-               className={cn("flex flex-col gap-1", i < 20 ? "hidden md:flex" : "flex")}
-               >
-               {week.map((commitCount, j) => (
+
+const CommitGraph = ({ days }: CommitGraphProps) => {
+   if (!days.length) return null;
+
+   const weeks = buildWeeks(days);
+
+   return (
+      <div className="flex w-full gap-[3px]">
+         {weeks.map((week, weekIndex) => (
+            <div
+               key={`week-${weekIndex}`}
+               className={cn(
+                  "flex flex-1 flex-col gap-[3px]",
+                  weekIndex < weeks.length - 20 && "hidden md:flex"
+               )}
+            >
+               {week.map((day, dayIndex) => (
                   <div
-                     key={`week-${i}-day-${j}`}
-                     id={`week-${i}-day-${j}`}
+                     key={day?.date ?? `empty-${weekIndex}-${dayIndex}`}
+                     title={day ? `${day.count} contributions on ${day.date}` : undefined}
                      className={cn(
-                     "h-1 w-1 sm:h-2 sm:w-2 md:h-3 md:w-3 md:rounded-[2px] lg:h-4 lg:w-4",
-                     getColor(commitCount),
+                        "aspect-square w-full rounded-[2px]",
+                        day ? levelClasses[day.level] ?? levelClasses[4] : "bg-transparent"
                      )}
                   />
                ))}
-               </div>
-            ))}
-         </div>
+            </div>
+         ))}
       </div>
-   </section>
-);
-}
+   );
+};
 
 export default CommitGraph;

@@ -1,61 +1,27 @@
 "use client";
 
-import React, { useEffect, RefObject } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/common/lib/utils";
+import { useMusic } from "@/stores/music";
 
-/**
- * Created a custom ref of instead using forwardRef
- * that can't passing multiple refs, it improves readability,
- * simplifies code, and avoid many code issues
- * 
- * NOTE: use forwardRef only for necessary in specific scenarios
- */
 interface FrequencyProps {
-   audioData: number[]
-   className: string
-   animationIdRef: RefObject<number | null>
-   audioContextRef: RefObject<AudioContext | null>
-   sourceRef: RefObject<MediaElementAudioSourceNode>  
+   className?: string
 }
 
-
-
-const Frequency = ({ 
-   audioData, 
-   className = '', 
-   animationIdRef, 
-   audioContextRef, 
-   sourceRef }: FrequencyProps) => {
-   
-   useEffect(() => {
-      const currentSourceRef = sourceRef.current;
-      const currentAnimationIdRef = animationIdRef.current;
-      const currentAudioContextRef = audioContextRef.current;
-
-      // Clean up on unmount
-      return () => {
-         if (currentAnimationIdRef) cancelAnimationFrame(currentAnimationIdRef);
-         
-         if (currentAudioContextRef) {
-            // Disconnect and close audio context to prevent memory leaks
-            if (currentSourceRef) {
-               currentSourceRef.disconnect();
-            }
-            currentAudioContextRef.close();
-         }
-      };
-   }, [animationIdRef, audioContextRef, sourceRef]);
+const Frequency = ({ className }: FrequencyProps) => {
+   const audioData = useMusic(state => state.audioData);
 
    return (
-      <div className={`flex items-end ${className}`}>
+      <div className={cn("flex items-end gap-[3px]", className)}>
          {audioData.map((height, index) => (
             <motion.div
                key={index}
-               className="dark:bg-slate-300 w-2 mx-0.5 rounded-2xl border border-black"
-               animate={{
-                  height: `${height - 100}px`, 
-                  backgroundColor: height > 200 ? "#F55353" : "#EFECEC",
-               }}
+               className={cn(
+                  "w-1.5 flex-1 border border-mainDark dark:border-darkBorder",
+                  height > 65 ? "bg-shineRed" : "bg-mainDark dark:bg-darkText"
+               )}
+               animate={{ height: `${Math.max(height, 4)}%` }}
                transition={{
                   type: "spring",
                   stiffness: 200,

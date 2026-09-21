@@ -29,7 +29,7 @@ const LeftCollapseNav = () => {
                   </div>
                   <ThemeToggleIcon />
                   <LinkButtonIcon 
-                     link={'https://www.instagram.com/dimpfe'} 
+                     link={'https://www.instagram.com/dimaspfe'} 
                      icon={<BsInstagram />} 
                   />
                   <LinkButtonIcon 

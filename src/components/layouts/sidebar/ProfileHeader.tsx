@@ -47,7 +47,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
             <div className="flex gap-2">
                <ThemeToggleIcon />
                <LinkButtonIcon 
-                  link={'https://www.instagram.com/dimpfe'} 
+                  link={'https://www.instagram.com/dimaspfe'} 
                   icon={<BsInstagram />} 
                />
                <LinkButtonIcon 

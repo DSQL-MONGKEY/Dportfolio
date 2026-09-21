@@ -4,13 +4,15 @@ import Feeds from '@/modules/feeds'
 import { Metadata } from "next";
 import { METADATA } from "@/common/constants/metadata";
 
+export const revalidate = 3600
+
 export const metadata: Metadata = {
 	title: `Feeds ${METADATA.exTitle}`,
-	description: `Something might you like it`,
+	description: `Featured videos, socials, and GitHub activity of Dimas Prasetyo`,
 	alternates: {
 		canonical: `${process.env.DOMAIN}/feeds`
 	},
-   keywords: 'chatting app, social feeds, chat, feeds'
+   keywords: 'tiktok, instagram, github, social media, feeds, commit graph, featured videos'
 }
 
 const FeedsPage = () => {
