@@ -1,35 +1,29 @@
-import { Rocket } from "lucide-react";
-
+import React from 'react'
+import { Rocket } from 'lucide-react'
 
 const JourneyBottomLine = () => {
    return (
-      <>
-         <div className='flex flex-col w-full gap-2'>
-            <div className='flex flex-col w-full justify-center items-center bg-neutral-100 dark:bg-neutral-900 rounded-md border-2 border-black shadow-light p-2'>
-            <div className='flex gap-2 items-center'>
-               <span className='font-paytone text-lg'>
-                  Freelance
-               </span>
-               <span className='font-outfit text-sm'>
-                  Software / IoT Developer
+      <div className="mt-12 md:mt-16">
+         <div className="border-2 border-mainDark bg-main p-4 text-center shadow-[4px_4px_0px_0px_#F4CE14] dark:border-darkBorder dark:bg-secondaryBlack">
+            <div className="flex flex-wrap items-center justify-center gap-2">
+               <span className="font-lexend text-base font-bold">Freelance</span>
+               <span className="border-2 border-mainDark bg-bg px-2 py-0.5 font-outfit text-[10px] font-bold dark:border-darkBorder dark:bg-darkBg">
+                  2023 – now
                </span>
             </div>
-            <span className='font-outfit text-xs'>
-               2023 - Still here
-            </span>
-            <span className='font-outfit text-xs italic'>
-               Honorary Title - Glorified Google-fu practitioner, Openrouter free models malpracticist
-            </span>
-         </div>
-         </div>
-         <div>
-            <p className='text-xs lg:text-2xl text-neutral-900 dark:text-slate-200 font-outfit text-center mt-5'>
-               And that&apos;s my journey so far! <br/> I&apos;m excited to see where it takes me next 
-               <Rocket className='inline-block' />
+            <p className="mt-1 font-outfit text-xs opacity-70">Software / IoT Developer</p>
+            <p className="mt-2 font-outfit text-xs italic opacity-60">
+               Honorary title — glorified Google-fu practitioner, OpenRouter free-model
+               malpractitioner.
             </p>
          </div>
-      </>
+
+         <p className="mx-auto mt-6 max-w-md text-center font-outfit text-sm opacity-70">
+            And that&apos;s my journey so far! I&apos;m excited to see where it takes me next
+            <Rocket className="ml-1 inline-block" size={14} />
+         </p>
+      </div>
    )
 }
 
-export default JourneyBottomLine;
+export default JourneyBottomLine

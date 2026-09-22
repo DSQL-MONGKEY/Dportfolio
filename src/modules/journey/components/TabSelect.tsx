@@ -1,37 +1,50 @@
 import React from 'react'
-import { CoworksTypes } from './ItemDetails'
 import Image from 'next/image'
-import { FaBriefcase } from "react-icons/fa";
-import { panda } from '@/assets';
-
+import { FaBriefcase } from 'react-icons/fa'
+import { panda } from '@/assets'
+import { cn } from '@/common/lib/utils'
+import { Cowork } from '@/common/types/journey'
 
 interface TabSelectProps {
    handleCaseButton: () => void
-   handleSelectProfile: (data: CoworksTypes) => void
-   coworks: CoworksTypes[]
+   handleSelectProfile: (data: Cowork) => void
+   coworks: Cowork[]
+   isSelected: boolean
 }
 
-const TabSelect = ({ handleCaseButton, handleSelectProfile , coworks }: TabSelectProps) => {
+const TabSelect = ({ handleCaseButton, handleSelectProfile, coworks, isSelected }: TabSelectProps) => {
    return (
-      <div className='flex flex-row items-center no-scrollbar overflow-y-hidden overflow-x-scroll w-full border-2 border-black bg-neutral-100 dark:bg-zinc-900 rounded-md space-x-3 gap-2 p-2'>
-         <div id='my-works' className='p-2 pr-4 border-r-2 border-black'>
-            <button onClick={handleCaseButton}>
-               <FaBriefcase className='text-3xl' />
-            </button>
-         </div>
-         {coworks.map((data, idx) => (
+      <div className="flex w-full items-center gap-2 overflow-x-auto border-2 border-mainDark bg-bg p-2 dark:border-darkBorder dark:bg-darkBg">
+         <button
+            type="button"
+            onClick={handleCaseButton}
+            aria-label="Show role details"
+            className={cn(
+               'flex h-11 w-11 shrink-0 items-center justify-center border-2 border-mainDark shadow-[2px_2px_0px_0px_#000] transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
+               isSelected
+                  ? 'bg-[#F4CE14] text-mainDark'
+                  : 'bg-main text-text dark:bg-secondaryBlack dark:text-darkText'
+            )}
+         >
+            <FaBriefcase className="text-lg" />
+         </button>
+
+         <span className="h-8 w-0.5 shrink-0 bg-mainDark dark:bg-darkBorder" />
+
+         {coworks.map((data, index) => (
             <button
-               key={idx}
-               className="flex-shrink-0"
+               key={index}
+               type="button"
                onClick={() => handleSelectProfile(data)}
+               className="shrink-0 transition-transform hover:-translate-y-0.5"
             >
-            <Image
-               width={50}
-               height={50}
-               alt={data.name || 'picture'}
-               src={data?.image == '' ? panda : data?.image}
-               className="rounded-full border-2 border-black"
-            />
+               <Image
+                  width={44}
+                  height={44}
+                  alt={data.name || 'picture'}
+                  src={data?.image === '' ? panda : data?.image}
+                  className="h-11 w-11 rounded-full border-2 border-mainDark object-cover dark:border-darkBorder"
+               />
             </button>
          ))}
       </div>

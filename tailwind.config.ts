@@ -124,6 +124,11 @@ const config: Config = {
 					'0%': { transform: 'translateX(-150px)' },
 					'100%': { transform: 'translateX(150px)' }
 				},
+				shake: {
+					'0%, 100%': { transform: 'translateX(0)' },
+					'25%': { transform: 'translateX(-6px)' },
+					'75%': { transform: 'translateX(6px)' },
+				},
 			},
 			animation: {
 				"trail": "trail var(--duration) linear infinite",
@@ -134,6 +139,7 @@ const config: Config = {
 				'rain-arrow': 'rainArrow 1s ease-out infinite',
 				'enter-left': 'enterLeft 0.5s ease-in-out',
 				'right-infinite': 'rightInfinite 2s linear infinite',
+				shake: 'shake 0.4s ease-in-out',
 				marquee: "marquee var(--duration) linear infinite",
 				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
 			},

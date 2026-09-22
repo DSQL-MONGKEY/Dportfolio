@@ -3,4 +3,5 @@ export interface ArticleItem  {
    title: string
    tags: string[]
    description: string
+   link: string
 }

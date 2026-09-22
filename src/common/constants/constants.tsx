@@ -4,7 +4,7 @@ import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostm
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
 import { GiBearFace, GiSpermWhale  } from "react-icons/gi";
-import { TbBrandPowershell, TbBrandThreejs, TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang, TbBrandReactNative } from "react-icons/tb"
+import { TbBrandPowershell, TbBrandThreejs, TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang, TbBrandReactNative, TbBrandMedium } from "react-icons/tb"
 import { GrDocker, } from "react-icons/gr";
 import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
@@ -12,6 +12,9 @@ import { GiJourney } from "react-icons/gi";
 import { BiSolidMobileVibration, BiLogoPostgresql  } from "react-icons/bi";
 
 import { MenuItemProps } from "../types/menu"
+import { JourneyItem } from "../types/journey"
+import { ProjectItem } from "../types/project"
+import { ArticleItem } from "../types/article"
 import { aishi, androidBasic, arrashi, backendBeginner, bangkit,  burhan,  cekit, cimb, edi, firdaus, fo, frontendBeginner, frontendReact, google, harry, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, rama, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
 
 
@@ -69,25 +72,25 @@ export const services = [
       icon: <SiTorbrowser /> ,
       id: '72d7892ede',
       title: 'Website Development',
-      description: 'Create stunning website, user-friendly design with modern technologies '
+      description: 'Modern, responsive websites built for speed, accessibility, and clean user experience'
    },
    {
       icon: <BiSolidMobileVibration />,
       id: 'cd5fc36877',
       title: 'Mobile Development',
-      description: 'Create cross-platform and reliable application using React-Native'
+      description: 'Cross-platform mobile apps with React Native, shipped for both iOS and Android'
    },
    {
       icon: <PiNetworkFill />,
       id: 'a9292e0942',
       title: 'IoT (Internet of Things)',
-      description: 'Create and develop IoT services/devices for your needs'
+      description: 'IoT devices and services, from firmware and MQTT pipelines to monitoring dashboards'
    },
    {
       icon: <SiTestinglibrary />,
       id: '32e5582f4d',
       title: 'Software Testing',
-      description: 'Test your application with manual or automation testing'
+      description: 'Manual and automated testing to catch regressions before your users do'
    },
 ]
 
@@ -494,11 +497,12 @@ export const softSkills = [
    
 ]
 
-export const journeys = [
+export const journeys: JourneyItem[] = [
    {
       title: 'Citra Negara Vocational High Shcool',
       role: 'Software Engineering',
-      logo: ug,
+      logo: '',
+      shortName: 'CN',
       date: 'August 2020 - August 2022',
       isPresent: false,
       jobDesc: 'Learning the fundamentals of software development, including programming, system design, and database management, with a focus on algorithms, data structures, and efficient software solutions. This field also hones analytical and problem-solving skills essential for the tech industry.',
@@ -596,7 +600,7 @@ export const journeys = [
       ]
    },
    {
-      title: 'Lembaga Pengembangan Komputer UG',
+      title: 'Lembaga Pengembangan Komputerisasi (LepKom)',
       role: 'Workshop Insturctor & Certification Profession Assistant',
       logo: lepkom,
       date: 'March 2024 - Present',
@@ -800,7 +804,8 @@ export const journeys = [
    {
       title: 'PT. Kereta Api Indonesia(KAI)',
       role: 'IT Support & Developer (freelance)',
-      logo: ug,
+      logo: '',
+      shortName: 'KAI',
       date: 'February 2025 - June 2025',
       isPresent: false,
       jobDesc: 'Support the facility monitoring division with excellence and on-point solution using Macro Excel for automate generate Grafik Perjalanan Kereta Api(GAPEKA) and helping re-design internal web application in digital transformation project',
@@ -818,7 +823,8 @@ export const journeys = [
    {
       title: 'DSCVRY PTE. LTD (SG)',
       role: 'Fullstack Engineer',
-      logo: ug,
+      logo: '',
+      shortName: 'DS',
       date: 'July 2025 - November 2025',
       isPresent: true,
       jobDesc: 'Develop multi-platform application for the company\'s new PoC product, focusing on architecting system that support real-time functionality with IoT-devices via MQTT. Responsible to deliver techinal solution covering bakcend, frontend(dashboard), mobile application and also IoT-devices.',
@@ -935,7 +941,7 @@ export const certificates = [
    
 ]
 
-export const projects = [
+export const projects: ProjectItem[] = [
    {
       title: 'M2MWizard | Machine to Machine Simcard Management System',
       isFeatured: true,
@@ -965,7 +971,7 @@ export const projects = [
             color: 'text-cyan-400'
          },
       ],
-      desc: 'M2MWiz is a full-stack web application built with Next.js, designed for managing projects, phone numbers, quotas, and user organizations. It features a dashboard for users to create and manage projects, handle phone number assignments, track credits, and more. The app integrates authentication via Clerk, a modern UI with shadcn/ui components, and a PostgreSQL database for data persistence.',
+      desc: 'Full-stack SIM card and quota management platform for M2M operations, built with Next.js, Clerk, and PostgreSQL.',
       image: xclone,
       link: 'https://github.com/acabtech/M2MWiz'
    },
@@ -1006,7 +1012,7 @@ export const projects = [
             color: 'text-cyan-400'
          },
       ],
-      desc: 'Designed and deployed a self-hosted cloud storage solution using SFTPGo running within a Docker container. The system features a custom Telegram Bot interface, allowing users to upload, retrieve, and manage files remotely via chat. All file operations and logic are orchestrated using n8n automation workflows, creating a seamless "ChatOps" experience for server management without requiring a traditional web dashboard.',
+      desc: 'Self-hosted cloud storage with a Telegram bot interface and n8n automation workflows, running on Docker with SFTPGo.',
       image: xclone,
       link: ''
    },
@@ -1059,7 +1065,7 @@ export const projects = [
             color: 'text-blue-600'
          },
       ],
-      desc: 'This project addresses the safety issues of mountain climbers in areas with minimal cellular signal. We designed and implemented the LoRa Tracking System, a reliable location-tracking prototype.Utilizing LoRa 433MHz and GPS technology, the system wirelessly sends real-time position data from a device carried by the climber to a monitoring station. This data is then displayed on a web dashboard, enabling the base camp team to track climber movements and provide a rapid response in emergency situations. This project demonstrates LoRa as an effective and power-efficient solution for long-range communication in extreme environments.',
+      desc: 'LoRa + GPS tracking system that streams real-time climber positions to a monitoring dashboard, designed for areas with no cellular coverage.',
       image: xclone,
       link: 'https://github.com/DSQL-MONGKEY/maps-tracker-dashboard'
    },
@@ -1116,9 +1122,9 @@ export const projects = [
             color: 'text-blue-600'
          },
       ],
-      desc: 'The Kanaeru Multi Dispenser project is an IoT innovation that allows you to easily make drinks. Equipped with three drink tubes, this device can not only mix drinks manually, but also automatically based on stored recipes or your favorite drink history. To ensure that all commands and data run smoothly, Kanaeru uses the MQTT protocol with HiveMQ as a broker, which efficiently connects its hardware and software.',
+      desc: 'IoT multi-drink dispenser with automatic recipe execution, connected over MQTT/HiveMQ to a Next.js control dashboard.',
       image: xclone,
-      link: 'https://github.com/DSQL-MONGKEY/maps-tracker-dashboard'
+      link: 'https://github.com/DSQL-MONGKEY/kanaeru-dispenser'
    },
    {
       title: 'Twitter Clone',
@@ -1169,7 +1175,7 @@ export const projects = [
             color: 'text-blue-600'
          },
       ],
-      desc: 'Fullstack twitter/X clone with MERN stack that have similar functionality like the real app. In this included auth functionality and as a user we could make an post, follow other user, put some like on other user post, and upload or change the image profile that we want. This project have 95% similar functionality',
+      desc: 'Full-stack Twitter/X clone with authentication, posts, follows, likes, and image uploads built on the MERN stack.',
       image: xclone,
       link: 'https://github.com/DSQL-MONGKEY/twitter-clone'
    },
@@ -1198,7 +1204,7 @@ export const projects = [
             color: 'text-blue-500'
          },
          ],
-      desc: 'web-based community health center queuing application using the Laravel-9 framework which focuses on developing mechanisms for queuing and taking patient medicines This project has 3 authorization roles doctor, patient, pharmacist',
+      desc: 'Web-based community health center queue system with doctor, patient, and pharmacist roles, built with Laravel and Livewire.',
       image: puskesmas,
       link: 'https://github.com/DSQL-MONGKEY/app-puskesmas'
    },
@@ -1223,7 +1229,7 @@ export const projects = [
             color: 'text-blue-500'
          }, 
          ],
-      desc: 'This project provides practical experience in software development and an in-depth understanding of the technologies used in the creation of streaming video platforms such as YouTube.\n Frontend development includes user interface (UI) design, responsiveness, and user interaction and consume the API.',
+      desc: 'Video streaming frontend that consumes the YouTube API, focused on responsive UI and clean API integration.',
       image: ytclone,
       link: 'https://github.com/DSQL-MONGKEY/youtube-clone'
    },
@@ -1252,7 +1258,7 @@ export const projects = [
             color: 'text-blue-400'
          },
          ],
-      desc: 'My portfolio reflects my journey in the world of development and includes a variety of projects that highlight my technical and creative skills. From intuitive user interface design to developing innovative software solutions, each project has its own unique goals.',
+      desc: 'Personal portfolio showcasing my projects and design work, built with React, TypeScript, and Tailwind CSS.',
       image: porto,
       link: 'https://github.com/DSQL-MONGKEY/3Dportfolio'
    },
@@ -1281,7 +1287,7 @@ export const projects = [
             color: 'text-blue-400'
          },  
          ],
-      desc: 'Creating a copy or clone of Google is an interesting project and can provide experience in several aspects of web development. Implement a search engine that can handle user search queries. Understand search algorithms and how to optimize search results with Google search API.',
+      desc: 'Search engine clone that queries the Google Search API, with a responsive results UI built in React and Vite.',
       image: google,
       link: 'https://github.com/DSQL-MONGKEY/google-clone'
    },
@@ -1318,19 +1324,7 @@ export const projects = [
             color: 'text-red-700'
          },  
          ],
-      desc: `Clean and Intuitive User Interface:
-      Clean and intuitive user interface design similar to Notion.
-      Make sure design elements like colors, typography, and icons are consistent.
-      
-      Implement a page and content management system that allows users to easily create, edit, and delete pages.
-      Consider using blocks or modular elements to organize content.
-      
-      Includes a "What You See Is What You Get" (WYSIWYG) editor that makes it easy for users to format and edit text and multimedia content.
-      Add support for various content types, such as text, images, videos, tables, and attached files.
-      Organization and Hierarchy:
-      
-      Implement an organizational system that allows the creation of categories, subcategories, and labels.
-      Consider using a tag or label system to help users organize their content.`,
+      desc: 'Block-based note-taking app with a WYSIWYG editor, nested page hierarchy, and real-time data sync via Convex.',
       image: notion,
       link: 'https://github.com/DSQL-MONGKEY/notion-clone'
    },
@@ -1355,7 +1349,7 @@ export const projects = [
             color: 'text-blue-500'
          },
       ],
-      desc: 'Website for check the postpaid electricity bills, consume PLN API to get the data. This site will be improve further and will add a new features to it.',
+      desc: 'Web app that checks postpaid electricity bills through the PLN API, built with React and TypeScript.',
       image: cekit,
       link: 'https://github.com/DSQL-MONGKEY/check-pln-bills'
    },
@@ -1368,8 +1362,7 @@ export const projects = [
             color: 'text-blue-500'
          },
       ],
-      desc: `This Hotel Front Office Dashboard application UI/UX project explores and presents innovative design solutions to improve the user experience in hotel operational management. Use of user research methods to understand user needs and preferences in hotel operations.
-      Integrate user feedback in the design process to ensure the interface meets expectations and needs.`,
+      desc: 'UI/UX design for a hotel front-office dashboard, covering user research, prototyping, and interface design in Figma.',
       image: uiux,
       link: 'https://www.figma.com/proto/hyJkJl3QVX3J3c0uAlF0CA/fo-dashboard?node-id=45-117'
    },
@@ -1398,8 +1391,7 @@ export const projects = [
             color: 'text-rose-700'
          },
       ],
-      desc: `This Hotel Front Office Dashboard application UI/UX project explores and presents innovative design solutions to improve the user experience in hotel operational management. Use of user research methods to understand user needs and preferences in hotel operations.
-      Integrate user feedback in the design process to ensure the interface meets expectations and needs.`,
+      desc: 'React Native hotel front-office app for room, booking, and guest management, backed by Firebase.',
       image: fo,
       link: 'https://github.com/DSQL-MONGKEY/front-office-hotels'
    },
@@ -1416,7 +1408,7 @@ export const projects = [
             color: 'text-green-500'
          },
       ],
-      desc: `The practice project in creating a Mobile App Agent Valorant using Kotlin has provided valuable experience in mobile app development, providing an in-depth understanding of various technical aspects and best practices. Merancang sistem navigasi yang intuitif dan pengaturan tampilan yang efektif, memastikan pengguna dapat dengan mudah beralih antara berbagai fitur aplikasi.`,
+      desc: 'Android companion app for Valorant players, built with Kotlin and an intuitive Material navigation flow.',
       image: valo,
       link: ''
    },
@@ -1475,24 +1467,27 @@ export const cards = [
    },
 ]
 
-export const articles = [
+export const articles: ArticleItem[] = [
    {
       logo: <TbBrandNotion/>,
       title: 'Notion',
       tags: [''],
       description: '',
+      link: '',
    },
    {
-      logo: <TbBrandNotion />,
+      logo: <BsGithub />,
       title: 'Github Library',
       tags: [''],
       description: '',
+      link: '',
    },
    {
-      logo: <TbBrandNotion />,
+      logo: <TbBrandMedium />,
       title: 'Medium',
       tags: [''],
       description: '',
+      link: '',
    },
 ]
 

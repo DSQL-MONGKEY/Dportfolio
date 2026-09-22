@@ -3,14 +3,16 @@ import React from 'react'
 import ItemProject from './ItemProject'
 
 const Showcase = () => {
+   const sortedProjects = [...projects].sort(
+      (a, b) => Number(b.isFeatured) - Number(a.isFeatured)
+   )
+
    return (
-      <div className="flex flex-col gap-5">
-         {projects.sort((x, y) => (
-            x.isFeatured === y.isFeatured
-         ) ? 0 : x.isFeatured ? -1 : 0)
-         .map((item, idx) => (
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 mt-2">
+         {sortedProjects.map((item, index) => (
             <ItemProject
-               key={idx}
+               key={item.title}
+               index={index}
                title={item.title}
                techStack={item.techStack}
                desc={item.desc}

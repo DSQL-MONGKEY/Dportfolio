@@ -6,11 +6,11 @@ import { METADATA } from "@/common/constants/metadata";
 
 export const metadata: Metadata = {
 	title: `Projects ${METADATA.exTitle}`,
-	description: `The projects that i've working on`,
+	description: `Selected projects by Dimas Prasetyo — IoT, automation, full-stack web, and mobile apps`,
 	alternates: {
 		canonical: `${process.env.DOMAIN}/projects`
 	},
-   keywords: 'twitter clone, reactjs, nextjs, typescript, javascript, mongodb, mern stack, laravel, fullstack, notion clone, projects'
+   keywords: 'portfolio projects, iot, lora tracker, mqtt, fullstack, nextjs, react native, laravel, mern stack, automation, n8n'
 }
 
 const ProjectsPage = () => {

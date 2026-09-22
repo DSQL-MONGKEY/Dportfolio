@@ -1,37 +1,36 @@
 "use client"
 
-import React from 'react'
-import QuestButton from './quest/QuestButton'
-import SectionHeading from '@/components/elements/SectionHeading'
-import { MdOutlineGames } from "react-icons/md";
-import SectionSubHeading from '@/components/elements/SectionSubHeading';
-import QuestPlayer from './quest/QuestPlayer';
-import { useMiniGames } from '@/stores/mini-games';
+import React, { useEffect } from 'react'
+import NeoSectionHeading from '@/components/elements/NeoSectionHeading'
+import { questCopy } from '@/common/constants/quest'
+import { useMiniGames } from '@/stores/mini-games'
+import QuestLanguageToggle from './quest/QuestLanguageToggle'
+import QuestPlayer from './quest/QuestPlayer'
 
 const Quest = () => {
-   const {
-      isPlaying,
-      setIsPlaying
-   } = useMiniGames();
+   const locale = useMiniGames((state) => state.locale)
+   const loadPersistedState = useMiniGames((state) => state.loadPersistedState)
+   const copy = questCopy[locale]
 
+   useEffect(() => {
+      loadPersistedState()
+   }, [loadPersistedState])
 
    return (
-      <div className='flex flex-col'>
-         <SectionHeading
-            title='Quest!'
-            icon={<MdOutlineGames />}
+      <section>
+         <NeoSectionHeading
+            title={copy.title}
+            description={copy.subtitle}
+            badge={copy.badge}
+            badgeClassName="bg-[#F4CE14]"
          />
-         <SectionSubHeading>
-            <p>Do you wanna play some mini games with me?</p>
-      </SectionSubHeading>
-         <QuestPlayer />
-         <div className='flex mt-8 w-full justify-center sm:justify-end'>
-            <QuestButton
-               title={isPlaying ? 'Stop?' : 'Play!'}
-               onClick={() => setIsPlaying(!isPlaying)}
-            />
+
+         <div className="mb-3 flex justify-end">
+            <QuestLanguageToggle />
          </div>
-      </div>
+
+         <QuestPlayer />
+      </section>
    )
 }
 

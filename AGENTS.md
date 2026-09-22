@@ -14,6 +14,7 @@ Personal portfolio built with Next.js 16 (App Router, Turbopack), React 19, Tail
 
 - Routes in `src/app/<route>/page.tsx` are thin wrappers holding `metadata`/JSON-LD that render a module from `src/modules/<name>/` (barrel `index.ts` → `components/`), usually inside `<Container data-aos="fade-left">`.
 - Editable site content/data lives in `src/common/constants/`: `constants.tsx` (~1500 lines: nav, services, projects, journeys, tech), `music.ts`, `questions.ts`, `metadata.ts`, `feeds.ts` (socials, featured TikTok videos), `contact.ts` (email, LinkedIn, mail templates).
+- Quiz data in `questions.ts` is bilingual (`{ en, id }`, types in `src/common/types/quest.ts`); quiz UI copy is `quest.ts` and the quiz state machine is `src/stores/mini-games.tsx` (persists locale + best scores in localStorage).
 - `/feeds` is ISR (`revalidate = 3600`) and fetches GitHub profile/contributions via `src/common/lib/github.ts` plus TikTok thumbnails/view counts via `src/common/lib/tiktok.ts` (scrapes the embed page, has retries and `fallbackViews`); on failure it renders without live data. The global `<audio>`/analyser engine is `src/components/layouts/audio-player/AudioEngine.tsx`, mounted in layouts so playback survives page changes.
 - Global chrome (sidebar, mobile nav, audio player, AOS init) is in `src/components/layouts/index.tsx`; the theme provider is `src/stores/theme.tsx`, mounted in `src/app/layout.tsx`.
 - State/client providers live in `src/stores/*.tsx` (Zustand + provider components; `.tsx` even when there is no JSX).

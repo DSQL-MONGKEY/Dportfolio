@@ -1,60 +1,96 @@
-import Link from 'next/link';
+import Link from 'next/link'
 import React from 'react'
-import { VscRepoClone } from "react-icons/vsc";
+import { ArrowUpRight, Lock } from 'lucide-react'
+import { cn } from '@/common/lib/utils'
+import { ProjectTech } from '@/common/types/project'
 
-type techStack = {
-   tags: string;
-   color: string;
-}
+const shadows = [
+   'shadow-[4px_4px_0px_0px_#F4CE14]',
+   'shadow-[4px_4px_0px_0px_#25F4EE]',
+   'shadow-[4px_4px_0px_0px_#E1306C]',
+   'shadow-[4px_4px_0px_0px_#8ad451]',
+]
+
+const accents = ['bg-[#F4CE14]', 'bg-[#25F4EE]', 'bg-[#E1306C]', 'bg-[#8ad451]']
+
+const MAX_TAGS = 4
 
 interface ItemProjectProps {
-   className?: string;
-   title: string;
-   techStack: techStack[];
-   desc: string;
-   link: string;
+   index: number
+   title: string
+   techStack: ProjectTech[]
+   desc: string
+   link: string
    isFeatured: boolean
 }
 
-const ItemProject = ({ className='', title, techStack, desc, link, isFeatured }: ItemProjectProps) => {
+const ItemProject = ({ index, title, techStack, desc, link, isFeatured }: ItemProjectProps) => {
+   const extraTags = techStack.length - MAX_TAGS
+
    return (
-      <div className={`flex flex-col gap-2 ${className}`}>
-         <div className='flex justify-between items-center border-b-2 border-opacity-50 border-b-neutral-700 dark:border-b-slate-300 pb-4'>
-            <h3 className='font-paytone text-3xl text-zinc-700 dark:text-zinc-300'>
-               {title}
-            </h3>
+      <article
+         className={cn(
+            'group flex h-full flex-col border-2 border-mainDark bg-main p-3 transition-transform duration-300 hover:-translate-y-1 dark:border-darkBorder dark:bg-secondaryBlack sm:p-4 md:p-5',
+            shadows[index % shadows.length]
+         )}
+      >
+         <div className="flex items-center justify-between gap-3">
+            <span
+               className={cn(
+                  'border-2 border-mainDark px-1.5 py-0.5 font-lexend text-[10px] font-black text-mainDark dark:border-darkBorder sm:px-2 sm:text-[11px]',
+                  accents[index % accents.length]
+               )}
+            >
+               {String(index + 1).padStart(2, '0')}
+            </span>
+
             {isFeatured && (
-               <span className="font-outfit">Featured</span>
+               <span className="border-2 border-mainDark bg-mainDark px-1.5 py-0.5 font-outfit text-[9px] font-black uppercase tracking-[0.1em] text-main dark:border-darkBorder dark:bg-darkText dark:text-mainDark sm:px-2 sm:text-[10px] sm:tracking-[0.15em]">
+                  Featured
+               </span>
             )}
          </div>
 
-         <div>
-            <p className='font-outfit text-neutral-700 dark:text-slate-300'>
-               {desc}
-            </p>
+         <h3 className="mt-3 font-lexend text-sm font-bold leading-snug sm:text-base md:text-lg">{title}</h3>
+         <p className="mt-2 flex-1 font-outfit text-xs leading-relaxed opacity-75 sm:text-sm">{desc}</p>
+
+         <div className="mt-4 flex flex-wrap gap-1.5">
+            {techStack.slice(0, MAX_TAGS).map((item) => (
+               <span
+                  key={item.tags}
+                  className={cn(
+                     'border-2 border-mainDark bg-bg px-1.5 py-0.5 font-outfit text-[10px] font-bold dark:border-darkBorder dark:bg-darkBg dark:text-darkText sm:px-2 sm:text-[11px]',
+                     item.color
+                  )}
+               >
+                  {item.tags}
+               </span>
+            ))}
+
+            {extraTags > 0 && (
+               <span className="border-2 border-mainDark bg-bg px-1.5 py-0.5 font-outfit text-[10px] font-bold opacity-60 dark:border-darkBorder dark:bg-darkBg sm:px-2 sm:text-[11px]">
+                  +{extraTags}
+               </span>
+            )}
          </div>
 
-         <div className='flex gap-2 flex-wrap'>
-            {techStack.map((item, idx) => (
-               <div key={idx} className={`font-poppins bg-slate-200  rounded-full px-2 py-1 border-2 border-b-4 border-black`}>
-                  <span className={`text-neutral-700 text-sm`}>
-                     {item.tags}
-                  </span>
-               </div>
-            ))}
+         <div className="mt-5">
+            {link ? (
+               <Link
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 border-2 border-mainDark bg-mainDark px-2.5 py-1.5 font-outfit text-[11px] font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-darkText dark:text-mainDark sm:gap-2 sm:px-3 sm:text-xs"
+               >
+                  View repository <ArrowUpRight size={14} />
+               </Link>
+            ) : (
+               <span className="inline-flex items-center gap-1.5 border-2 border-mainDark bg-bg px-2.5 py-1.5 font-outfit text-[11px] font-bold opacity-60 dark:border-darkBorder dark:bg-darkBg sm:gap-2 sm:px-3 sm:text-xs">
+                  <Lock size={12} /> Private project
+               </span>
+            )}
          </div>
-         
-         <Link
-            href={link}
-            target='_blank'
-            className='flex items-center gap-2'
-         >
-            <span className='font-outfit text-lg text-neutral-500 dark:text-lightGreen'>
-               Visit project repository
-            </span>
-            <VscRepoClone className='h-8 w-8' />
-         </Link>
-      </div>
+      </article>
    )
 }
 

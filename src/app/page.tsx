@@ -7,10 +7,11 @@ import Home from "@/modules/home/index";
 
 export const metadata: Metadata = {
 	title: `${METADATA.creator} | Personal Website`,
+	description: `Dimas Prasetyo — Software / IoT Engineer building modern web, mobile, and connected-device products. Projects, services, and ways to get in touch.`,
 	alternates: {
 		canonical: process.env.DOMAIN
 	},
-	keywords: METADATA.keyword
+	keywords: 'dimas prasetyo, software engineer, iot engineer, frontend developer, nextjs, react native, typescript, freelance developer, portfolio'
 }
 
 function generateStructureData(): WithContext<Person> {
