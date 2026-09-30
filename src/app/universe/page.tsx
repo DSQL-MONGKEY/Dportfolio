@@ -6,14 +6,14 @@ import Universe from '@/modules/universe/Universe';
 
 export const metadata: Metadata = {
 	title: `Universe ${METADATA.exTitle}`,
-	description: `A collection of my projects, experiments, and everything in between. It&apos;s a universe of creativity and innovation where I share my work and ideas with the world. Explore the cosmos of my projects and discover the wonders of my universe!`,
+	description: `Explore Dimas Prasetyo's universe — an orbital map of my worlds: projects, tech stack, career, music, socials, and notes, plus wise stars and a visitor star field`,
 	alternates: {
 		canonical: `${process.env.DOMAIN}/universe`
 	},
-   keywords: 'projects, experiments, creativity, innovation, universe'
+   keywords: 'universe, orbital map, projects, tech stack, career, playlist, socials, quotes, star field, interactive portfolio'
 }
 
-const PlaylistPage = () => {
+const UniversePage = () => {
    return (
       <Container data-aos="fade-left">
          <Universe />
@@ -21,4 +21,4 @@ const PlaylistPage = () => {
    )
 }
 
-export default PlaylistPage
+export default UniversePage

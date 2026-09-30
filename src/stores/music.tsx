@@ -3,6 +3,8 @@ import { musicPlaylist } from '@/common/constants/music';
 
 export const FREQUENCY_BARS = 24;
 
+export type RepeatMode = 'off' | 'all' | 'one';
+
 export interface InitialMusicState {
    isPlaying: boolean,
    progress: number,
@@ -10,7 +12,8 @@ export interface InitialMusicState {
    currentTrackIndex: number,
    duration: number,
    title: string,
-   audioData: number[]
+   audioData: number[],
+   repeatMode: RepeatMode
 }
 
 export interface InitialMusicAction {
@@ -22,6 +25,7 @@ export interface InitialMusicAction {
    setTitle: (title: string) => void,
    setAudioData: (audioData: number[]) => void,
    togglePlay: () => void,
+   cycleRepeat: () => void,
    nextTrack: () => void,
    prevTrack: () => void,
    selectTrack: (index: number) => void,
@@ -35,6 +39,7 @@ export const useMusic = create<InitialMusicState & InitialMusicAction>()( set =>
    duration: 0,
    title: '',
    audioData: Array(FREQUENCY_BARS).fill(0),
+   repeatMode: 'all',
    setIsPlaying: (isPlaying) => set({ isPlaying }), 
    setProgress: (progress) => set({ progress }),
    setCurrentTime: (currentTime) => set({ currentTime }),
@@ -43,6 +48,9 @@ export const useMusic = create<InitialMusicState & InitialMusicAction>()( set =>
    setTitle: (title) => set({ title: title }),
    setAudioData: (audioData) => set({ audioData }),
    togglePlay: () => set(prev => ({ isPlaying: !prev.isPlaying })),
+   cycleRepeat: () => set(prev => ({
+      repeatMode: prev.repeatMode === 'off' ? 'all' : prev.repeatMode === 'all' ? 'one' : 'off'
+   })),
    nextTrack: () => set(prev => ({
       currentTrackIndex: (prev.currentTrackIndex + 1) % musicPlaylist.length,
       isPlaying: true

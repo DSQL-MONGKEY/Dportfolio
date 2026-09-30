@@ -32,13 +32,13 @@ const Header = () => {
          <div className="flex flex-wrap items-center gap-3">
             <h1 className="font-lexend text-3xl font-black uppercase tracking-[0.2em]">Projects</h1>
             <span className="border-2 border-mainDark bg-[#F4CE14] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
-               featured first
+               search · filter · quick view
             </span>
          </div>
 
          <p className="max-w-2xl font-outfit text-sm opacity-70">
-            Things I designed, built, and shipped — from IoT devices and automation to full-stack
-            web and mobile apps.
+            Things I designed, built, and shipped — explore the spotlight, then filter by category
+            or tech to find exactly what you need.
          </p>
 
          <div className="grid grid-cols-3 gap-3 sm:max-w-md">

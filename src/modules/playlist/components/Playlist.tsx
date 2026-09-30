@@ -1,14 +1,17 @@
 'use client';
 
 import React from 'react';
-import { Play, Pause, SkipBack, SkipForward } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Repeat, Repeat1 } from 'lucide-react';
 import Frequency from '@/components/layouts/audio-player/Frequency';
+import FavoriteBadge from '@/components/ui/FavoriteBadge';
 import { musicPlaylist } from '@/common/constants/music';
 import { cn, formatTime } from '@/common/lib/utils';
 import { useMusic } from '@/stores/music';
 
 const controlClass =
   'flex items-center justify-center border-2 border-mainDark bg-main text-text shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText';
+
+const discAccents = ['#F4CE14', '#25F4EE', '#E1306C', '#8ad451'];
 
 const Playlist = () => {
   const isPlaying = useMusic(state => state.isPlaying);
@@ -19,9 +22,13 @@ const Playlist = () => {
   const togglePlay = useMusic(state => state.togglePlay);
   const nextTrack = useMusic(state => state.nextTrack);
   const prevTrack = useMusic(state => state.prevTrack);
+  const repeatMode = useMusic(state => state.repeatMode);
+  const cycleRepeat = useMusic(state => state.cycleRepeat);
   const selectTrack = useMusic(state => state.selectTrack);
 
   const currentTrack = musicPlaylist[currentTrackIndex] ?? musicPlaylist[0];
+  const discAccent = discAccents[currentTrackIndex % discAccents.length];
+  const trackNumber = String(currentTrackIndex + 1).padStart(2, '0');
 
   return (
     <div className="w-full text-text dark:text-darkText">
@@ -32,13 +39,17 @@ const Playlist = () => {
 
             <div className="relative mx-auto aspect-square w-full max-w-[240px]">
               <div
-                className={cn(
-                  'absolute inset-0 rounded-full border-2 border-mainDark bg-mainDark shadow-[4px_4px_0px_0px_#000] dark:border-darkBorder dark:bg-darkBg',
-                  isPlaying ? 'animate-[spin_8s_linear_infinite]' : 'animate-none'
-                )}
+                className="absolute inset-0 animate-[spin_8s_linear_infinite] rounded-full border-4 border-mainDark bg-mainDark dark:border-darkBorder dark:bg-darkBg"
+                style={{
+                  animationPlayState: isPlaying ? 'running' : 'paused',
+                  boxShadow: `5px 5px 0px 0px ${discAccent}`,
+                }}
               >
-                <div className="absolute inset-4 rounded-full border border-white/15" />
-                <div className="absolute inset-8 rounded-full border border-white/10" />
+                <div className="absolute inset-[7%] rounded-full border-2 border-white/10" />
+                <div className="absolute inset-[15%] rounded-full border-2 border-white/[0.07]" />
+                <div className="absolute inset-[23%] rounded-full border-2 border-white/10" />
+
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-transparent to-white/10" />
 
                 {currentTrack?.musicCover ? (
                   <img
@@ -47,17 +58,25 @@ const Playlist = () => {
                     className="absolute inset-0 h-full w-full rounded-full object-cover"
                   />
                 ) : (
-                  <div className="absolute inset-[36%] flex items-center justify-center rounded-full border-2 border-mainDark bg-shineRed">
-                    <span className="h-3 w-3 rounded-full border-2 border-mainDark bg-main" />
+                  <div
+                    className="absolute inset-[34%] flex items-center justify-center rounded-full border-4 border-mainDark dark:border-darkBorder"
+                    style={{ backgroundColor: discAccent }}
+                  >
+                    <span className="font-lexend text-xl font-black text-mainDark">
+                      {trackNumber}
+                    </span>
                   </div>
                 )}
               </div>
             </div>
 
             <div className="mt-6 text-center">
-              <h2 className="truncate text-lg font-bold">
-                {currentTrack?.title.split(' - ')[0] ?? 'Unknown Title'}
-              </h2>
+              <div className="flex items-center justify-center gap-2">
+                <h2 className="truncate text-lg font-bold">
+                  {currentTrack?.title.split(' - ')[0] ?? 'Unknown Title'}
+                </h2>
+                {currentTrack?.isFavorite && <FavoriteBadge />}
+              </div>
               <p className="mt-1 truncate text-xs font-semibold opacity-70">
                 {currentTrack?.artist ?? 'Unknown Artist'}
               </p>
@@ -99,6 +118,22 @@ const Playlist = () => {
                 className={cn(controlClass, 'h-10 w-10')}
               >
                 <SkipForward size={18} fill="currentColor" />
+              </button>
+
+              <button
+                onClick={cycleRepeat}
+                aria-label={`Repeat: ${repeatMode}`}
+                aria-pressed={repeatMode !== 'off'}
+                title={`Repeat: ${repeatMode}`}
+                className={cn(
+                  controlClass,
+                  'h-10 w-10',
+                  repeatMode === 'all' && 'bg-[#F4CE14] text-mainDark dark:bg-[#F4CE14] dark:text-mainDark',
+                  repeatMode === 'one' && 'bg-shineRed text-mainDark dark:bg-shineRed dark:text-mainDark',
+                  repeatMode === 'off' && 'opacity-60'
+                )}
+              >
+                {repeatMode === 'one' ? <Repeat1 size={18} /> : <Repeat size={18} />}
               </button>
             </div>
 
@@ -143,7 +178,10 @@ const Playlist = () => {
                     </span>
 
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm font-bold">{music.title.split(' - ')[0]}</span>
+                      <span className="flex min-w-0 items-center justify-between gap-2">
+                        <span className="min-w-0 truncate text-sm font-bold">{music.title.split(' - ')[0]}</span>
+                        {music.isFavorite && <FavoriteBadge />}
+                      </span>
                       <span className="block truncate text-xs opacity-60">{music.artist}</span>
                     </span>
 

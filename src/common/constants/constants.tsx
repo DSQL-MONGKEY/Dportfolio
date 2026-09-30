@@ -1,9 +1,9 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
-import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta, BsUniversalAccess, BsTiktok } from "react-icons/bs"
+import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta, BsTiktok } from "react-icons/bs"
 import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
-import { GiBearFace, GiSpermWhale  } from "react-icons/gi";
+import { GiBearFace, GiSpermWhale, GiRingedPlanet  } from "react-icons/gi";
 import { TbBrandPowershell, TbBrandThreejs, TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang, TbBrandReactNative, TbBrandMedium } from "react-icons/tb"
 import { GrDocker, } from "react-icons/gr";
 import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
@@ -63,7 +63,7 @@ export const navLinks: MenuItemProps[] = [
    {
       href: 'universe',
       title: 'Universe',
-      icon: <BsUniversalAccess />
+      icon: <GiRingedPlanet />
    },
 ]
 
@@ -945,6 +945,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'M2MWizard | Machine to Machine Simcard Management System',
       isFeatured: true,
+      category: 'web',
       techStack: [
          {
             tags: 'Typescript',
@@ -972,12 +973,13 @@ export const projects: ProjectItem[] = [
          },
       ],
       desc: 'Full-stack SIM card and quota management platform for M2M operations, built with Next.js, Clerk, and PostgreSQL.',
-      image: xclone,
+      image: '',
       link: 'https://github.com/acabtech/M2MWiz'
    },
    {
       title: 'Cloud Storage SFTPGo & File Automation N8N',
       isFeatured: true,
+      category: 'automation',
       techStack: [
          {
             tags: 'Docker',
@@ -1013,12 +1015,13 @@ export const projects: ProjectItem[] = [
          },
       ],
       desc: 'Self-hosted cloud storage with a Telegram bot interface and n8n automation workflows, running on Docker with SFTPGo.',
-      image: xclone,
+      image: '',
       link: ''
    },
    {
       title: 'LoRa Climber Tracker',
       isFeatured: true,
+      category: 'iot',
       techStack: [
          {
             tags: 'LoRa',
@@ -1066,12 +1069,13 @@ export const projects: ProjectItem[] = [
          },
       ],
       desc: 'LoRa + GPS tracking system that streams real-time climber positions to a monitoring dashboard, designed for areas with no cellular coverage.',
-      image: xclone,
+      image: '',
       link: 'https://github.com/DSQL-MONGKEY/maps-tracker-dashboard'
    },
    {
       title: 'Kanaeru Dispenser',
       isFeatured: true,
+      category: 'iot',
       techStack: [
          {
             tags: 'IoT',
@@ -1123,12 +1127,13 @@ export const projects: ProjectItem[] = [
          },
       ],
       desc: 'IoT multi-drink dispenser with automatic recipe execution, connected over MQTT/HiveMQ to a Next.js control dashboard.',
-      image: xclone,
+      image: '',
       link: 'https://github.com/DSQL-MONGKEY/kanaeru-dispenser'
    },
    {
       title: 'Twitter Clone',
       isFeatured: true,
+      category: 'web',
       techStack: [
          {
             tags: 'Typescript',
@@ -1182,6 +1187,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Puskesmas Queue',
       isFeatured: false,
+      category: 'web',
       techStack: [
          {
             tags: 'PHP',
@@ -1211,6 +1217,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Youtube Clone',
       isFeatured: false,
+      category: 'web',
       techStack: [
          {
             tags: 'Typescript',
@@ -1236,6 +1243,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Portfolio Website',
       isFeatured: false,
+      category: 'web',
       techStack: [
          {
             tags: 'Typescript',
@@ -1265,6 +1273,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Google Clone',
       isFeatured: false,
+      category: 'web',
       techStack: [
          {
             tags: 'Javascript',
@@ -1294,6 +1303,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Notion Clone',
       isFeatured: false,
+      category: 'web',
       techStack: [
          {
             tags: 'Typescript',
@@ -1331,6 +1341,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Cekit',
       isFeatured: false,
+      category: 'web',
       techStack: [
          {
             tags: 'Typescript',
@@ -1356,6 +1367,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Fo-Dashboard UI/UX',
       isFeatured: false,
+      category: 'uiux',
       techStack: [
          {
             tags: 'Figma',
@@ -1369,6 +1381,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Mobile App Fo-Dashboard',
       isFeatured: true,
+      category: 'mobile',
       techStack: [
          {
             tags: 'React Native',
@@ -1398,6 +1411,7 @@ export const projects: ProjectItem[] = [
    {
       title: 'Mobile App Valoranism',
       isFeatured: false,
+      category: 'mobile',
       techStack: [
          {
             tags: 'Kotlin',

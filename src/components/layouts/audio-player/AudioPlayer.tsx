@@ -22,6 +22,8 @@ const AudioPlayer = ({ isHover = true, isMobile }: AudioPlayerProps) => {
    const togglePlay = useMusic(state => state.togglePlay);
    const nextTrack = useMusic(state => state.nextTrack);
    const prevTrack = useMusic(state => state.prevTrack);
+   const repeatMode = useMusic(state => state.repeatMode);
+   const cycleRepeat = useMusic(state => state.cycleRepeat);
 
    return (
       <div className={`flex flex-col justify-center space-y-2`}>
@@ -33,13 +35,14 @@ const AudioPlayer = ({ isHover = true, isMobile }: AudioPlayerProps) => {
          
          {isHover ? (
             <Controls 
-               onClick={{ handlePrevTrack: prevTrack, handleNextTrack: nextTrack, handlePlayPause: togglePlay }}
+               onClick={{ handlePrevTrack: prevTrack, handleNextTrack: nextTrack, handlePlayPause: togglePlay, handleCycleRepeat: cycleRepeat }}
                title={title}
                isPlaying={isPlaying}
                progress={progress}
                formatTime={formatTime}
                currentTime={currentTime}
                duration={duration}
+               repeatMode={repeatMode}
             />
          ) : (
             <div className=" ">

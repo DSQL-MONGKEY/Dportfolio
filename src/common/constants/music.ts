@@ -1,6 +1,6 @@
+import { MusicTrack } from '../types/music'
 
-
-export const musicPlaylist = [
+export const musicPlaylist: MusicTrack[] = [
    {
       musicCover: '',
       src:   '/music/Die with a Smile.mp3',
@@ -61,5 +61,68 @@ export const musicPlaylist = [
       artist: 'Nina',
       title: 'Feast - Nina',
    },
-   
+   {
+      musicCover: '',
+      src:   '/music/The Weeknd - Blinding Lights (Official Audio).mp3',
+      artist: 'The Weeknd',
+      title: 'Blinding Lights - The Weeknd'
+   },
+   {
+      musicCover: '',
+      src:   "/music/Shouldn't Be.mp3",
+      artist: 'Luke Chiang',
+      title: "Shouldn't Be - Luke Chiang"
+   },
+   {
+      musicCover: '',
+      src:   '/music/Ruth B. - Dandelions (Lyrics).mp3',
+      artist: 'Ruth B.',
+      title: 'Dandelions - Ruth B.'
+   },
+   {
+      musicCover: '',
+      src:   '/music/Ravyn Lenae - Love Me Not (Official Music Video).mp3',
+      artist: 'Ravyn Lenae',
+      title: 'Love Me Not - Ravyn Lenae'
+   },
+   {
+      musicCover: '',
+      src:   '/music/Raim Laode - IQRO FOLK VERSION OFFICIAL LYRIC VIDEO.mp3',
+      artist: 'Raim Laode',
+      title: "Iqro' (Folk Version) - Raim Laode",
+      isFavorite: true,
+   },
+   {
+      musicCover: '',
+      src:   '/music/DJ PUSING TUJUH KELILING%2C AH AKU HARUS BERSAING  DJ ASTAGA BERCANDA ELPE YETE FYP TIKTOK TERBARU.mp3',
+      artist: 'Akbar Chalay & Mingse (DJ Remix)',
+      title: 'Astaga Bercanda (DJ Remix) - Akbar Chalay & Mingse',
+      isFavorite: true,
+   },
+   {
+      musicCover: '',
+      src:   '/music/Pee Wee Gaskins - Selama Engkau Hidup (Official Lyric Video).mp3',
+      artist: 'Pee Wee Gaskins',
+      title: 'Selama Engkau Hidup - Pee Wee Gaskins'
+   },
+   {
+      musicCover: '',
+      src:   '/music/eńau feat. Ari Lesmana - Sesi Potret (LIRIK LAGU).mp3',
+      artist: 'eńau feat. Ari Lesmana',
+      title: 'Sesi Potret - eńau feat. Ari Lesmana',
+      isFavorite: true,
+   },
+   {
+      musicCover: '',
+      src:   '/music/dia%2C Tenxi - SENCY (Official Music Video) - antinrml.mp3',
+      artist: 'dia, Tenxi',
+      title: 'SENCY - dia, Tenxi'
+   },
+   {
+      musicCover: '',
+      src:   '/music/The Weeknd%2C Ariana Grande - Die For You (Remix - Lyric Video).mp3',
+      artist: 'The Weeknd & Ariana Grande',
+      title: 'Die For You (Remix) - The Weeknd & Ariana Grande',
+      isFavorite: true,
+   },
 ]

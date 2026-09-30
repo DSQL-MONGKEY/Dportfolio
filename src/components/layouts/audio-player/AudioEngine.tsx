@@ -18,6 +18,8 @@ const AudioEngine = () => {
    const setDuration = useMusic(state => state.setDuration);
    const setTitle = useMusic(state => state.setTitle);
    const setAudioData = useMusic(state => state.setAudioData);
+   const setIsPlaying = useMusic(state => state.setIsPlaying);
+   const repeatMode = useMusic(state => state.repeatMode);
    const nextTrack = useMusic(state => state.nextTrack);
 
    const setupAudio = () => {
@@ -69,11 +71,29 @@ const AudioEngine = () => {
       }
    }
 
+   const handleEnded = () => {
+      const audio = audioElementRef.current;
+
+      if (repeatMode === 'one' && audio) {
+         audio.currentTime = 0;
+         audio.play().catch(() => {});
+         return;
+      }
+
+      if (repeatMode === 'all') {
+         nextTrack();
+         return;
+      }
+
+      setIsPlaying(false);
+   }
+
    useEffect(() => {
       const audio = audioElementRef.current;
       if (!audio) return;
 
       if (isPlaying) {
+         if (audio.ended) audio.currentTime = 0;
          audio.play().catch(() => {});
       } else {
          audio.pause();
@@ -99,7 +119,7 @@ const AudioEngine = () => {
          onPlay={setupAudio}
          onTimeUpdate={handleTimeUpdate}
          onLoadedMetadata={handleLoadedMetadata}
-         onEnded={nextTrack}
+         onEnded={handleEnded}
          src={musicPlaylist[currentTrackIndex].src}
          hidden={true}
       />
