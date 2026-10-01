@@ -1,18 +1,17 @@
-import Script from 'next/script'
 import React from 'react'
 import { Thing, WithContext } from 'schema-dts'
 
 interface StructuredDataProps<T extends Thing> {
    data: WithContext<T>
+   id?: string
 }
 
-function StructuredData<T extends Thing>({ data }: StructuredDataProps<T>) {
+function StructuredData<T extends Thing>({ data, id = 'structured-data' }: StructuredDataProps<T>) {
    return (
-      <Script
-         key="structured-data"
+      <script
          type="application/ld+json"
+         id={id}
          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-         id="structured-data"
       />
    )
 }

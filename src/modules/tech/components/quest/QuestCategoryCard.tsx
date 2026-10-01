@@ -30,7 +30,7 @@ const QuestCategoryCard = ({ category }: QuestCategoryCardProps) => {
       >
          <div className="flex items-start justify-between gap-3">
             <span
-               className="flex h-11 w-11 items-center justify-center border-2 border-mainDark text-mainDark dark:border-darkBorder"
+               className="flex h-11 w-11 items-center justify-center border-2 border-mainDark text-mainDark dark:border-mainDark"
                style={{ backgroundColor: category.accent }}
             >
                <Icon size={20} />

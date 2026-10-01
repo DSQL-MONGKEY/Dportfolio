@@ -43,7 +43,7 @@ const FeaturedSpotlight = ({ projects, onOpen }: FeaturedSpotlightProps) => {
                   type="button"
                   aria-label="Previous projects"
                   onClick={() => scrollByPage(-1)}
-                  className="flex h-9 w-9 items-center justify-center border-2 border-mainDark bg-main shadow-[3px_3px_0px_0px_#000] transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-secondaryBlack"
+                  className="flex h-9 w-9 items-center justify-center border-2 border-mainDark bg-main shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-secondaryBlack"
                >
                   <ChevronLeft size={16} />
                </button>
@@ -51,7 +51,7 @@ const FeaturedSpotlight = ({ projects, onOpen }: FeaturedSpotlightProps) => {
                   type="button"
                   aria-label="Next projects"
                   onClick={() => scrollByPage(1)}
-                  className="flex h-9 w-9 items-center justify-center border-2 border-mainDark bg-main shadow-[3px_3px_0px_0px_#000] transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-secondaryBlack"
+                  className="flex h-9 w-9 items-center justify-center border-2 border-mainDark bg-main shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-secondaryBlack"
                >
                   <ChevronRight size={16} />
                </button>
@@ -125,7 +125,7 @@ const FeaturedSpotlight = ({ projects, onOpen }: FeaturedSpotlightProps) => {
                            <button
                               type="button"
                               onClick={() => onOpen(project)}
-                              className="inline-flex items-center gap-1.5 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-darkText dark:text-mainDark"
+                              className="inline-flex items-center gap-1.5 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-mainDark dark:bg-darkText dark:text-mainDark"
                            >
                               Quick view
                            </button>

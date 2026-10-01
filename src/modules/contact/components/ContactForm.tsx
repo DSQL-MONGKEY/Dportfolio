@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Check, Copy, Send } from 'lucide-react'
 import { cn } from '@/common/lib/utils'
 import { CONTACT_EMAIL, budgetOptions, serviceOptions, timelineOptions } from '@/common/constants/contact'
@@ -16,7 +17,7 @@ const initialValues: LeadFormValues = {
 }
 
 const inputClass =
-   'w-full border-2 border-mainDark bg-bg px-3 py-2 font-outfit text-sm text-text outline-none transition-shadow placeholder:opacity-50 focus:shadow-[3px_3px_0px_0px_#000] dark:border-darkBorder dark:bg-darkBg dark:text-darkText'
+   'w-full border-2 border-mainDark bg-bg px-3 py-2 font-outfit text-sm text-text outline-none transition-shadow placeholder:opacity-50 focus:shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-darkBg dark:text-darkText'
 
 const labelClass = 'mb-1.5 block font-lexend text-[11px] font-bold uppercase tracking-[0.15em]'
 
@@ -27,7 +28,7 @@ const Chip = ({ label, active, onClick }: { label: string; active: boolean; onCl
       className={cn(
          'border-2 border-mainDark px-2.5 py-1 font-outfit text-xs font-bold transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
          active
-            ? 'bg-[#F4CE14] text-mainDark shadow-[2px_2px_0px_0px_#000]'
+            ? 'bg-[#F4CE14] text-mainDark shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark'
             : 'bg-bg text-text dark:bg-darkBg dark:text-darkText'
       )}
    >
@@ -39,6 +40,20 @@ const ContactForm = () => {
    const [values, setValues] = useState(initialValues)
    const [copied, setCopied] = useState(false)
    const [sent, setSent] = useState(false)
+
+   const searchParams = useSearchParams()
+   const product = searchParams.get('product')
+   const prefilledRef = useRef(false)
+
+   useEffect(() => {
+      if (!product || prefilledRef.current) return
+
+      prefilledRef.current = true
+      setValues((prev) => ({
+         ...prev,
+         message: prev.message || `Hi Dimas, I'd like to order: ${product}.`,
+      }))
+   }, [product])
 
    const template = useMemo(() => buildLeadTemplate(values), [values])
 
@@ -66,7 +81,7 @@ const ContactForm = () => {
    return (
       <form
          onSubmit={handleSubmit}
-         className="border-2 border-mainDark bg-main p-4 shadow-[4px_4px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack md:p-5"
+         className="border-2 border-mainDark bg-main p-4 shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack md:p-5"
       >
          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <label>
@@ -152,7 +167,7 @@ const ContactForm = () => {
          <div className="mt-5 flex flex-wrap items-center gap-3">
             <button
                type="submit"
-               className="flex items-center gap-2 border-2 border-mainDark bg-shineRed px-5 py-2.5 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[4px_4px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none dark:border-darkBorder"
+               className="flex items-center gap-2 border-2 border-mainDark bg-shineRed px-5 py-2.5 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none dark:border-mainDark"
             >
                <Send size={16} /> Send brief
             </button>
@@ -161,7 +176,7 @@ const ContactForm = () => {
                href={buildGmailCompose(template)}
                target="_blank"
                rel="noreferrer"
-               className="border-2 border-mainDark bg-main px-4 py-2.5 font-outfit text-xs font-bold text-text shadow-[4px_4px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText"
+               className="border-2 border-mainDark bg-main px-4 py-2.5 font-outfit text-xs font-bold text-text shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText"
             >
                Open in Gmail ↗
             </a>
@@ -177,7 +192,7 @@ const ContactForm = () => {
          </div>
 
          {sent && (
-            <p className="mt-4 border-2 border-mainDark bg-lightGreen px-3 py-2 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
+            <p className="mt-4 border-2 border-mainDark bg-lightGreen px-3 py-2 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
                Your email app should be opening — if nothing happens, use “Open in Gmail” or copy my email
                below.
             </p>

@@ -15,7 +15,7 @@ React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
 <TabsPrimitive.List
    ref={ref}
    className={cn(
-      'inline-flex h-12 items-center justify-center rounded-md border-2 border-black bg-neutral-100 dark:bg-lightGreen p-1 text-center',
+      'inline-flex h-12 items-center justify-center rounded-md border-2 border-mainDark bg-neutral-100 dark:border-darkBorder dark:bg-secondaryBlack p-1 text-center',
       className,
    )}
    {...props}
@@ -30,7 +30,7 @@ React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
 <TabsPrimitive.Trigger
    ref={ref}
    className={cn(
-      'inline-flex items-center justify-center whitespace-nowrap rounded-md  px-3 py-1.5 text-sm font-heading transition-all w-full  focus-visible:ring-black focus-visible:outline-none  data-[state=active]:border-2 data-[state=active]:border-black data-[state=active]:border-b-4 data-[state=active]:border-r-6 data-[state=active]:bg-main dark:data-[state=active]:bg-zinc-800 dark:data-[state=active]:text-neutral-200 dark:text-black',
+      'inline-flex items-center justify-center whitespace-nowrap rounded-md  px-3 py-1.5 text-sm font-heading transition-all w-full  focus-visible:ring-black dark:focus-visible:ring-darkText focus-visible:outline-none  data-[state=active]:border-2 data-[state=active]:border-mainDark dark:data-[state=active]:border-darkBorder data-[state=active]:border-b-4 data-[state=active]:border-r-6 data-[state=active]:bg-main dark:data-[state=active]:bg-darkBg dark:data-[state=active]:text-darkText dark:text-darkText',
       className,
    )}
    {...props}

@@ -20,9 +20,9 @@ const TabSelect = ({ handleCaseButton, handleSelectProfile, coworks, isSelected 
             onClick={handleCaseButton}
             aria-label="Show role details"
             className={cn(
-               'flex h-11 w-11 shrink-0 items-center justify-center border-2 border-mainDark shadow-[2px_2px_0px_0px_#000] transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
+               'flex h-11 w-11 shrink-0 items-center justify-center border-2 border-mainDark shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
                isSelected
-                  ? 'bg-[#F4CE14] text-mainDark'
+                  ? 'bg-[#F4CE14] text-mainDark dark:border-mainDark'
                   : 'bg-main text-text dark:bg-secondaryBlack dark:text-darkText'
             )}
          >

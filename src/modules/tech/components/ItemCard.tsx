@@ -32,7 +32,10 @@ const ItemCard = ({ title, icon, level, onLearn }: CardProps) => {
       <TooltipProvider delayDuration={100}>
          <Tooltip>
             <TooltipTrigger asChild>
-               <div className="group relative flex aspect-square cursor-help items-center justify-center border-2 border-mainDark bg-main shadow-[3px_3px_0px_0px_#000] transition-transform duration-200 hover:-translate-y-1 dark:border-darkBorder dark:bg-secondaryBlack">
+               <div className="group relative flex aspect-square cursor-help items-center justify-center border-2 border-mainDark bg-main shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-transform duration-200 hover:-translate-y-1 dark:border-darkBorder dark:bg-secondaryBlack">
+                  <span className="sr-only">
+                     {title} — {level}
+                  </span>
                   <span className="text-2xl transition-transform duration-200 group-hover:scale-110 sm:text-3xl">
                      {icon}
                   </span>
@@ -46,7 +49,7 @@ const ItemCard = ({ title, icon, level, onLearn }: CardProps) => {
                </div>
             </TooltipTrigger>
 
-            <TooltipContent className="border-2 border-mainDark bg-main text-text shadow-[3px_3px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText">
+            <TooltipContent className="border-2 border-mainDark bg-main text-text shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText">
                <span className="block font-lexend text-xs font-bold">{title}</span>
                <span className="mt-1 flex items-center gap-1.5 font-outfit text-[11px] font-bold uppercase tracking-[0.1em] opacity-70">
                   <span

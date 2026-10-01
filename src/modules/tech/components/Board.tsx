@@ -3,7 +3,7 @@
 import React from 'react'
 import ItemCard from './ItemCard'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs'
-import { devOps, tech, tools } from '@/common/constants/constants'
+import { devOps, tech, tools, aiTools } from '@/common/constants/constants'
 import PulseNotif from '@/components/elements/PulseNotif'
 
 const tabItems = [
@@ -25,6 +25,12 @@ const tabItems = [
       items: devOps,
       activeClass: 'data-[state=active]:bg-[#E1306C] data-[state=active]:text-main',
    },
+   {
+      value: 'ai',
+      label: 'AI',
+      items: aiTools,
+      activeClass: 'data-[state=active]:bg-[#B983FF] data-[state=active]:text-main',
+   },
 ]
 
 const levels = [
@@ -34,10 +40,10 @@ const levels = [
 ]
 
 const tabClass =
-   'w-auto border-2 border-mainDark bg-main px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.15em] text-text shadow-[3px_3px_0px_0px_#000] transition-all hover:-translate-y-0.5 data-[state=active]:translate-x-[2px] data-[state=active]:translate-y-[2px] data-[state=active]:text-mainDark data-[state=active]:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText'
+   'w-auto border-2 border-mainDark bg-main px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.15em] text-text shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:-translate-y-0.5 data-[state=active]:translate-x-[2px] data-[state=active]:translate-y-[2px] data-[state=active]:text-mainDark data-[state=active]:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText'
 
 const Board = () => {
-   const learningCount = [...tech, ...tools, ...devOps].filter((item) => item.onLearn).length
+   const learningCount = [...tech, ...tools, ...devOps, ...aiTools].filter((item) => item.onLearn).length
 
    return (
       <section className="flex flex-col gap-5">
@@ -73,6 +79,14 @@ const Board = () => {
                </TabsContent>
             ))}
          </Tabs>
+
+         <ul className="sr-only">
+            {[...tech, ...tools, ...devOps, ...aiTools].map((item) => (
+               <li key={item.title}>
+                  {item.title} — {item.level}
+               </li>
+            ))}
+         </ul>
 
          <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-3 font-outfit text-xs">

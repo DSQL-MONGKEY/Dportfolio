@@ -6,6 +6,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --neo-shadow-color: #000000;
+}
+
+.dark {
+  --neo-shadow-color: #eeefe9;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -14,7 +22,8 @@ html {
 /* fonts */
 @font-face {
   font-family: poppins;
-  src: url(./fonts/Poppins/Poppins-Medium.ttf)
+  src: url(./fonts/Poppins/Poppins-Medium.ttf);
+  font-display: swap;
 }
 .font-poppins {
   font-family: 'poppins', sans-serif;
@@ -22,7 +31,8 @@ html {
 
 @font-face {
   font-family: Paytone;
-  src: url(./fonts/PaytoneOne/PaytoneOne-Regular.ttf)
+  src: url(./fonts/PaytoneOne/PaytoneOne-Regular.ttf);
+  font-display: swap;
 }
 .font-paytone {
   font-family: 'Paytone', sans-serif;
@@ -30,14 +40,17 @@ html {
 
 @font-face {
   font-family: outfit;
-  src: url(./fonts/Outfit/Outfit-Medium.ttf)
+  src: url(./fonts/Outfit/Outfit-Medium.ttf);
+  font-display: swap;
 }
 .font-outfit {
   font-family: 'outfit', sans-serif;
 }
+
 @font-face {
   font-family: lexend;
-  src: url(./fonts/Lexend_Mega/static/LexendMega-Bold.ttf)
+  src: url(./fonts/Lexend_Mega/static/LexendMega-Bold.ttf);
+  font-display: swap;
 }
 .font-lexend {
   font-family: 'lexend', sans-serif;

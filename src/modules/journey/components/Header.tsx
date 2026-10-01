@@ -28,7 +28,7 @@ const Header = () => {
       <section className="space-y-5">
          <div className="flex flex-wrap items-center gap-3">
             <h1 className="font-lexend text-3xl font-black uppercase tracking-[0.2em]">Journey</h1>
-            <span className="border-2 border-mainDark bg-[#F4CE14] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
+            <span className="border-2 border-mainDark bg-[#F4CE14] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
                newest first
             </span>
             <span className="border-2 border-mainDark bg-main px-2 py-0.5 font-outfit text-xs font-bold dark:border-darkBorder dark:bg-secondaryBlack">

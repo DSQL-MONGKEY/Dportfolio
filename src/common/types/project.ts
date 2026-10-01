@@ -7,6 +7,11 @@ export interface ProjectTech {
    color: string
 }
 
+export interface ProjectLink {
+   label: string
+   url: string
+}
+
 export interface ProjectItem {
    title: string
    isFeatured: boolean
@@ -15,4 +20,7 @@ export interface ProjectItem {
    desc: string
    image?: StaticImageData | ''
    link: string
+   links?: ProjectLink[]
+   highlights?: string[]
+   shortName?: string
 }

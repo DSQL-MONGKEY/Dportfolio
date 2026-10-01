@@ -78,7 +78,7 @@ const ContactChannels = () => {
                >
                   <span
                      className={cn(
-                        'flex h-10 w-10 shrink-0 items-center justify-center border-2 border-mainDark text-lg dark:border-darkBorder',
+                        'flex h-10 w-10 shrink-0 items-center justify-center border-2 border-mainDark text-lg dark:border-mainDark',
                         channel.iconText
                      )}
                      style={{ backgroundColor: channel.accent }}

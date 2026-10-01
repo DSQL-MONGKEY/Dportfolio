@@ -19,7 +19,7 @@ const Steps = () => {
                   className="border-2 border-mainDark bg-main p-4 dark:border-darkBorder dark:bg-secondaryBlack"
                >
                   <span
-                     className="flex h-10 w-10 items-center justify-center border-2 border-mainDark font-lexend text-lg font-black text-mainDark dark:border-darkBorder"
+                     className="flex h-10 w-10 items-center justify-center border-2 border-mainDark font-lexend text-lg font-black text-mainDark dark:border-mainDark"
                      style={{ backgroundColor: step.accent }}
                   >
                      {index + 1}

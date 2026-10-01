@@ -88,7 +88,7 @@ const QuestQuestion = () => {
                      disabled={isLocked || isHidden}
                      onClick={() => answer(choiceIndex)}
                      className={cn(
-                        'flex min-h-[64px] items-center justify-center border-2 border-mainDark bg-bg px-4 py-3 text-center font-outfit text-sm font-bold text-text shadow-[3px_3px_0px_0px_#000] transition-all dark:border-darkBorder dark:bg-darkBg dark:text-darkText',
+                        'flex min-h-[64px] items-center justify-center border-2 border-mainDark bg-bg px-4 py-3 text-center font-outfit text-sm font-bold text-text shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all dark:border-darkBorder dark:bg-darkBg dark:text-darkText',
                         !isLocked && !isHidden && 'hover:-translate-y-1',
                         isHidden && 'pointer-events-none line-through opacity-30',
                         isLocked && isCorrectChoice && 'bg-[#8ad451] text-mainDark dark:bg-[#8ad451] dark:text-mainDark',
@@ -129,7 +129,7 @@ const QuestQuestion = () => {
                onClick={handleHint}
                disabled={hints <= 0 || isLocked}
                className={cn(
-                  'flex items-center gap-2 border-2 border-mainDark bg-[#F4CE14] px-3 py-2 font-outfit text-xs font-bold text-mainDark shadow-[3px_3px_0px_0px_#000] transition-all dark:border-darkBorder',
+                  'flex items-center gap-2 border-2 border-mainDark bg-[#F4CE14] px-3 py-2 font-outfit text-xs font-bold text-mainDark shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all dark:border-mainDark',
                   hints <= 0 || isLocked
                      ? 'cursor-not-allowed opacity-40'
                      : 'hover:-translate-y-0.5'
@@ -143,7 +143,7 @@ const QuestQuestion = () => {
                <button
                   type="button"
                   onClick={next}
-                  className="border-2 border-mainDark bg-mainDark px-5 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-main shadow-[3px_3px_0px_0px_#000] transition-all hover:-translate-y-0.5 dark:border-darkBorder dark:bg-darkText dark:text-mainDark"
+                  className="border-2 border-mainDark bg-mainDark px-5 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-main shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:-translate-y-0.5 dark:border-mainDark dark:bg-darkText dark:text-mainDark"
                >
                   {copy.next} →
                </button>

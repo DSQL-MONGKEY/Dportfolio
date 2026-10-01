@@ -1,5 +1,5 @@
 import React from 'react'
-import { devOps, tech, tools } from '@/common/constants/constants'
+import { aiTools, devOps, tech, tools } from '@/common/constants/constants'
 
 const stats = [
    {
@@ -20,30 +20,36 @@ const stats = [
       accent: 'bg-[#E1306C]',
       shadow: 'shadow-[3px_3px_0px_0px_#E1306C]',
    },
+   {
+      label: 'AI Workflow',
+      value: aiTools.length,
+      accent: 'bg-[#B983FF]',
+      shadow: 'shadow-[3px_3px_0px_0px_#B983FF]',
+   },
 ]
 
 const Header = () => {
-   const total = tech.length + tools.length + devOps.length
-   const learning = [...tech, ...tools, ...devOps].filter((item) => item.onLearn).length
+   const total = tech.length + tools.length + devOps.length + aiTools.length
+   const learning = [...tech, ...tools, ...devOps, ...aiTools].filter((item) => item.onLearn).length
 
    return (
       <section className="space-y-5">
          <div className="flex flex-wrap items-center gap-3">
             <h1 className="font-lexend text-3xl font-black uppercase tracking-[0.2em]">Techys</h1>
-            <span className="border-2 border-mainDark bg-[#F4CE14] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
+            <span className="border-2 border-mainDark bg-[#F4CE14] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
                {total} in the stack
             </span>
-            <span className="border-2 border-mainDark bg-[#8ad451] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
+            <span className="border-2 border-mainDark bg-[#8ad451] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
                {learning} learning now
             </span>
          </div>
 
          <p className="max-w-2xl font-outfit text-sm opacity-70">
-            The technologies, tools, and DevOps stack I use to ship projects — plus a mini quiz at
-            the bottom to test your own knowledge.
+            The technologies, tools, DevOps, and AI workflow I use to ship projects — plus a mini
+            quiz at the bottom to test your own knowledge.
          </p>
 
-         <div className="grid grid-cols-3 gap-3 sm:max-w-md">
+         <div className="grid grid-cols-2 gap-3 sm:max-w-lg sm:grid-cols-4">
             {stats.map((stat) => (
                <div
                   key={stat.label}

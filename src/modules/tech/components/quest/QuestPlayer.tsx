@@ -14,7 +14,7 @@ const QuestPlayer = () => {
    const copy = questCopy[locale]
 
    return (
-      <div className="flex min-h-[480px] flex-col gap-5 border-2 border-mainDark bg-main p-4 shadow-[4px_4px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack sm:min-h-[420px] md:p-5">
+      <div className="flex min-h-[480px] flex-col gap-5 border-2 border-mainDark bg-main p-4 shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack sm:min-h-[420px] md:p-5">
          {status === 'idle' && (
             <>
                <p className="text-center font-lexend text-sm font-black uppercase tracking-[0.15em] opacity-70">

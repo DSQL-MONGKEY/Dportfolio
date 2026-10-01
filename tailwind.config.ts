@@ -23,10 +23,11 @@ const config: Config = {
 				text: '#000',
 		
 				// dark mode
-				darkBg: '#2c312b',
+				darkBg: '#242424',
 				darkText: '#eeefe9',
-				darkBorder: '#000',
-				secondaryBlack: '#212121',
+				darkBorder: '#eeefe9',
+				darkCanvas: '#0b0b0b',
+				secondaryBlack: '#1c1c1c',
 				
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
@@ -145,9 +146,9 @@ const config: Config = {
 			},
 		},
 		boxShadow: {
-			light: '4px 4px 0px 0px #000',
-			dark: '4px 4px 0px 0px #000',
-			none: '0px 0px 0px 0px #000',
+			light: '4px 4px 0px 0px var(--neo-shadow-color)',
+			dark: '4px 4px 0px 0px var(--neo-shadow-color)',
+			none: '0px 0px 0px 0px var(--neo-shadow-color)',
 		},
 		translate: {
 			boxShadowX: '4px',

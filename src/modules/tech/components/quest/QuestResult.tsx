@@ -56,7 +56,7 @@ const QuestResult = () => {
          <span
             className={cn(
                'border-2 border-mainDark px-3 py-1 font-lexend text-xs font-black uppercase tracking-[0.15em] dark:border-darkBorder',
-               didWin ? 'bg-[#8ad451] text-mainDark' : 'bg-[#F55353] text-main'
+               didWin ? 'bg-[#8ad451] text-mainDark dark:border-mainDark' : 'bg-[#F55353] text-main dark:border-mainDark'
             )}
          >
             {didWin ? copy.win : copy.lose}
@@ -84,7 +84,7 @@ const QuestResult = () => {
          </div>
 
          {newBest ? (
-            <span className="border-2 border-mainDark bg-[#F4CE14] px-3 py-1 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
+            <span className="border-2 border-mainDark bg-[#F4CE14] px-3 py-1 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
                {copy.newBest}
             </span>
          ) : (
@@ -99,7 +99,7 @@ const QuestResult = () => {
             <button
                type="button"
                onClick={() => categoryData && startGame(categoryData.id, categoryData.questions)}
-               className="border-2 border-mainDark bg-shineRed px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder"
+               className="border-2 border-mainDark bg-shineRed px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark"
             >
                {copy.playAgain}
             </button>
@@ -107,7 +107,7 @@ const QuestResult = () => {
             <button
                type="button"
                onClick={reset}
-               className="border-2 border-mainDark bg-main px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-text shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText"
+               className="border-2 border-mainDark bg-main px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-text shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText"
             >
                {copy.changeCategory}
             </button>

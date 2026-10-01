@@ -20,3 +20,11 @@ export function formatCompactNumber(value: number) {
     maximumFractionDigits: 1,
   }).format(value)
 }
+
+export function formatRupiah(value: number) {
+  return `Rp ${new Intl.NumberFormat("id-ID").format(value)}`
+}
+
+export function formatUsd(value: number) {
+  return `$${new Intl.NumberFormat("en-US").format(value)}`
+}

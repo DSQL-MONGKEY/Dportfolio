@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Play } from 'lucide-react'
 import { BsTiktok } from 'react-icons/bs'
 import { cn, formatCompactNumber } from '@/common/lib/utils'
@@ -53,21 +54,22 @@ const FeaturedVideos = async () => {
                      <BsTiktok className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-main/20 sm:text-5xl" />
 
                      {video.info.thumbnailUrl && (
-                        <img
+                        <Image
                            src={video.info.thumbnailUrl}
                            alt={video.title}
-                           loading="lazy"
-                           className="relative h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                           fill
+                           sizes="(max-width: 640px) 33vw, 260px"
+                           className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                      )}
 
                      <span className="absolute inset-0 flex items-center justify-center">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-mainDark bg-shineRed text-mainDark shadow-[2px_2px_0px_0px_#000] transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14 sm:shadow-[3px_3px_0px_0px_#000]">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-mainDark bg-shineRed text-mainDark shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14 sm:shadow-[3px_3px_0px_0px_var(--neo-shadow-color)]">
                            <Play className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" />
                         </span>
                      </span>
 
-                     <span className="absolute bottom-2 left-2 flex items-center gap-1 border-2 border-mainDark bg-main px-1.5 py-0.5 font-outfit text-[9px] font-bold text-mainDark dark:border-darkBorder dark:bg-darkText sm:bottom-3 sm:left-3 sm:gap-1.5 sm:px-2 sm:text-[11px]">
+                     <span className="absolute bottom-2 left-2 flex items-center gap-1 border-2 border-mainDark bg-main px-1.5 py-0.5 font-outfit text-[9px] font-bold text-mainDark dark:border-mainDark dark:bg-darkText sm:bottom-3 sm:left-3 sm:gap-1.5 sm:px-2 sm:text-[11px]">
                         <Play className="h-2 w-2 sm:h-2.5 sm:w-2.5" fill="currentColor" />
                         {formatCompactNumber(video.info.views ?? video.fallbackViews)} views
                      </span>

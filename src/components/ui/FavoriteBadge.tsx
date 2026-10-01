@@ -11,7 +11,7 @@ const FavoriteBadge = ({ className, label = 'Favorite' }: FavoriteBadgeProps) =>
    return (
       <span
          className={cn(
-            'inline-flex shrink-0 items-center gap-1 border-2 border-mainDark bg-[#F4CE14] px-1.5 py-0.5 font-lexend text-[9px] font-black uppercase tracking-[0.1em] text-mainDark dark:border-darkBorder',
+            'inline-flex shrink-0 items-center gap-1 border-2 border-mainDark bg-[#F4CE14] px-1.5 py-0.5 font-lexend text-[9px] font-black uppercase tracking-[0.1em] text-mainDark dark:border-mainDark',
             className
          )}
       >

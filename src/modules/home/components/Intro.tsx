@@ -9,12 +9,12 @@ const Intro = () => {
    return (
       <section className="border-2 border-mainDark bg-main p-5 shadow-[4px_4px_0px_0px_#F4CE14] dark:border-darkBorder dark:bg-secondaryBlack md:p-6">
          <div className="flex items-start justify-between gap-4">
-            <div className="text-2xl font-lexend dark:text-white md:text-3xl">
+            <h1 className="text-2xl font-lexend dark:text-white md:text-3xl">
                <TypeAnimation
                   sequence={[`Hi, i'm Dimas Prasetyo`, `Hi, i'm Software Engineer`]}
                   delay={3000}
                />
-            </div>
+            </h1>
             <span className="text-3xl md:text-4xl" aria-hidden>
                🐼
             </span>
@@ -40,14 +40,14 @@ const Intro = () => {
          <div className="mt-5 flex flex-wrap gap-3">
             <Link
                href="/projects"
-               className="flex items-center gap-2 border-2 border-mainDark bg-shineRed px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder"
+               className="flex items-center gap-2 border-2 border-mainDark bg-shineRed px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark"
             >
                View projects <ArrowUpRight size={14} />
             </Link>
 
             <Link
                href="/contact"
-               className="flex items-center gap-2 border-2 border-mainDark bg-main px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-text shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText"
+               className="flex items-center gap-2 border-2 border-mainDark bg-main px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-text shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText"
             >
                Get in touch <Mail size={14} />
             </Link>

@@ -36,7 +36,7 @@ const QuickTemplates = () => {
                      )}
                   >
                      <span
-                        className="flex h-10 w-10 items-center justify-center border-2 border-mainDark text-mainDark dark:border-darkBorder"
+                        className="flex h-10 w-10 items-center justify-center border-2 border-mainDark text-mainDark dark:border-mainDark"
                         style={{ backgroundColor: template.accent }}
                      >
                         <Icon size={18} />

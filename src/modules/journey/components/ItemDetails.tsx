@@ -100,7 +100,7 @@ const ItemDetails = ({
                            {date}
                         </span>
                         {isPresent && (
-                           <span className="border-2 border-mainDark bg-[#8ad451] px-2 py-0.5 font-outfit text-[10px] font-black uppercase tracking-[0.1em] text-mainDark dark:border-darkBorder">
+                           <span className="border-2 border-mainDark bg-[#8ad451] px-2 py-0.5 font-outfit text-[10px] font-black uppercase tracking-[0.1em] text-mainDark dark:border-mainDark">
                               Present
                            </span>
                         )}
@@ -135,7 +135,7 @@ const ItemDetails = ({
    return (
       <Dialog>
          <DialogTrigger className="w-full text-left">{children}</DialogTrigger>
-         <DialogContent className="max-h-[85vh] min-h-0 overflow-y-auto rounded-none border-2 border-mainDark bg-main shadow-[6px_6px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack">
+         <DialogContent className="max-h-[85vh] min-h-0 overflow-y-auto rounded-none border-2 border-mainDark bg-main shadow-[6px_6px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack">
             <DialogTitle className="sr-only">{title}</DialogTitle>
             <DialogDescription className="sr-only">{role}</DialogDescription>
             {content}

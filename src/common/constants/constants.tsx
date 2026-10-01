@@ -1,10 +1,10 @@
 import { GoHome, GoQuestion, GoWorkflow, GoCodeReview, GoBug, GoClockFill, GoDiscussionClosed, GoStarFill, GoNorthStar } from "react-icons/go"
 import { BsChatRightText, BsInstagram, BsLinkedin, BsGithub, BsMeta, BsTiktok } from "react-icons/bs"
-import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser } from "react-icons/si"
+import { SiGooglecloud, SiCplusplus, SiNginx, SiCloudinary, SiShadcnui , SiPostman, SiVercel, SiGnubash, SiRedux, SiReactquery, SiFramer, SiProxmox, SiMui, SiOpenai, SiIntellijidea, SiAndroidstudio, SiCisco, SiTestinglibrary, SiTorbrowser, SiN8N } from "react-icons/si"
 import { IoLogoJavascript } from "react-icons/io5"
 import { FaGitlab, FaPhp, FaReact, FaBootstrap, FaGitAlt, FaFigma, FaNodeJs, FaPython, FaWordpress, FaLinux } from "react-icons/fa"
-import { GiBearFace, GiSpermWhale, GiRingedPlanet  } from "react-icons/gi";
-import { TbBrandPowershell, TbBrandThreejs, TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang, TbBrandReactNative, TbBrandMedium } from "react-icons/tb"
+import { GiBearFace, GiSpermWhale  } from "react-icons/gi";
+import { TbBrandPowershell, TbBrandThreejs, TbBrandTypescript, TbBrandTailwind, TbBrandNextjs, TbBrandMysql, TbBrandMongodb, TbBrandVite, TbBrandNotion, TbBrandVscode, TbBrandKotlin, TbBrandGmail, TbBrandGolang, TbBrandReactNative, TbBrandMedium, TbShoppingBag, TbRoute } from "react-icons/tb"
 import { GrDocker, } from "react-icons/gr";
 import { PiCoffeeDuotone, PiNetworkFill, PiMicrosoftExcelLogo } from "react-icons/pi";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
@@ -15,6 +15,7 @@ import { MenuItemProps } from "../types/menu"
 import { JourneyItem } from "../types/journey"
 import { ProjectItem } from "../types/project"
 import { ArticleItem } from "../types/article"
+import { ClaudeCodeIcon, OpencodeIcon, OpenRouterIcon } from "@/components/icons/AiBrandIcons"
 import { aishi, androidBasic, arrashi, backendBeginner, bangkit,  burhan,  cekit, cimb, edi, firdaus, fo, frontendBeginner, frontendReact, google, harry, jsBasic, kotlinBasic, layla, lepkom, nata, notion, porto, projectManagement, puskesmas, rama, reactApp, rene, sofw, sql, syaikha, tasya, ug, uiux, valo, xclone, yanti, ytclone } from "@assets/index"
 
 
@@ -61,9 +62,9 @@ export const navLinks: MenuItemProps[] = [
       icon: <MdOutlinePlaylistAddCheckCircle/>
    },
    {
-      href: 'universe',
-      title: 'Universe',
-      icon: <GiRingedPlanet />
+      href: 'store',
+      title: 'Store',
+      icon: <TbShoppingBag />
    },
 ]
 
@@ -431,20 +432,6 @@ export const tools = [
       onLearn: false,
    },
    {
-      title: 'OpenAI',
-      label: 'tools',
-      icon: <SiOpenai/>,
-      level: 'Basic',
-      onLearn: false,
-   },
-   {
-      title: 'Deepseek',
-      label: 'tools',
-      icon: <GiSpermWhale/>,
-      level: 'Basic',
-      onLearn: false,
-   },
-   {
       title: 'Gitlab',
       label: 'tools',
       icon: <FaGitlab/>,
@@ -463,6 +450,58 @@ export const tools = [
       label: 'tools',
       icon: <PiMicrosoftExcelLogo />,
       level: 'Basic',
+      onLearn: false,
+   },
+]
+
+export const aiTools = [
+   {
+      title: 'Opencode',
+      label: 'ai',
+      icon: <OpencodeIcon />,
+      level: 'Advanced',
+      onLearn: false,
+   },
+   {
+      title: 'Claude Code',
+      label: 'ai',
+      icon: <ClaudeCodeIcon />,
+      level: 'Advanced',
+      onLearn: false,
+   },
+   {
+      title: 'OpenRouter',
+      label: 'ai',
+      icon: <OpenRouterIcon />,
+      level: 'Advanced',
+      onLearn: false,
+   },
+   {
+      title: '9Router',
+      label: 'ai',
+      icon: <TbRoute/>,
+      level: 'Intermediete',
+      onLearn: false,
+   },
+   {
+      title: 'OpenAI',
+      label: 'ai',
+      icon: <SiOpenai/>,
+      level: 'Advanced',
+      onLearn: false,
+   },
+   {
+      title: 'Deepseek',
+      label: 'ai',
+      icon: <GiSpermWhale/>,
+      level: 'Intermediete',
+      onLearn: false,
+   },
+   {
+      title: 'N8N',
+      label: 'ai',
+      icon: <SiN8N/>,
+      level: 'Intermediete',
       onLearn: false,
    },
 ]
@@ -537,8 +576,8 @@ export const journeys: JourneyItem[] = [
       title: 'Gunadarma University',
       role: 'Computer System',
       logo: ug,
-      date: 'September 2022 - Present',
-      isPresent: true,
+      date: 'September 2022 - August 2026',
+      isPresent: false,
       jobDesc: 'Studying electronics to develop computer systems and implementing them in IoT projects that integrate multiple fields of computer science and electrical engineering. Focused on understanding hardware, designing circuits, and analyzing the processes behind how a computer executes commands.',
       coworks: [
          {
@@ -603,8 +642,8 @@ export const journeys: JourneyItem[] = [
       title: 'Lembaga Pengembangan Komputerisasi (LepKom)',
       role: 'Workshop Insturctor & Certification Profession Assistant',
       logo: lepkom,
-      date: 'March 2024 - Present',
-      isPresent: true,
+      date: 'March 2024 - July 2026',
+      isPresent: false,
       jobDesc: 'As an Assistant and IT Support at LePKom UG (Lembaga Pengembangan Komputer Universitas Gundarama), I was responsible for maintaining and upgrading applications on lab computers used for professional certification and graduation exams, as well as resolving technical issues to ensure smooth operations. I also assisted participants during LePKom Workshops, providing support for technical and programming-related problems. My role included handling lab maintenance, ensuring all systems and equipment were functioning optimally to support academic and professional activities. This experience strengthened my technical troubleshooting skills and ability to provide effective IT solutions in a dynamic environment.',
       coworks: [
          {
@@ -707,8 +746,8 @@ export const journeys: JourneyItem[] = [
       title: 'PT. Bank CIMB Niaga Tbk',
       role: 'Bussines Process & Solution Excellence Intern (Software Tester)',
       logo: cimb,
-      date: 'August 2024 - December 2024',
-      isPresent: true,
+      date: 'September 2024 - January 2025',
+      isPresent: false,
       jobDesc: 'As a Software Tester in the banking system field, I am responsible for conducting User Acceptance Testing (UAT) on core banking system scenarios, including operating AS400 machines to test new features. Additionally, I develop Business Process Engines using a macro Excel approach to enhance efficiency and automate business processes. My role involves ensuring all testing scenarios run smoothly, identifying potential issues, and verifying that the system functions according to business requirements.',
       coworks: [
          {
@@ -826,7 +865,7 @@ export const journeys: JourneyItem[] = [
       logo: '',
       shortName: 'DS',
       date: 'July 2025 - November 2025',
-      isPresent: true,
+      isPresent: false,
       jobDesc: 'Develop multi-platform application for the company\'s new PoC product, focusing on architecting system that support real-time functionality with IoT-devices via MQTT. Responsible to deliver techinal solution covering bakcend, frontend(dashboard), mobile application and also IoT-devices.',
       coworks: [
          {
@@ -942,6 +981,83 @@ export const certificates = [
 ]
 
 export const projects: ProjectItem[] = [
+   {
+      title: 'RJM Digitalization | Body Repair Operations Platform',
+      isFeatured: true,
+      category: 'web',
+      shortName: 'RJM',
+      techStack: [
+         {
+            tags: 'Typescript',
+            color: 'text-yellow-500'
+         },
+         {
+            tags: 'ReactJS',
+            color: 'text-cyan-600'
+         },
+         {
+            tags: 'NextJS',
+            color: 'text-green-600'
+         },
+         {
+            tags: 'NestJS',
+            color: 'text-rose-600'
+         },
+         {
+            tags: 'Go',
+            color: 'text-sky-500'
+         },
+         {
+            tags: 'TailwindCSS',
+            color: 'text-blue-500'
+         },
+         {
+            tags: 'PostgreSQL',
+            color: 'text-cyan-400'
+         },
+      ],
+      desc: 'End-to-end digitalization for RJM Body Repair Express — a production landing page, a public vehicle-repair status tracker, a Next.js operations dashboard, and a NestJS API with a Go rewrite in progress.',
+      image: '',
+      link: 'https://rjmbodyrepair.com',
+      links: [
+         { label: 'Landing page', url: 'https://rjmbodyrepair.com' },
+         { label: 'Repair tracker', url: 'https://rjmbodyrepair.com/order/track' },
+         { label: 'Dashboard', url: 'https://dashboard.rjmbodyrepair.com' },
+         { label: 'API', url: 'https://api.rjmbodyrepair.com' },
+      ],
+      highlights: [
+         'Public "Lacak Status Perbaikan Kendaraan" tracker — customers follow repair status by order number.',
+         'Production landing page with SEO/OG, Google reviews (5.0), and WhatsApp-first booking.',
+         'Four services: rjm-nest-api, rjm-frontend, rjm-landing, and rjm-go-api (in migration progress).',
+      ],
+   },
+   {
+      title: 'GAPEKA Macro Excel Engine | KAI Train Schedule Graphics',
+      isFeatured: true,
+      category: 'automation',
+      shortName: 'GAPEKA',
+      techStack: [
+         {
+            tags: 'Excel VBA',
+            color: 'text-green-700'
+         },
+         {
+            tags: 'Macros',
+            color: 'text-emerald-600'
+         },
+         {
+            tags: 'Data Automation',
+            color: 'text-cyan-600'
+         },
+      ],
+      desc: 'Excel VBA engine that generates Grafik Perjalanan Kereta Api (GAPEKA) schedule graphics for the KAI commuter ecosystem — still used daily by the KAI Monitoring Division as a helper tool.',
+      image: '',
+      link: '',
+      highlights: [
+         'Still actively used by the KAI Monitoring Division as a daily helper tool.',
+         'Automates train schedule graphic generation across the Indonesian commuter network.',
+      ],
+   },
    {
       title: 'M2MWizard | Machine to Machine Simcard Management System',
       isFeatured: true,

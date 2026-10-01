@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowUpRight, Lock, Star } from 'lucide-react'
+import { ArrowUpRight, Check, Lock, Star } from 'lucide-react'
 import {
    Dialog,
    DialogContent,
@@ -31,7 +31,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             if (!open) onClose()
          }}
       >
-         <DialogContent className="max-h-[85vh] min-h-0 overflow-y-auto rounded-none border-2 border-mainDark bg-main p-5 shadow-[6px_6px_0px_0px_#000] dark:border-darkBorder dark:bg-secondaryBlack">
+         <DialogContent className="max-h-[85vh] min-h-0 overflow-y-auto rounded-none border-2 border-mainDark bg-main p-5 shadow-[6px_6px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-secondaryBlack">
             <DialogTitle className="sr-only">{project.title}</DialogTitle>
             <DialogDescription className="sr-only">{project.desc}</DialogDescription>
 
@@ -48,7 +48,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                </span>
 
                {project.isFeatured && (
-                  <span className="flex items-center gap-1 border-2 border-mainDark bg-mainDark px-2 py-0.5 font-outfit text-[10px] font-black uppercase tracking-[0.1em] text-main dark:border-darkBorder dark:bg-darkText dark:text-mainDark">
+                  <span className="flex items-center gap-1 border-2 border-mainDark bg-mainDark px-2 py-0.5 font-outfit text-[10px] font-black uppercase tracking-[0.1em] text-main dark:border-mainDark dark:bg-darkText dark:text-mainDark">
                      <Star size={10} fill="currentColor" /> Featured
                   </span>
                )}
@@ -71,13 +71,41 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                ))}
             </div>
 
-            <div className="mt-5">
-               {project.link ? (
+            {project.highlights && project.highlights.length > 0 && (
+               <ul className="mt-4 flex flex-col gap-2">
+                  {project.highlights.map((highlight) => (
+                     <li
+                        key={highlight}
+                        className="flex items-start gap-2 font-outfit text-xs leading-relaxed"
+                     >
+                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center border-2 border-mainDark bg-[#8ad451] text-mainDark dark:border-mainDark">
+                           <Check size={10} strokeWidth={3} />
+                        </span>
+                        <span className="opacity-80">{highlight}</span>
+                     </li>
+                  ))}
+               </ul>
+            )}
+
+            <div className="mt-5 flex flex-wrap gap-2">
+               {project.links && project.links.length > 0 ? (
+                  project.links.map((link) => (
+                     <Link
+                        key={link.label}
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-mainDark dark:bg-darkText dark:text-mainDark"
+                     >
+                        {link.label} <ArrowUpRight size={14} />
+                     </Link>
+                  ))
+               ) : project.link ? (
                   <Link
                      href={project.link}
                      target="_blank"
                      rel="noreferrer"
-                     className="inline-flex items-center gap-2 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-darkText dark:text-mainDark"
+                     className="inline-flex items-center gap-2 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-mainDark dark:bg-darkText dark:text-mainDark"
                   >
                      View repository <ArrowUpRight size={14} />
                   </Link>

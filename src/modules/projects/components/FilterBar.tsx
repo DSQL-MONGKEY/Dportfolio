@@ -43,7 +43,7 @@ const FilterBar = ({
                value={query}
                onChange={(event) => onQueryChange(event.target.value)}
                placeholder="Search title, description, or tech…"
-               className="w-full border-2 border-mainDark bg-bg py-2 pl-9 pr-3 font-outfit text-sm outline-none transition-shadow placeholder:opacity-50 focus:shadow-[3px_3px_0px_0px_#000] dark:border-darkBorder dark:bg-darkBg"
+               className="w-full border-2 border-mainDark bg-bg py-2 pl-9 pr-3 font-outfit text-sm outline-none transition-shadow placeholder:opacity-50 focus:shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] dark:border-darkBorder dark:bg-darkBg"
             />
          </label>
 
@@ -55,7 +55,7 @@ const FilterBar = ({
                className={cn(
                   'border-2 border-mainDark px-2.5 py-1 font-outfit text-xs font-bold transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
                   category === 'all'
-                     ? 'bg-mainDark text-main dark:bg-darkText dark:text-mainDark'
+                     ? 'bg-mainDark text-main dark:border-mainDark dark:bg-darkText dark:text-mainDark'
                      : 'bg-bg dark:bg-darkBg'
                )}
             >
@@ -71,7 +71,7 @@ const FilterBar = ({
                   className={cn(
                      'border-2 border-mainDark px-2.5 py-1 font-outfit text-xs font-bold transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
                      category === item.id
-                        ? `${item.accent} text-mainDark`
+                        ? `${item.accent} text-mainDark dark:border-mainDark`
                         : 'bg-bg dark:bg-darkBg'
                   )}
                >
@@ -90,7 +90,7 @@ const FilterBar = ({
                   className={cn(
                      'border-2 border-mainDark px-2 py-0.5 font-outfit text-[11px] font-bold transition-transform hover:-translate-y-0.5 dark:border-darkBorder',
                      tech === item
-                        ? 'bg-[#F4CE14] text-mainDark'
+                        ? 'bg-[#F4CE14] text-mainDark dark:border-mainDark'
                         : 'bg-main dark:bg-secondaryBlack'
                   )}
                >

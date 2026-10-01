@@ -39,7 +39,7 @@ const JourneyCard = ({ title, role, date, isPresent, logo, shortName, shadow }: 
             </span>
 
             {isPresent && (
-               <span className="flex items-center gap-1.5 border-2 border-mainDark bg-[#8ad451] px-2 py-0.5 font-outfit text-[10px] font-black uppercase tracking-[0.1em] text-mainDark dark:border-darkBorder">
+               <span className="flex items-center gap-1.5 border-2 border-mainDark bg-[#8ad451] px-2 py-0.5 font-outfit text-[10px] font-black uppercase tracking-[0.1em] text-mainDark dark:border-mainDark">
                   <span className="h-2 w-2 rounded-full bg-mainDark" />
                   Present
                </span>

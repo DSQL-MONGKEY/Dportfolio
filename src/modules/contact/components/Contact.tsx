@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Mail } from 'lucide-react'
 import { BsLinkedin } from 'react-icons/bs'
 import Marquee from '@/components/ui/Marquee'
@@ -34,7 +34,7 @@ const Contact = () => {
                <h1 className="font-lexend text-3xl font-black uppercase tracking-[0.2em]">
                   Get in Touch
                </h1>
-               <span className="border-2 border-mainDark bg-lightGreen px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-darkBorder">
+               <span className="border-2 border-mainDark bg-lightGreen px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
                   open for freelance
                </span>
             </div>
@@ -47,7 +47,7 @@ const Contact = () => {
             <div className="mt-5 flex flex-wrap gap-3">
                <a
                   href={buildMailto(defaultTemplate)}
-                  className="flex items-center gap-2 border-2 border-mainDark bg-shineRed px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[4px_4px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] dark:border-darkBorder"
+                  className="flex items-center gap-2 border-2 border-mainDark bg-shineRed px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark"
                >
                   <Mail size={16} /> Email me
                </a>
@@ -56,7 +56,7 @@ const Contact = () => {
                   href={LINKEDIN.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 border-2 border-mainDark bg-[#0A66C2] px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-main shadow-[4px_4px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#000] dark:border-darkBorder"
+                  className="flex items-center gap-2 border-2 border-mainDark bg-[#0A66C2] px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-main shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark"
                >
                   <BsLinkedin size={14} /> LinkedIn
                </a>
@@ -67,7 +67,7 @@ const Contact = () => {
 
          <Marquee
             key="contact-banner"
-            className="border-2 border-mainDark bg-[#F4CE14] py-2 [--duration:20s] dark:border-darkBorder"
+            className="border-2 border-mainDark bg-[#F4CE14] py-2 [--duration:20s] dark:border-mainDark"
          >
             {bannerItems.map((item) => (
                <span
@@ -88,7 +88,9 @@ const Contact = () => {
                badge="reply in ~24h"
                badgeClassName="bg-shineRed"
             />
-            <ContactForm />
+            <Suspense fallback={null}>
+               <ContactForm />
+            </Suspense>
          </section>
 
          <ServicesCTA />

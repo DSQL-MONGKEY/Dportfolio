@@ -9,7 +9,7 @@ import { cn, formatTime } from '@/common/lib/utils';
 import { useMusic } from '@/stores/music';
 
 const controlClass =
-  'flex items-center justify-center border-2 border-mainDark bg-main text-text shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText';
+  'flex items-center justify-center border-2 border-mainDark bg-main text-text shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText';
 
 const discAccents = ['#F4CE14', '#25F4EE', '#E1306C', '#8ad451'];
 
@@ -32,10 +32,22 @@ const Playlist = () => {
 
   return (
     <div className="w-full text-text dark:text-darkText">
+      <div className="mb-5">
+        <div className="flex flex-wrap items-center gap-3">
+          <h1 className="font-lexend text-3xl font-black uppercase tracking-[0.2em]">Playlist</h1>
+          <span className="border-2 border-mainDark bg-[#F4CE14] px-2 py-0.5 font-outfit text-xs font-bold text-mainDark dark:border-mainDark">
+            {musicPlaylist.length} tracks
+          </span>
+        </div>
+        <p className="mt-2 max-w-xl font-outfit text-sm opacity-70">
+          Songs on repeat while I build — play from the list or use the global music box.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 items-start gap-5 lg:grid-cols-12 lg:gap-6">
 
         <section className="lg:col-span-5 lg:sticky lg:top-6">
-          <div className="border-2 border-mainDark bg-main p-5 shadow-[4px_4px_0px_0px_#000] transition-colors duration-300 dark:border-darkBorder dark:bg-secondaryBlack md:p-6">
+          <div className="border-2 border-mainDark bg-main p-5 shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] transition-colors duration-300 dark:border-darkBorder dark:bg-secondaryBlack md:p-6">
 
             <div className="relative mx-auto aspect-square w-full max-w-[240px]">
               <div
@@ -59,7 +71,7 @@ const Playlist = () => {
                   />
                 ) : (
                   <div
-                    className="absolute inset-[34%] flex items-center justify-center rounded-full border-4 border-mainDark dark:border-darkBorder"
+                    className="absolute inset-[34%] flex items-center justify-center rounded-full border-4 border-mainDark dark:border-mainDark"
                     style={{ backgroundColor: discAccent }}
                   >
                     <span className="font-lexend text-xl font-black text-mainDark">
@@ -144,7 +156,7 @@ const Playlist = () => {
         </section>
 
         <section className="lg:col-span-7">
-          <div className="flex flex-col border-2 border-mainDark bg-main shadow-[4px_4px_0px_0px_#000] transition-colors duration-300 dark:border-darkBorder dark:bg-secondaryBlack">
+          <div className="flex flex-col border-2 border-mainDark bg-main shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] transition-colors duration-300 dark:border-darkBorder dark:bg-secondaryBlack">
             <div className="flex items-center justify-between border-b-2 border-mainDark px-5 py-4 dark:border-darkBorder">
               <h3 className="text-sm font-black uppercase tracking-[0.2em]">Playlist</h3>
               <span className="border-2 border-mainDark bg-bg px-2 py-0.5 text-xs font-bold dark:border-darkBorder dark:bg-darkBg">

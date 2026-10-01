@@ -34,7 +34,7 @@ const Socials = ({ profile }: SocialsProps) => {
                className={`${socialCardClass} shadow-[4px_4px_0px_0px_#E1306C]`}
             >
                <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center border-2 border-mainDark bg-[#E1306C] text-lg text-main dark:border-darkBorder">
+                  <span className="flex h-10 w-10 items-center justify-center border-2 border-mainDark bg-[#E1306C] text-lg text-main dark:border-mainDark">
                      <BsInstagram />
                   </span>
                   <span className="font-lexend text-xs font-black uppercase tracking-[0.2em] opacity-60">Instagram</span>
@@ -64,7 +64,7 @@ const Socials = ({ profile }: SocialsProps) => {
                className={`${socialCardClass} shadow-[4px_4px_0px_0px_#25F4EE]`}
             >
                <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center border-2 border-mainDark bg-[#25F4EE] text-lg text-mainDark dark:border-darkBorder">
+                  <span className="flex h-10 w-10 items-center justify-center border-2 border-mainDark bg-[#25F4EE] text-lg text-mainDark dark:border-mainDark">
                      <BsTiktok />
                   </span>
                   <span className="font-lexend text-xs font-black uppercase tracking-[0.2em] opacity-60">TikTok</span>
@@ -85,7 +85,7 @@ const Socials = ({ profile }: SocialsProps) => {
                className={`${socialCardClass} shadow-[4px_4px_0px_0px_#F4CE14]`}
             >
                <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center border-2 border-mainDark bg-[#F4CE14] text-lg text-mainDark dark:border-darkBorder">
+                  <span className="flex h-10 w-10 items-center justify-center border-2 border-mainDark bg-[#F4CE14] text-lg text-mainDark dark:border-mainDark">
                      <BsGithub />
                   </span>
                   <span className="font-lexend text-xs font-black uppercase tracking-[0.2em] opacity-60">Github</span>
@@ -93,9 +93,11 @@ const Socials = ({ profile }: SocialsProps) => {
 
                <div className="mt-4 flex items-center gap-3">
                   {profile ? (
-                     <img
+                     <Image
                         src={profile.avatarUrl}
                         alt={profile.name}
+                        width={48}
+                        height={48}
                         className="h-12 w-12 rounded-full border-2 border-mainDark object-cover dark:border-darkBorder"
                      />
                   ) : (

@@ -1,13 +1,13 @@
 "use client"
 
-import { useEffect, ReactNode } from 'react'
+import { Suspense, useEffect, ReactNode } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import LeftCollapseNav from './LeftCollapseNav'
 import MusicBox from './MusicBox'
 import AudioEngine from './audio-player/AudioEngine'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import MobileSlideNav from './MobileSlideNav'
+import SidebarGate from './SidebarGate'
 
 interface LayoutsProps {
    children: ReactNode
@@ -15,22 +15,20 @@ interface LayoutsProps {
 
 const Layouts = ({ children }: LayoutsProps ) => {
    const pathName = usePathname();
-   const searchParams = useSearchParams();
-   const readMode = searchParams.get("read-mode");
 
-   const hideSidebar = ['/me'].includes(pathName) || readMode == 'true'; 
    const hideMusicBox = pathName === '/playlist';
 
    
    useEffect(() =>{
       AOS.init({
          duration: 800,
-         delay: 50
+         delay: 50,
+         once: true
       })
    },[])
 
    return (
-      <div className="flex h-full w-full flex-col justify-center overflow-x-hidden ">
+      <div className="flex h-full w-full flex-col justify-center overflow-x-clip ">
          
          <div className="flex w-full flex-col justify-center lg:flex-row lg: gap-5">
             
@@ -44,7 +42,9 @@ const Layouts = ({ children }: LayoutsProps ) => {
 
          </div>
 
-         {!hideSidebar && <LeftCollapseNav />}
+         <Suspense fallback={null}>
+            <SidebarGate />
+         </Suspense>
 
          <AudioEngine />
 

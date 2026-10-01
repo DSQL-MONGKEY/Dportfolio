@@ -45,7 +45,7 @@ const ProjectThumb = ({ project, className }: ProjectThumbProps) => {
          )}
       >
          <span className="font-lexend text-lg font-black tracking-[0.2em] opacity-60">
-            {initials(project.title)}
+            {project.shortName ?? initials(project.title)}
          </span>
       </div>
    )

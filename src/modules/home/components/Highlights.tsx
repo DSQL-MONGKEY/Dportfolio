@@ -45,7 +45,7 @@ const Highlights = () => {
             ))}
          </div>
 
-         <div className="flex flex-wrap items-center justify-between gap-4 border-2 border-mainDark bg-[#F4CE14] p-4 shadow-[4px_4px_0px_0px_#000] dark:border-darkBorder">
+         <div className="flex flex-wrap items-center justify-between gap-4 border-2 border-mainDark bg-[#F4CE14] p-4 shadow-[4px_4px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark">
             <div>
                <p className="font-lexend text-sm font-black uppercase tracking-[0.15em] text-mainDark">
                   Open for freelance
@@ -57,7 +57,7 @@ const Highlights = () => {
 
             <Link
                href="/contact"
-               className="flex items-center gap-2 border-2 border-mainDark bg-mainDark px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-main shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder dark:bg-darkText dark:text-mainDark"
+               className="flex items-center gap-2 border-2 border-mainDark bg-mainDark px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-main shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark dark:bg-darkText dark:text-mainDark"
             >
                Start a project <ArrowUpRight size={14} />
             </Link>

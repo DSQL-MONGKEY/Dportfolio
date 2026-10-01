@@ -90,7 +90,7 @@ const Showcase = () => {
                <button
                   type="button"
                   onClick={clearFilters}
-                  className="mt-3 border-2 border-mainDark bg-[#F4CE14] px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000] dark:border-darkBorder"
+                  className="mt-3 border-2 border-mainDark bg-[#F4CE14] px-4 py-2 font-lexend text-xs font-black uppercase tracking-[0.1em] text-mainDark shadow-[3px_3px_0px_0px_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_var(--neo-shadow-color)] dark:border-mainDark"
                >
                   Clear filters
                </button>

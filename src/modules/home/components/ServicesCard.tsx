@@ -41,7 +41,7 @@ const ServicesCard = ({ icon, index, title, description }: ServicesCardProps) =>
 
          <Link
             href="/contact"
-            className="mt-4 inline-flex w-fit items-center gap-1.5 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-darkText dark:text-mainDark"
+            className="mt-4 inline-flex w-fit items-center gap-1.5 border-2 border-mainDark bg-mainDark px-3 py-1.5 font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-mainDark dark:bg-darkText dark:text-mainDark"
          >
             Start a project <ArrowUpRight size={14} />
          </Link>

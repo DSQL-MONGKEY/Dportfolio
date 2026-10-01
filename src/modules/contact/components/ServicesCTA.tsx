@@ -42,7 +42,7 @@ const ServicesCTA = () => {
 
                   <a
                      href={buildMailto(buildServiceTemplate(service.title))}
-                     className="mt-4 inline-block border-2 border-mainDark bg-mainDark px-3 py-1.5 text-center font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-darkBorder dark:bg-darkText dark:text-mainDark"
+                     className="mt-4 inline-block border-2 border-mainDark bg-mainDark px-3 py-1.5 text-center font-outfit text-xs font-bold text-main transition-transform hover:-translate-y-0.5 dark:border-mainDark dark:bg-darkText dark:text-mainDark"
                   >
                      Start a project ↗
                   </a>

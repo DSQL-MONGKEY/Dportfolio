@@ -6,15 +6,14 @@ import StructuredData from '@/components/elements/StructuredData'
 import Contact from '@/modules/contact'
 import { CONTACT_EMAIL, LINKEDIN } from "@/common/constants/contact";
 import { METADATA } from "@/common/constants/metadata";
+import { buildMetadata } from "@/common/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
 	title: `Contact ${METADATA.exTitle}`,
 	description: `Hire Dimas Prasetyo — freelance website, mobile, and IoT development. Get in touch by email or LinkedIn.`,
-	alternates: {
-		canonical: `${process.env.DOMAIN}/contact`
-	},
-   keywords: 'hire software engineer, freelance web developer, freelance mobile developer, iot developer, contact, email, linkedin, website development, software testing'
-}
+	path: '/contact',
+	keywords: 'hire software engineer, freelance web developer, freelance mobile developer, iot developer, contact, email, linkedin, website development, software testing',
+})
 
 function generateStructureData(): WithContext<ContactPageSchema> {
 	return {
