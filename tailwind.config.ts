@@ -14,7 +14,7 @@ const config: Config = {
 			colors: {
 				'main': '#FFFFFF',
 				'mainDark': '#000000',
-				'calmBlue': '#151515',
+				'calmBlue': '#170f2e',
 				'shineRed': '#F55353',
 				'lightGreen': '#8ad451',
 				'nicheBlue': '#B983FF',
@@ -23,11 +23,11 @@ const config: Config = {
 				text: '#000',
 		
 				// dark mode
-				darkBg: '#242424',
+				darkBg: '#241a3d',
 				darkText: '#eeefe9',
 				darkBorder: '#eeefe9',
-				darkCanvas: '#0b0b0b',
-				secondaryBlack: '#1c1c1c',
+				darkCanvas: '#0f0a1e',
+				secondaryBlack: '#1a1230',
 				
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
